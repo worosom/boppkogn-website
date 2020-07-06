@@ -1,0 +1,89 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+site_url: https://bopp-kogn.africa
+display_url: https://bopp-kogn.africa
+logo_url: https://bopp-kogn.africa/bopp-kogn-inline.svg
+media_folder: "static/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/images"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "about"
+    label: "About"
+    folder: "content/about"
+    slug: "about"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - label: "Abstract"
+        name: "abstract"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Part"
+            name: "part"
+            widget: "markdown"
+            required: false
+      - label: "Translations"
+        name: "translations"
+        widget: "list"
+        fields:
+          - label: "Translation"
+            name: "translation"
+            widget: object
+            required: false
+            fields:
+              - {label: "Language", name: "language", widget: "string"}
+              - {label: "Value", name: "value", widget: "string"}
+  - name: "events" # Used in routes, ie.: /admin/collections/:slug/edit
+    summary: "{{title}} | {{type}}"
+    label: "Event" # Used in the UI, ie.: "New Post"
+    folder: "content/events"
+    slug: "{{fields.slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Slug", name: "slug", widget: "string", tagname: "h1"}
+      - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
+      - {label: "Type", name: "type", widget: "string", tagname: "h1", required: false}
+      - {label: "Subtitle", name: "subtitle", widget: "string", tagname: "h1", required: false}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
+      - label: "Venue"
+        name: "venue"
+        required: false
+        widget: object
+        fields:
+          - {label: "Name", name: "name", widget: "string", tagname: "h1", required: false}
+          - {label: "Link", name: "venueLink", widget: "string", tagname: "h1", required: false}
+      - {label: "Address", name: "address", widget: "string", tagname: "h1", required: false}
+      - {label: "Price", name: "price", widget: "string", tagname: "h1", required: false}
+      - {label: "Instagram", name: "instagram", widget: "string", tagname: "h1", required: false}
+      - {label: "Facebook", name: "facebook", widget: "string", tagname: "h1", required: false}
+      - {label: "Residentadvisor", name: "residentadvisor", widget: "string", tagname: "h1", required: false}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
+      - label: "Artists"
+        name: "artists"
+        widget: "list"
+        fields:
+          - label: Artist
+            name: artist
+            widget: object
+            required: false
+            fields:
+              - {label: Name, name: title, widget: string, required: false}
+              - {label: Role, name: role, widget: string, required: false}
+              - {label: From, name: from, widget: string, required: false}
+              - {label: Link, name: link, widget: string, required: false}
+              - {label: Avatar, name: avatar, widget: image, required: false}
+      - label: "Media"
+        name: "media"
+        widget: "list"
+        fields:
+          - label: Image
+            name: image
+            widget: object
+            required: false
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Image, name: src, widget: image}

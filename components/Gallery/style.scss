@@ -1,0 +1,217 @@
+.media {
+  width: 100%;
+  &__thumbnail_wrapper {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &::before {
+      background-color: yellow;
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__thumbnail, .ls-blur-up-img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 150ms ease-in-out;
+    will-change: transform;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__links_wrap {
+    margin: 3rem 0;
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00f;
+      z-index: -1;
+      transform: rotate(-3deg);
+      transition: background-color 200ms ease, transform 200ms ease;
+    }
+    &:hover::before {
+      background-color: #ff0;
+      transform: rotate(-3deg) translate3d(5px, 5px, 0);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      background-image: url('/contact-yellow.svg#svgView(preserveAspectRatio(none))');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      z-index: -2;
+      transform: rotate(7deg);
+      transition: transform 200ms ease;
+    }
+    &:hover::after {
+      background-image: url('/contact.svg#svgView(preserveAspectRatio(none))');
+      transform: rotate(-3deg) translate3d(-1px, -3px, 0);
+    }
+
+    .btn {
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-family: "Sporting Grotesque_Bold";
+      z-index: 1;
+      padding: 1rem 2rem;
+      color: #ff0;
+      &:hover {
+        background-color: transparent;
+        color: #f00;
+      }
+      &:active {
+        background-color: transparent !important;
+        animation: activity 50ms infinite alternate linear;
+      }
+    }
+  }
+}
+
+#gallery_modal {
+  .modal {
+    &-dialog-centered {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      max-width: unset;
+    }
+    &-content {
+      background: #000;
+      border-width: 0;
+      height: 100%;
+    }
+    &-header {
+      position: fixed;
+      width: 100%;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      .btn {
+        background-color: #00F;
+        border: none;
+        border-radius: 0;
+        text-transform: uppercase;
+        font-family: "Sporting Grotesque_Bold", sans-serif;
+        width: 100%;
+        will-change: transform, background, color;
+        transition: transform 150ms ease-in-out;
+        i { font-size: 1.5rem; line-height: 1rem; vertical-align: middle; }
+        &:active, &:focus {
+          transform: translate3d(0, 0, 0) !important;
+        }
+        &:active {
+          animation: active 100ms infinite;
+        }
+        &.hidden { transform: translate3d(0, -100%, 0); }
+      }
+    }
+    &-body {
+      padding: 0;
+    }
+    &__media {
+      border-radius: 5px;
+      border-width: 0;
+      overflow: hidden;
+    }
+    &__image {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+      }
+      &-large::before {
+        content: " ";
+        display: block;
+        padding-top: 100%;
+      }
+      .ls-blur-up-img {
+        filter: blur(3vmin);
+      }
+      &--current {
+        display: block;
+      }
+    }
+
+    &__controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      &--prev,
+      &--next {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5vh;
+        height: 100vh;
+        background: white;
+        opacity: 0;
+        will-change: background, color, opacity;
+        transition: opacity 150ms ease-in-out;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        i {
+          font-size: 10vh;
+          color: black;
+        }
+        &:hover, &:focus {
+          background-color: white;
+          opacity: .25;
+        }
+        &:active {
+          opacity: .25;
+          animation: active 100ms infinite;
+        }
+      }
+      &--next {
+        left: 100%;
+        transform: translate(-100%, 0);
+      }
+      &--prev, &--next {
+        min-width: 8rem;
+      }
+    }
+    @keyframes active {
+      0% { background: #F00; color: #00F; }
+      50% { background: #0F0; color: #F00; }
+      100% { background: #00F; color: #0F0; }
+    }
+  }
+}
