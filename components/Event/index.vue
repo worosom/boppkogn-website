@@ -142,7 +142,6 @@ export default {
   },
   computed: {
     time() { 
-      console.log(this.date)
       return `${this.date.format('HH')}h` }
   }
 }
