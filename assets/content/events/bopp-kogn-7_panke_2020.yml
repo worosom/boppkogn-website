@@ -45,5 +45,27 @@ artists:
 media:
   - image:
       src: /images/_mg_0321-verbessert.jpg
-      title: Pictures
+      title: ""
+  - image:
+      src: /images/_mg_0262.jpg
+  - image:
+      src: /images/_mg_0329-verbessert.jpg
+  - image:
+      src: /images/_mg_0287.jpg
+  - image:
+      src: /images/_mg_0388.jpg
+  - image:
+      src: /images/_mg_0425.jpg
+  - image:
+      src: /images/_mg_0462.jpg
+  - image:
+      src: /images/_mg_0486.jpg
+  - image:
+      src: /images/_mg_0503.jpg
+  - image:
+      src: /images/_mg_0522.jpg
+  - image:
+      src: /images/_mg_0556.jpg
+  - image:
+      src: /images/_mg_0571.jpg
 livestream: https://www.twitch.tv/pankeberlin
