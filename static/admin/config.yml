@@ -11,7 +11,7 @@ public_folder: "/images"
 collections: # A list of collections the CMS should be able to edit
   - name: "about"
     label: "About"
-    folder: "content/about"
+    folder: "assets/content/about"
     slug: "about"
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -38,7 +38,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "events" # Used in routes, ie.: /admin/collections/:slug/edit
     summary: "{{title}} | {{type}}"
     label: "Event" # Used in the UI, ie.: "New Post"
-    folder: "content/events"
+    folder: "assets/content/events"
     slug: "{{fields.slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
