@@ -39,6 +39,14 @@
         offset-lg="1"
         class="event__address_links_wrap event__info">
         <h2>{{address}}</h2>
+        <div class="event__links_wrap" v-if='reservation'>
+          <b-btn :href="reservation"
+                 target="_blank"
+                 variant="primary"
+                 rel="noopener">
+            Reservation
+          </b-btn>
+        </div>
         <div class="event__links_wrap" v-if='residentadvisor'>
           <b-btn :href="residentadvisor"
                  target="_blank"

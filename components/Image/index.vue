@@ -10,7 +10,6 @@ const resolutions = []
 for (let i = 244; i <= 4148; i += 244) {
   resolutions.push(i)
 }
-console.log(resolutions)
 
 export default {
   props: {
