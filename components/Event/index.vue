@@ -3,7 +3,8 @@
     <b-row>
       <b-col
         cols="12"
-        md="6"
+        md="7"
+        lg="6"
         class="event__info">
         <h1>
           <span class="event__title">{{title}}</span>
@@ -12,6 +13,7 @@
         </h1>
       </b-col>
       <b-col
+        v-if="subtitle"
         cols="12"
         md="6"
         lg="3"
@@ -29,12 +31,15 @@
       </b-col>
       <b-col
         class="event__info"
+        md="2"
+        lg="12"
         v-if="price">
         <h4 class="event__price">{{price}}</h4>
       </b-col>
       <b-col
         cols="8"
         md="2"
+        offset-md="3"
         order-lg="2"
         offset-lg="1"
         class="event__address_links_wrap event__info">
@@ -87,14 +92,13 @@
              offset-lg="0"
              xl="7"
              order-md="1"
-             v-if="description"
              class="event__info event__info--pattern">
         <p class="event__description" v-html="description"/>
       </b-col>
     </b-row>
 
     <template v-if="media.length">
-      <no-ssr>
+      <client-only>
         <b-row>
           <b-col>
             <h1 class="event__media_header">Pics</h1>
@@ -103,7 +107,7 @@
         <b-row>
           <gallery v-model="media"/>
         </b-row>
-      </no-ssr>
+      </client-only>
     </template>
 
     <template v-if="artists.length">
@@ -136,6 +140,7 @@ export default {
       description: undefined,
       residentadvisor: undefined,
       livestream: undefined,
+      reservation: undefined,
       ...this.event,
       date: this.$moment(this.event.date)
     }

@@ -1,11 +1,21 @@
 <template>
   <img
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      once: true,
+      throttle: 150,
+      throttleOptions: {
+        leading: 'visible'
+      }
+    }"
     :src="computedSrc"
     :alt="alt"
+    ref="image"
     />
 </template>
 
 <script>
+import loaderSvg from './loader.svg?data'
 
 const resolutions = []
 for (let i = 244; i <= 4148; i += 244) {
@@ -21,8 +31,9 @@ export default {
   },
   data() {
     return {
-      mounted: false,
-      computedSrc: ''
+      computedSrc: '',
+      loaderSvg,
+      _shadowImg: undefined
     }
   },
   computed: {
@@ -43,13 +54,25 @@ export default {
       }
     }
   },
-  mounted() {
-    this.mounted = true
-    if (this.src)
-      this.computedSrc = `${this.src}?nf_resize=${this.smartcrop ? 'smartcrop' : 'fit'}&w=${this.width}&h=${this.height}`
+  methods: {
+    visibilityChanged(isVisible, entry) {
+      this.visible = isVisible
+      if (isVisible) {
+        this.computedSrc = loaderSvg
+        this.shadow_img.src = this._src
+      }
+    },
+    onLoad() {
+      this.computedSrc = this._src
+    }
   },
-  beforeDestroy() {
-    this.mounted = false
+  mounted() {
+    this._src = `${this.src}?nf_resize=${this.smartcrop ? 'smartcrop' : 'fit'}&w=${this.width}&h=${this.height}`
+    this.shadow_img = new Image()
+    this.shadow_img.onload = this.onLoad
+  },
+  destroy() {
+    this.shadow_img.onload = undefined
   }
 }
 </script>

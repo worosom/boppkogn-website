@@ -64,7 +64,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/vue-hammer.js', ssr: false }
+    { src: '~/plugins/vue-hammer.js', ssr: false },
+    { src: '~/plugins/visibility.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -75,6 +76,7 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
+    '@nuxtjs/svg',
     'bootstrap-vue/nuxt',
     ['@nuxtjs/moment', { locales: ['de'] }]
   ],

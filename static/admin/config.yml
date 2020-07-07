@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  branch: master
 
 site_url: https://bopp-kogn.africa
 display_url: https://bopp-kogn.africa
