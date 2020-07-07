@@ -12,6 +12,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "about"
     label: "About"
     folder: "assets/content/about"
+    extension: "json"
     slug: "about"
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -39,6 +40,7 @@ collections: # A list of collections the CMS should be able to edit
     summary: "{{title}} | {{type}}"
     label: "Event" # Used in the UI, ie.: "New Post"
     folder: "assets/content/events"
+    extension: "json"
     slug: "{{fields.slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
