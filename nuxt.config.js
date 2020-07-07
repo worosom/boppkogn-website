@@ -37,10 +37,11 @@ export default {
           route: '/'
         },
         ...fs.readdirSync(events_path)
-        .filter(filename => filename.endsWith('json'))
+        .filter(filename => filename.endsWith('md'))
         .map(filename => {
           const event = require(`./${join(events_path, filename)}`)
-          event.date = moment(event.date, 'YYYY-MM-DD hh:mma')
+          event.date = moment(event.date, 'YYYY-MM-DD hh:mma').utc()
+          console.log(event.slug)
           return {
             route: `/${event.slug}`
           }
@@ -92,7 +93,13 @@ export default {
     extend (config, _ctx) {
       config.node = {
         fs: "empty"
-      }
+      };
+      config.module.rules.push(
+        {
+          test: /\.yml$/,
+          loader: 'yml-loader'
+        }
+      )
     }
   }
 }

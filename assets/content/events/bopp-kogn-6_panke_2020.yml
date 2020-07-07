@@ -1,0 +1,61 @@
+title: Bopp Kogn
+slug: bopp-kogn-6_panke_2020
+image: /images/Bopp-Kogn-6.jpg
+type: Part 6
+subtitle: Hip-Hop worldwide connection
+date: '2020-03-20 10:00pm'
+venue:
+  name: Panke
+  venueLink: 'https://bit.ly/2NDGRAK'
+address: 'Gerichtstraße 23, Berlin'
+instagram: 'https://www.instagram.com/boppkognfestival/'
+facebook: 'https://www.facebook.com/events/127660125294807/'
+description: >-
+  <b>Bopp Kogn</b> means <b>around the corner</b>, where people meet together and share the <b>space</b>.
+  We are the worldwide connection and present a colourful night with amazing <b>musicians</b> and great <b>MCs</b> on stage.
+  <br>
+  Welcome to everybody :) and let’s enjoy the party
+  <br>
+  <br>
+  <b>Bopp Kogn</b> heißt <b>um die ecke</b>, wo man sich trifft um den gemeinsamen <b>Raum</b> zu nutzen.
+  Wir sind ein globales Künstlerkollektiv und präsentieren eine farbenfrohe Nacht voller atemberaubender <b>Musiker</b> und doper <b>MCs</b> auf der Bühne.
+  <br>
+  Jeder ist willkommen :) und viel Spaß auf der Party
+artists:
+  - artist:
+      title: Simon
+      avatar: /images/simon.jpg
+      from: Dakar, Senegal
+      link: 'https://youtu.be/w7qDVtd3dzM'
+      role: Live
+  - artist:
+      title: The Tradi HipHop Band
+      avatar: /images/the-tradi-hip-hop-band.jpg
+      from: Dakar, Senegal
+      link: 'https://youtu.be/w7qDVtd3dzM'
+      role: Live
+  - artist:
+      title: Maura
+      avatar: /images/maura.jpg
+      from: Berlin
+      link: 'https://soundcloud.com/maura-souloud'
+      role: Live
+  - artist:
+      title: Derron
+      avatar: /images/derron.jpg
+      from: Berlin
+      link: 'https://bit.ly/2TGlFAj'
+      role: Live
+  - artist:
+      title: Metabolism
+      avatar: /images/metabolism.jpg
+      from: Berlin
+      link: 'https://soundcloud.com/metabolism-sa'
+      role: DJ
+  - artist:
+      title: Raz-One
+      avatar: /images/raz-one.jpg
+      from: Berlin
+      link: 'https://soundcloud.com/raz-one'
+      role: DJ
+media: []
