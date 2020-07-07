@@ -1,0 +1,68 @@
+{
+  "title": "Bopp Kogn",
+  "slug": "bopp-kogn-8_panke_2020",
+  "image": "/images/bopp-kogn_25.07._post.jpg",
+  "type": "Part 8",
+  "subtitle": "Limited admission",
+  "date": "2020-07-25 08:00pm",
+  "venue": {
+    "name": "Panke",
+    "venueLink": "https://bit.ly/2NDGRAK"
+  },
+  "address": "Gerichtstraße 23, Berlin",
+  "instagram": "https://www.instagram.com/boppkognfestival/",
+  "facebook": "https://www.facebook.com/events/288853932117389/",
+  "livestream": "https://www.twitch.tv/pankeberlin",
+  "reservation": "https://docs.google.com/forms/d/e/1FAIpQLSdL144Kj2P7Z3yVebtZjbdc17Qua1NRSY4Wwsb0IDl1Dhbr_w/viewform?usp=sf_link",
+  "description": "It’s all about hip hop.<br> There is so much that we can learn from each other. <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdL144Kj2P7Z3yVebtZjbdc17Qua1NRSY4Wwsb0IDl1Dhbr_w/viewform?usp=sf_link\"><br><b>Reserve your tickets online</b></a><br> Do things easy protect yourself and protect the others.<br> <br> <b>BOPP KOGN</b> is a project that goes within the framework of devolution and education to promote the success of the Artists all around the world.<br> -<br> Es dreht sich alles um Hip Hop.<br> Es gibt so viel was wir voneinander lernen können. <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdL144Kj2P7Z3yVebtZjbdc17Qua1NRSY4Wwsb0IDl1Dhbr_w/viewform?usp=sf_link\"><br><b>Reserviert eure Tickets online</b></a><br> Mach’s dir einfach, bleib sicher und pass auf deine Umwelt auf.<br> <br> <b>BOPP KOGN</b> ist ein Projekt, welches sich im Rahmen von Devolution in Bildung bewegt um den Erfolg der Künstler zu fördern.<br> <br> LINE UP:<br><br> <b>GALV</b> (Live MC)<br><br> <b>DJ ROOKIE</b> (DJ)<br><br> <b>DAYBEE DEE</b> (DJ)<br><br> <b>METABOLISM</b> (DJ)<br><br> <b>DJ PRIMARK</b> (DJ)<br><br>",
+  "artists": [
+    {
+      "artist": {
+        "title": "Galv",
+        "avatar": "/images/galv_1.jpg",
+        "from": "Germany",
+        "link": "https://soundcloud.com/der-galv",
+        "role": "Live MC"
+      }
+    },
+    {
+      "artist": {
+        "title": "DJ Rookie",
+        "avatar": "/images/dj-rookie_1.jpg",
+        "from": "Germany",
+        "link": "https://www.facebook.com/djrookieofficial/",
+        "role": "DJ"
+      }
+    },
+    {
+      "artist": {
+        "title": "Daybee Dee",
+        "avatar": "/images/daybee-dee.jpg",
+        "from": "Berlin",
+        "link": "https://soundcloud.com/daybee-dee",
+        "role": "DJ"
+      }
+    },
+    {
+      "artist": {
+        "title": "Metabolism",
+        "avatar": "/images/metabolism.jpg",
+        "from": "Berlin",
+        "link": "https://soundcloud.com/metabolism-sa",
+        "role": "DJ"
+      }
+    },
+    {
+      "artist": {
+        "title": "DJ Primark",
+        "avatar": "/images/dj-primark_1.jpg",
+        "from": "Berlin",
+        "link": "https://mixcloud.com/djprimark/",
+        "role": "DJ"
+      }
+    }
+  ],
+  "media": [
+
+  ]
+}

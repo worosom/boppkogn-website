@@ -34,13 +34,13 @@ export const actions = {
       const events_path = 'assets/content/events'
       const events = store.state.events
       fs.readdirSync(events_path)
-            .filter(filename => filename.endsWith('yml'))
+            .filter(filename => filename.endsWith('json'))
             .forEach(filename => {
         const event = require(`~/${events_path}/${filename}`)
         event.date = moment(event.date, 'YYYY-MM-DD hh:mma')
         events.push(event)
       })
-      const about = require('~/assets/content/about/about.yml')
+      const about = require('~/assets/content/about/about.json')
       await store.commit('setEvents', events)
       await store.commit('setAbout', about)
     }

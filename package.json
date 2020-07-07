@@ -21,7 +21,6 @@
     "@nuxtjs/svg": "^0.1.11",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
-    "frontmatter-markdown-loader": "^3.6.0",
     "moment": "^2.27.0",
     "nuxt": "^2.11.0",
     "sass": "^1.26.9",
