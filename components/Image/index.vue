@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 const resolutions = []
 for (let i = 244; i <= 4148; i += 244) {
   resolutions.push(i)
@@ -14,8 +15,6 @@ for (let i = 244; i <= 4148; i += 244) {
 export default {
   props: {
     src: {type: String, default: ''},
-    sizes: String,
-    srcset: String,
     alt: String,
     fullscreen: {type: Boolean, default: false},
     smartcrop: {type: Boolean, default: true}
