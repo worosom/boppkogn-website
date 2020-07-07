@@ -1,3 +1,8 @@
+$red: #FF0000;
+$yellow: #FFFF00;
+$cyan: #00FFFF;
+$blue: #0000FF;
+
 html {
   scroll-behavior: smooth;
 }
@@ -353,4 +358,288 @@ img:not([src]) {
 @keyframes contact-activity {
   0% { color: #ff0; }
   100% { color: #f00; }
+}
+
+.event {
+  padding-top: 2.5rem;
+  z-index: 0;
+  position: relative;
+  &__info {
+    color: $yellow;
+    display: grid;
+  }
+  &__title,
+  &__venue {
+    color: $blue;
+  }
+  &__date,
+  &__time {
+    color: #f00;
+    text-shadow:
+    -1px -1px 0 #00f,
+    1px -1px 0 #00f,
+    -1px  1px 0 #00f,
+    1px  1px 0 #00f;
+  }
+  &__venue {
+    a {
+      color: #00f;
+      text-decoration: underline;
+      display: inline-block;
+    }
+    a:hover {
+      transform: translate(0, 5px);
+      animation: activity 50ms infinite alternate linear;
+    }
+  }
+  &__description {
+    align-self: center;
+    font-family: "Sporting Grotesque_Regular";
+    color: #ff0;
+    line-height: 1.5;
+    hyphens: auto;
+    @media (min-width: --breakpoint-md) {
+      font-size: 1.2rem;
+    }
+    b, &_artist,
+    &_venue,
+    &_highlight {
+      color: #00f;
+      padding: 0 0.5rem;
+      background-color: #ff0;
+      font-family: "Sporting Grotesque_Bold";
+    }
+    b:hover, &_artist:hover,
+    &_venue:hover,
+    &_highlight:hover {
+      animation: activity 50ms infinite alternate linear;
+    }
+  }
+  &__media {
+    &_header {
+      color: $cyan;
+    }
+  }
+  &__lineup_header {
+    color: $cyan;
+  }
+  &__address_links_wrap {
+    display: grid;
+    align-content: start;
+    justify-items: center;
+    &::before {
+      content: " ";
+      position: absolute;
+      z-index: -2;
+      width: 63%;
+      height: 63%;
+      left: -100%;
+      top: 25%;
+      background-image: linear-gradient(transparent, red), linear-gradient(red, transparent), url(/pattern2.webp);
+      // background-attachment: fixed, fixed, fixed;
+      background-size: 100% 55%, 100% 55%, 100% 150%;
+      background-position: bottom center, top center, 100% 100%;
+      background-repeat: no-repeat, no-repeat, repeat;
+      filter: hue-rotate(0deg);
+      transform-origin: center;
+      transform: rotate3d(0, 0, 1, -100deg);
+    }
+  }
+  &__links_wrap {
+    margin: 3rem 0;
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00f;
+      z-index: -1;
+      transform: rotate(-3deg);
+      transition: background-color 200ms ease, transform 200ms ease;
+    }
+    &:hover::before {
+      background-color: #ff0;
+      transform: rotate(-3deg) translate3d(5px, 5px, 0);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      left: -15%;
+      width: 130%;
+      height: 130%;
+      background-image: url('/contact-yellow.svg#svgView(preserveAspectRatio(none))');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      z-index: -2;
+      transform: rotate(-7deg);
+      transition: transform 200ms ease;
+    }
+    &:hover::after {
+      background-image: url('/contact.svg#svgView(preserveAspectRatio(none))');
+      transform: rotate(-3deg) translate3d(-1px, -3px, 0);
+    }
+
+    .btn {
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-family: "Sporting Grotesque_Bold";
+      z-index: 1;
+      padding: 1rem 2rem;
+      color: #ff0;
+      &:hover {
+	background-color: transparent;
+	color: #f00;
+      }
+      &:active {
+	background-color: transparent !important;
+	animation: activity 50ms infinite alternate linear;
+      }
+    }
+  }
+}
+
+@keyframes activity {
+  0% { color: #00f; }
+  100% { color: #f00; }
+}
+
+.event__info--pattern {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  padding: 3rem;
+  z-index: 0;
+  &::after {
+    font-size: 0;
+    z-index: -10;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pattern2.webp');
+    background-size: cover;
+    transform: rotate(15deg) translateZ(-3px);
+  }
+
+  &::before {
+    font-size: 0;
+    z-index: -1;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00f;
+    box-shadow: 0 60px 100px -50px rgba(0,0,0,.7);
+    transform: rotate(3deg);
+  }
+}
+
+.partners--container {
+  h1 {
+    color: #00f;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .container::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 3px;
+    height: 100%;
+    background-color: #ff0;
+  }
+
+  .partners {
+    position: relative;
+  }
+
+  .partner {
+    position: relative;
+    height: 150px;
+    z-index: 0;
+    &::after {
+      content: " ";
+      padding-top: 100%;
+      background-color: yellow;
+    }
+  }
+
+  .partner_image {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    object-fit: contain;
+    color: transparent;
+    img:not([src]) {
+      display: none;
+    }
+  }
+
+  .partner_image_wrap {
+    width: 100%;
+    height: 100%;
+    filter: saturate(0);
+    transition: filter 200ms ease 200ms;
+    perspective: 1000;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transform: translate3d(0,0,-10px) rotate(-7deg);
+      transition: opacity 200ms ease 0ms;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #00f;
+      opacity: 0;
+      transform: translate3d(0,0,-2px);
+      transition: opacity 100ms ease 0ms, transform 0ms 200ms;
+      z-index: -1;
+    }
+    &:hover {
+      filter: saturate(1);
+      transition: filter 200ms ease;
+    }
+    &:hover::before {
+      background: url('/pattern1.webp');
+      background-size: cover;
+      transform: translate3d(0,0,-3px) rotate(-15deg);
+      opacity: 1;
+      transition: opacity 200ms ease 600ms, transform 200ms ease 600ms;
+    }
+    &:hover::after {
+      transform: translate3d(0,0,-1px) rotate(-7deg);
+      background-color: #00f;
+      opacity: 1;
+      transition: opacity 200ms ease 300ms, transform 200ms ease 400ms;
+    }
+  }
 }

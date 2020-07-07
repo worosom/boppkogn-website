@@ -137,11 +137,13 @@ export default {
       residentadvisor: undefined,
       livestream: undefined,
       ...this.event,
-      date: this.$moment(this.event.date).utc().utcOffset(-7)
+      date: this.$moment(this.event.date)
     }
   },
   computed: {
-    time() { return `${this.date.format('HH')}h` }
+    time() { 
+      console.log(this.date)
+      return `${this.date.format('HH')}h` }
   }
 }
 </script>

@@ -37,7 +37,7 @@ export const actions = {
             .filter(filename => filename.endsWith('yml'))
             .forEach(filename => {
         const event = require(`~/${events_path}/${filename}`)
-        event.date = moment(event.date, 'YYYY-MM-DD hh:mma').utc().utcOffset(-7)
+        event.date = moment(event.date, 'YYYY-MM-DD hh:mma')
         events.push(event)
       })
       const about = require('~/assets/content/about/about.yml')
