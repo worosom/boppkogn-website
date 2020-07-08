@@ -25,9 +25,6 @@ export default {
       title: '🎤Hip Hop Festival Bopp Kogn',
       meta: [
         { hid: 'description', name: 'description', content: 'Bopp Kogn brings people together. Originating from a unique connection between African and European Hip-Hop scenes, this is the first project designed to connect Hip-Hop cultures on a global scale.' }
-      ],
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]
     }
   },
