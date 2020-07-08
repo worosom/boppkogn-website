@@ -23,6 +23,22 @@ for (let i = 244; i <= 4148; i += 244) {
   resolutions.push(i)
 }
 
+
+const hashfn = (str) => {
+  let hash = 0, i, chr;
+  if (str.length === 0) return hash;
+  for (i = 0; i < str.length; i++) {
+    chr   = str.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash
+}
+
+
+const cached = {}
+
+
 export default {
   props: {
     src: {type: String, default: ''},
@@ -35,7 +51,8 @@ export default {
       computedSrc: '',
       loaderSvg,
       fullscreenLoaderSvg,
-      _shadowImg: undefined
+      _shadowImg: undefined,
+      _src: ''
     }
   },
   computed: {
@@ -58,22 +75,31 @@ export default {
   },
   methods: {
     visibilityChanged(isVisible, entry) {
-      this.visible = isVisible
-      if (isVisible) {
-        if (this.fullscreen) {
-          this.computedSrc = fullscreenLoaderSvg
-        } else {
-          this.computedSrc = loaderSvg
+      if (!this.visible) {
+        this.visible = isVisible
+        if (isVisible) {
+          if (this.fullscreen) {
+            this.computedSrc = fullscreenLoaderSvg
+          } else {
+            this.computedSrc = loaderSvg
+          }
+          this.shadow_img.src = this._src
         }
-        this.shadow_img.src = this._src
       }
     },
     onLoad() {
       this.computedSrc = this._src
+      cached[this.hash] = true
     }
   },
   mounted() {
     this._src = `${this.src}?nf_resize=${this.smartcrop ? 'smartcrop' : 'fit'}&w=${this.width}&h=${this.height}`
+    this.hash = hashfn(this._src)
+    if (cached[this.hash]) {
+      this.computedSrc = this._src
+      this.visible = true
+      return
+    }
     this.shadow_img = new Image()
     this.shadow_img.onload = this.onLoad
   },
