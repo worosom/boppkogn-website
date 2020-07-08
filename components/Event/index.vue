@@ -138,6 +138,7 @@ export default {
     return {
       price: undefined,
       description: undefined,
+      subtitle: undefined,
       residentadvisor: undefined,
       livestream: undefined,
       reservation: undefined,
