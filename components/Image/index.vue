@@ -16,6 +16,7 @@
 
 <script>
 import loaderSvg from './loader.svg?data'
+import fullscreenLoaderSvg from './fullscreenLoader.svg?data'
 
 const resolutions = []
 for (let i = 244; i <= 4148; i += 244) {
@@ -33,6 +34,7 @@ export default {
     return {
       computedSrc: '',
       loaderSvg,
+      fullscreenLoaderSvg,
       _shadowImg: undefined
     }
   },
@@ -58,7 +60,11 @@ export default {
     visibilityChanged(isVisible, entry) {
       this.visible = isVisible
       if (isVisible) {
-        this.computedSrc = loaderSvg
+        if (this.fullscreen) {
+          this.computedSrc = fullscreenLoaderSvg
+        } else {
+          this.computedSrc = loaderSvg
+        }
         this.shadow_img.src = this._src
       }
     },
