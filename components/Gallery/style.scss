@@ -12,7 +12,7 @@
       padding-top: 100%;
     }
   }
-  &__thumbnail, .ls-blur-up-img {
+  &__thumbnail {
     position: absolute;
     object-fit: cover;
     top: 0;
@@ -157,9 +157,6 @@
         content: " ";
         display: block;
         padding-top: 100%;
-      }
-      .ls-blur-up-img {
-        filter: blur(3vmin);
       }
       &--current {
         display: block;

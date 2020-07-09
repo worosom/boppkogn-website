@@ -1,13 +1,17 @@
+<style>
+.img-hidden {
+  opacity: 0;
+}
+</style>
+
 <template>
   <img
     v-observe-visibility="{
       callback: visibilityChanged,
       once: true,
-      throttle: 150,
-      throttleOptions: {
-        leading: 'visible'
-      }
+      throttle: 150
     }"
+    :class="visible ? 'img-visible' : 'img-hidden'"
     :src="computedSrc"
     :alt="alt"
     ref="image"
@@ -15,7 +19,7 @@
 </template>
 
 <script>
-import loaderSvg from './loader.svg?data'
+import loaderSvg from './loaderOpt.svg?data'
 import fullscreenLoaderSvg from './fullscreenLoader.svg?data'
 
 const resolutions = []
@@ -44,13 +48,15 @@ export default {
     src: {type: String, default: ''},
     alt: String,
     fullscreen: {type: Boolean, default: false},
-    smartcrop: {type: Boolean, default: true}
+    smartcrop: {type: Boolean, default: true},
+    lazy: {type: Boolean, default: true}
   },
   data() {
     return {
       computedSrc: '',
       loaderSvg,
       fullscreenLoaderSvg,
+      visible: false,
       _shadowImg: undefined,
       _src: ''
     }
@@ -102,6 +108,9 @@ export default {
     }
     this.shadow_img = new Image()
     this.shadow_img.onload = this.onLoad
+    if (!this.lazy) {
+      this.visibilityChanged(true)
+    }
   },
   destroy() {
     this.shadow_img.onload = undefined

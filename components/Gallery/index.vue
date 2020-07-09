@@ -31,7 +31,7 @@
                            id="gallery_modal"
         fullscreen lazy centered hide-footer>
         <template slot="modal-header">
-          <b-btn title="Close Gallery" @click="hide()" :class="modal_header.show ? '' : 'hidden'">
+          <b-btn title="Close Gallery" @click="hide()" :style="modal_ui.show ? '' : 'display: none'">
               <i class="icon ion-md-arrow-round-up"></i>
               Back to Bopp-Kogn
           </b-btn>
@@ -44,6 +44,7 @@
                <l-image
                  class='modal__image-large'
                  :smartcrop="false"
+                 :lazy="false"
                  :fullscreen="true"
                  height="100%"
                  :src="item.image.src"
@@ -74,7 +75,7 @@ export default {
   data() {
     return {
       is_mounted: false,
-      modal_header: {
+      modal_ui: {
         show: false,
         timeout: null
       },
@@ -84,19 +85,14 @@ export default {
   methods: {
     show(_i) {
       this.$router.push(`#${_i}_${this.value[_i].image.title || ''}_gallery`)
-      document.onkeydown = (ev) => {
-        (ev.key == 'Escape') && this.hide();
-        (ev.key == 'ArrowLeft') && this.prev();
-        (ev.key == 'ArrowRight') && this.next();
-      }
     },
     showMore() {
       this.num_thumbnails += Math.min(30, this.num - this.num_thumbnails)
     },
     hide() {
-      this.modal_header.show = false;
-      window.clearTimeout(this.modal_header.timeout)
-      this.modal_header.timeout = null;
+      this.modal_ui.show = false;
+      window.clearTimeout(this.modal_ui.timeout)
+      this.modal_ui.timeout = null;
       this.$router.push(this.$route.path);
       document.onkeydown = null;
     },
@@ -130,14 +126,14 @@ export default {
       }
     },
     visible(i) {
-      return this.delta(i) == 0
+      return Math.abs(this.delta(i)) <= 1
     },
     showHeader() {
-      this.modal_header.show = true;
-      if (!this.modal_header.timeout) {
-        this.modal_header.timeout = window.setTimeout(() => {
-          this.modal_header.show = false;
-          this.modal_header.timeout = null;
+      this.modal_ui.show = true;
+      if (!this.modal_ui.timeout) {
+        this.modal_ui.timeout = window.setTimeout(() => {
+          this.modal_ui.show = false;
+          this.modal_ui.timeout = null;
         }, 3000)
       }
     },
@@ -159,6 +155,16 @@ export default {
   },
   mounted() {
     this.is_mounted = true
+    document.onkeydown = (ev) => {
+      if (this.modal) {
+        (ev.key == 'Escape') && this.hide();
+        (ev.key == 'ArrowLeft' || ev.key == 'j') && this.prev();
+        (ev.key == 'ArrowRight' || ev.key == 'l') && this.next();
+      }
+    }
+  },
+  beforeDestroy() {
+    document.onkeydown = undefined
   },
   computed: {
     num() { return this.value.length },

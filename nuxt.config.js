@@ -76,8 +76,8 @@ export default {
    */
   modules: [
     '@nuxtjs/markdownit',
-    '@nuxtjs/svg',
     'bootstrap-vue/nuxt',
+    ['@nuxtjs/svg', { svgo: true }],
     ['@nuxtjs/moment', { locales: ['de'] }]
   ],
   markdownit: {
