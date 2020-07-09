@@ -11,7 +11,7 @@
       once: true,
       throttle: 150
     }"
-    :class="visible ? 'img-visible' : 'img-hidden'"
+    :class="imgClass"
     :src="computedSrc"
     :alt="alt"
     ref="image"
@@ -20,7 +20,8 @@
 
 <script>
 import loaderSvg from './loaderOpt.svg?data'
-import fullscreenLoaderSvg from './fullscreenLoader.svg?data'
+const fullscreenLoaderSvg = loaderSvg
+// import fullscreenLoaderSvg from './fullscreenLoader.svg?data'
 
 const resolutions = []
 for (let i = 244; i <= 4148; i += 244) {
@@ -57,6 +58,8 @@ export default {
       loaderSvg,
       fullscreenLoaderSvg,
       visible: false,
+      loading: false,
+      loaded: false,
       _shadowImg: undefined,
       _src: ''
     }
@@ -77,6 +80,14 @@ export default {
         index = Math.min(resolutions.length - 1, Math.ceil(index));
         return resolutions[index] 
       }
+    },
+    imgClass() {
+      let res = ''
+      res += this.visible ? ' img-visible' : ' img-hidden';
+      res += this.fullscreen ? ' img-fullscreen' : ''; 
+      res += this.loading ? ' img-loading' : '';
+      res += this.loaded ? ' img-loaded' : '';
+      return res
     }
   },
   methods: {
@@ -84,18 +95,26 @@ export default {
       if (!this.visible) {
         this.visible = isVisible
         if (isVisible) {
-          if (this.fullscreen) {
-            this.computedSrc = fullscreenLoaderSvg
-          } else {
-            this.computedSrc = loaderSvg
-          }
+          requestAnimationFrame(() => {
+            if (this.fullscreen) {
+              this.computedSrc = fullscreenLoaderSvg
+            } else {
+              this.computedSrc = loaderSvg
+            }
+          })
           this.shadow_img.src = this._src
+          this.loading = true
         }
       }
     },
     onLoad() {
-      this.computedSrc = this._src
       cached[this.hash] = true
+      this.loaded = true
+      this.loading = false
+      this.$emit('onload')
+      requestAnimationFrame(() => {
+        this.computedSrc = this._src
+      })
     }
   },
   mounted() {
@@ -104,6 +123,7 @@ export default {
     if (cached[this.hash]) {
       this.computedSrc = this._src
       this.visible = true
+      this.loaded = true
       return
     }
     this.shadow_img = new Image()

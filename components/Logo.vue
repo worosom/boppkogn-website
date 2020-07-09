@@ -16,33 +16,38 @@
          title="Bopp Kogn Facebook"
          target="_blank"
          rel="noopener">
-        <i class="icon ion-logo-facebook"/>
+        <logo-facebook w="2.5rem" h="2.5rem"/>
       </a>
       <a href="https://www.instagram.com/boppkognfestival/"
          title="Bopp Kogn Instagram"
          target="_blank"
          rel="noopener">
-        <i class="icon ion-logo-instagram"/>
+        <logo-instagram w="2.5rem" h="2.5rem"/>
       </a>
     </div>
     <div v-if="!slim && $store.getters.upcoming.length" class="logo__cta">
       <a href="#upcoming" title="Upcoming">
         <h2>Upcoming</h2>
-        <i class="icon ion-md-arrow-round-down"/>
+        <md-arrow-round-down-icon w="2.5rem" h="2.5rem"/>
       </a>
     </div>
     <div v-else-if="!slim && $store.getters.previous.length" class="logo__cta">
       <a href="#previously" title="Previously">
         <h2>Previously</h2>
-        <i class="icon ion-md-arrow-round-down"/>
+        <md-arrow-round-down-icon w="2.5rem" h="2.5rem"/>
       </a>
     </div>
   </div>
 </template>
 
 <script>
+import MdArrowRoundDownIcon from 'vue-ionicons/dist/md-arrow-round-down.vue'
+import LogoInstagram from 'vue-ionicons/dist/logo-instagram.vue'
+import LogoFacebook from 'vue-ionicons/dist/logo-facebook.vue'
+
 export default {
   props: ['slim'],
+  components: {MdArrowRoundDownIcon, LogoFacebook, LogoInstagram},
   mounted() {
     if (!this.slim)
       this.$el.setAttribute('style', `min-height: ${this.$el.offsetHeight}px;`);

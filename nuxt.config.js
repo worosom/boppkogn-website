@@ -22,8 +22,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preload', type: 'text/css', as: 'style', href: '/webfonts/sporting_grotesque/font.css' },
-      { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css', media: 'none', onload: 'if(media!=="all")media="all"' }
+      { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' }
     ]
   },
   generate: {
@@ -41,7 +40,6 @@ export default {
         .map(filename => {
           const event = require(`./${join(events_path, filename)}`)
           event.date = moment(event.date, 'YYYY-MM-DD hh:mma').utc()
-          console.log(event.slug)
           return {
             route: `/${event.slug}`
           }
@@ -58,7 +56,8 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/scss/main.scss'
+    '@/assets/scss/main.scss',
+    'vue-ionicons/ionicons.css'
   ],
   /*
    ** Plugins to load before mounting the App

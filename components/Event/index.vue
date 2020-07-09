@@ -101,7 +101,7 @@
       <client-only>
         <b-row>
           <b-col>
-            <h1 class="event__media_header">Pics</h1>
+            <h1 class="event__media_header" id="pics">Pics</h1>
           </b-col>
         </b-row>
         <b-row>

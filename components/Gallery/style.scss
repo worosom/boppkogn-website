@@ -88,6 +88,34 @@
 }
 
 #gallery_modal {
+  .modal-content {
+    border-radius: 0;
+    header, footer {
+      border-radius: 0;
+      will-change: transform;
+      transition: transform 200ms ease-out;
+    }
+    header {
+      transform: translate3d(0, -100%, 0);
+    }
+    footer {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  cursor: none;
+  &.active {
+    header, footer {
+    }
+    .modal-content {
+      header {
+        transform: translate3d(0, 0%, 0);
+      }
+      footer {
+        transform: translate3d(0, 0%, 0);
+      }
+    }
+    cursor: auto;
+  }
   .modal {
     &-dialog-centered {
       position: fixed;
@@ -102,41 +130,92 @@
       background: #000;
       border-width: 0;
       height: 100%;
-    }
-    &-header {
-      position: fixed;
-      width: 100%;
-      width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-      background-color: transparent;
-      border: none;
-      padding: 0;
-      .btn {
-        background-color: #00F;
-        border: none;
-        border-radius: 0;
-        text-transform: uppercase;
-        font-family: "Sporting Grotesque_Bold", sans-serif;
+      .modal-header,
+      .modal-footer {
+        position: fixed;
         width: 100%;
-        will-change: transform, background, color;
-        transition: transform 150ms ease-in-out;
-        i { font-size: 1.5rem; line-height: 1rem; vertical-align: middle; }
-        &:active, &:focus {
-          transform: translate3d(0, 0, 0) !important;
+        z-index: 1;
+        background: rgba(255,0,0,1);
+        border: none;
+        // backdrop-filter: blur(10px) contrast(2);
+      }
+      .modal-header {
+        top: 0;
+        left: 0;
+        padding: .25;
+        .title {
+          margin: 0;
+          position: relative;
+          padding-top: .35rem;
+          padding-left: .4rem;
+          padding-right: .4rem;
+          font-family: "Sporting Grotesque_Regular";
+          font-size: 1rem;
+          background-color: #00F;
+          color: #FF0;
         }
-        &:active {
-          animation: active 100ms infinite;
+      }
+      .modal-footer {
+        bottom: 0;
+        left: 0;
+        padding: .25;
+        line-height: 1;
+        .gallery_progress {
+          line-height: 1;
+          background-color: #00F;
+          color: #FF0;
+          position: relative;
+          margin: 0;
+          padding-top: .35rem;
+          padding-left: .4rem;
+          padding-right: .4rem;
+          font-family: "Sporting Grotesque_Regular";
+          font-size: 1rem;
         }
-        &.hidden { transform: translate3d(0, -100%, 0); }
+      }
+      .gallery_modal__ui {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        line-height: 1;
+        padding: 0;
+        margin: 0;
+        .btn {
+          background: #00F;
+          border: none;
+          border-radius: 0;
+          padding: 0;
+          display: inline-flex;
+          svg {
+            color: #FF0;
+          }
+          &:hover:not(.disabled),
+          &:active:not(.disabled),
+          &:focus:not(.disabled) {
+            border-radius: 100%;
+            transition: border-radius 150ms ease-out;
+            background: #FF0;
+            svg {
+              color: #00F;
+              animation: activity 50ms infinite alternate linear;
+            }
+          }
+        }
+        &--helper {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          user-select: none;
+        }
       }
     }
     &-body {
       padding: 0;
     }
     &__media {
-      border-radius: 5px;
+      border-radius: 0;
       border-width: 0;
       overflow: hidden;
     }
@@ -145,6 +224,8 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      touch-action: none;
+      user-select: none;
       img {
         width: 100%;
         height: 100%;
@@ -162,53 +243,17 @@
         display: block;
       }
     }
-
-    &__controls {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      &--prev,
-      &--next {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5vh;
-        height: 100vh;
-        background: white;
-        opacity: 0;
-        will-change: background, color, opacity;
-        transition: opacity 150ms ease-in-out;
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        i {
-          font-size: 10vh;
-          color: black;
-        }
-        &:hover, &:focus {
-          background-color: white;
-          opacity: .25;
-        }
-        &:active {
-          opacity: .25;
-          animation: active 100ms infinite;
-        }
-      }
-      &--next {
-        left: 100%;
-        transform: translate(-100%, 0);
-      }
-      &--prev, &--next {
-        min-width: 8rem;
-      }
-    }
     @keyframes active {
       0% { background: #F00; color: #00F; }
-      50% { background: #0F0; color: #F00; }
-      100% { background: #00F; color: #0F0; }
+      50% { background: #FF0; color: #F00; }
+      100% { background: #00F; color: #FF0; }
     }
+  }
+}
+#modal_credits {
+  .modal-body {
+    background: #00F;
+    color: #FF0;
+    font-family: "Sporting Grotesque_Bold";
   }
 }
