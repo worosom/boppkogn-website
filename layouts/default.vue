@@ -1,11 +1,11 @@
 <template>
   <section class="main_wrap">
-    <logo :slim="true"/>
+    <bk-logo :slim="true"/>
     <nuxt/>
-    <about/>
-    <partners/>
-    <contact/>
-    <b-footer/>
+    <bk-about/>
+    <bk-partners/>
+    <bk-contact/>
+    <bk-footer/>
   </section>
 </template>
 
@@ -15,19 +15,19 @@ body {
 }
 </style>
 <script>
-import Logo from '~/components/Logo'
-import About from '~/components/About'
-import Partners from '~/components/Partners'
-import Contact from '~/components/Contact'
-import BFooter from '../components/Footer';
+import BkLogo from '~/components/Logo'
+import BkAbout from '~/components/About'
+import BkPartners from '~/components/Partners'
+import BkContact from '~/components/Contact'
+import BkFooter from '../components/Footer';
 
 export default {
   components: {
-    Logo,
-    About,
-    Partners,
-    Contact,
-    BFooter
+    BkLogo,
+    BkAbout,
+    BkPartners,
+    BkContact,
+    BkFooter
   }
 }
 </script>

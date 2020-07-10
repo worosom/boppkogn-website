@@ -69,7 +69,7 @@
                v-if="visible[_i]">
                <l-image
                  class='modal__image-large'
-                 @onload="currentIsLoaded = true"
+                 @onload="onLoad(_i)"
                  :smartcrop="false"
                  :lazy="false"
                  :fullscreen="true"
@@ -195,6 +195,11 @@ export default {
           break;
           case 4:
           this.prev();
+      }
+    },
+    onLoad(i) {
+      if (this.delta(i) == 0) {
+        this.currentIsLoaded = true
       }
     }
   },

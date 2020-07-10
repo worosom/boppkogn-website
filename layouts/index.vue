@@ -1,9 +1,9 @@
 <template>
   <section class="main_wrap">
-    <logo/>
+    <bk-logo/>
     <nuxt/>
-    <contact/>
-    <b-footer/>
+    <bk-contact/>
+    <bk-footer/>
   </section>
 </template>
 
@@ -13,15 +13,15 @@ body {
 }
 </style>
 <script>
-import Logo from '~/components/Logo'
-import Contact from '~/components/Contact'
-import BFooter from '../components/Footer';
+import BkLogo from '~/components/Logo'
+import BkContact from '~/components/Contact'
+import BkFooter from '../components/Footer';
 
 export default {
   components: {
-    Logo,
-    Contact,
-    BFooter
+    BkLogo,
+    BkContact,
+    BkFooter
   }
 }
 </script>
