@@ -1,19 +1,3 @@
-<style lang="scss">
-.event_preview {
-  .ls-blur-up-img {
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: transparent;
-    will-change: filter, opacity;
-    transition: filter 200ms ease-in-out, opacity 200ms ease-in-out;
-    filter: blur(15px);
-  }
-}
-</style>
 <style scoped lang="scss">
 h1 {
   color: #ff0;
@@ -129,10 +113,18 @@ h1 {
       </b-col>
     </b-row>
     <b-row>
-      <b-col class="event_preview col-md-4 col-12"
+      <b-col class="event_preview"
+             xs="12"
+             sm="6"
+             md="6"
+             lg="4"
+             xl="3"
              v-for="(p, index) in previous"
              v-bind:key="index">
-        <nuxt-link :to="'/'+p.slug+'#content'" class="event_preview__link">
+        <nuxt-link
+          :to="'/'+p.slug+'#content'"
+          class="event_preview__link mb-4"
+          >
           <div class="event_preview__image_wrap">
             <l-image
               class="event_preview__image"

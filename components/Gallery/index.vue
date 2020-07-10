@@ -11,9 +11,10 @@
                sm="6"
                md="4"
                class="mb-3 mt-3"
-               @click.stop="show(i)"
                :key="i">
-          <thumbnail :value="item.image"/>
+          <thumbnail :href="getHash(i)"
+                     :title="`Gallery image ${item.image.title ? item.image.title : ''}`"
+                     :value="item.image"/>
         </b-col>
       </b-row>
       <b-row v-if="num_thumbnails < num && is_mounted">
@@ -116,8 +117,11 @@ export default {
     }
   },
   methods: {
+    getHash(_i) {
+      return `#${_i}_${this.value[_i].image.title || ''}_gallery`
+    },
     show(_i) {
-      this.$router.push(`#${_i}_${this.value[_i].image.title || ''}_gallery`)
+      this.$router.push(this.getHash(_i))
     },
     showMore() {
       this.num_thumbnails += Math.min(30, this.num - this.num_thumbnails)
@@ -162,7 +166,7 @@ export default {
         this.modal_ui.show = true;
         this._modal_original_class = document.getElementById('gallery_modal').className
         document.getElementById('gallery_modal').className += ' active'
-        this.modal_ui.timeout = window.setTimeout(this.hideUI, 3000)
+        this.modal_ui.timeout = window.setTimeout(this.hideUI, 3500)
       }
     },
     hideUI() {

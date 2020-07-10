@@ -1,7 +1,8 @@
 <template>
   <b-col class="artist artist__wrap"
          nuxt link :to="artist.link"
-         sm="12"
+         xs="12"
+         sm="6"
          md="6"
          lg="4"
          xl="3">
