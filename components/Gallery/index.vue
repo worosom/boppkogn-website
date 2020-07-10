@@ -13,6 +13,7 @@
                class="mb-3 mt-3"
                :key="i">
           <thumbnail :href="getHash(i)"
+                     @click="show(i)"
                      :title="`Gallery image ${item.image.title ? item.image.title : ''}`"
                      :value="item.image"/>
         </b-col>
