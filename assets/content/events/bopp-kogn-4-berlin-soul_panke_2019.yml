@@ -90,17 +90,49 @@ artists:
 media:
   - image:
       src: /images/boppkogn-berlin-soul_0.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_1.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_2.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_4.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_5.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_7.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_8.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/boppkogn-berlin-soul_9.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'

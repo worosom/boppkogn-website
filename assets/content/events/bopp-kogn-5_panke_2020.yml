@@ -66,81 +66,241 @@ artists:
 media: 
   - image:
       src: "/images/BK5-Poster-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Logo-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Logo-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Panke-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Panke-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Panke-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-El_Che-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-4.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-5.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Crowd-6.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Beat_Pete-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Beat_Pete_2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Beat_Pete_3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Beat_Pete_4.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-B2BCrew-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-B2BCrew-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-DJ_Gizzel-Alice_Dee-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Leila_A.-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-John_Known-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-John_Known-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-John_Known-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Terra_Pete-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Terra_Pete-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Terra_Pete-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Terra_Pete-4.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Terra_Pete-5.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Mal_Eleve-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Mal_Eleve-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Mal_Eleve-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Mal_Eleve-4.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Hityawitthat-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Hityawitthat-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Hityawitthat-3.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Hityawitthat-4.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Hityawitthat-5.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Dope_est._Dope-John_Known-1.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: "/images/BK5-Dope_est._Dope-John_Known-2.jpg"
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'

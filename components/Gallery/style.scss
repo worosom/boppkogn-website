@@ -252,9 +252,65 @@
   }
 }
 #modal_credits {
+  .modal-dialog {
+    max-width: fit-content;
+  }
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    background: #F00;
+  }
   .modal-body {
-    background: #00F;
-    color: #FF0;
     font-family: "Sporting Grotesque_Bold";
+    padding: 2rem 1.5rem;
+  }
+  .modal_credit {
+    background-color: #00F;
+    color: #FF0;
+    line-height: 1.5;
+    padding: 1.5rem;
+    &_text {
+      margin-bottom: .5rem;
+    }
+    a {
+      display: inline-flex;
+      color: #FF0;
+      border: solid 1px #FF0;
+      padding: .25rem;
+      padding-right: .45rem;
+      position: relative;
+      text-decoration: none;
+      span {
+        padding-top: .30rem;
+      }
+      svg {
+        fill: #FF0;
+        transition: transform 150ms ease-out;
+      }
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #FF0;
+        transition: width 150ms ease-in-out;
+      }
+      &:hover, &:focus, &:active {
+        border-color: red;
+        &::before {
+          width: 100%;
+        }
+        span, svg {
+          animation: activity 100ms linear infinite;
+          fill: #F00;
+          z-index: 1;
+        }
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
   }
 }

@@ -88,7 +88,24 @@
         body-bg-variant="#00F"
         body-text-variant="#FF0"
         lazy centered hide-footer hide-header>
-        {{credits}}
+        <b-container>
+          <b-row>
+            <b-col
+              :class="'mx-2 modal_credit'"
+              v-for="credit in credits"
+              >
+              <div v-if="credit.text" class="modal_credit_text">{{credit.text}}</div>
+              <a
+                :href="`https://instagram.com/${credit.instagram}/`"
+                target="_blank"
+                :title="`Instagram @${credit.instagram}`"
+                v-if="credit.instagram">
+                <logo-instagram w="2rem" h="2rem"/>
+                <span>@{{credit.instagram}}</span>
+              </a>
+            </b-col>
+          </b-row>
+        </b-container>
       </b-modal>
     </div>
   </div>
@@ -99,12 +116,13 @@ import MdCloseIcon from 'vue-ionicons/dist/md-close.vue'
 import MdInformationIcon from 'vue-ionicons/dist/md-information.vue'
 import MdArrowForwardIcon from 'vue-ionicons/dist/md-arrow-forward.vue'
 import MdArrowBackIcon from 'vue-ionicons/dist/md-arrow-back.vue'
+import LogoInstagram from 'vue-ionicons/dist/logo-instagram.vue'
 import Thumbnail from './Thumbnail'
 import LImage from '~/components/Image'
 
 export default {
   props: ['value'],
-  components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon },
+  components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram },
   data() {
     return {
       is_mounted: false,

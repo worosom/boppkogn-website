@@ -91,5 +91,15 @@ collections: # A list of collections the CMS should be able to edit
             required: false
             fields:
               - {label: Title, name: title, widget: string, required: false}
-              - {label: Credits, name: credits, widget: string, required: false}
               - {label: Image, name: src, widget: image}
+              - label: Credits
+                name: credits
+                widget: object
+                required: false
+                fields:
+                  - label: Credit
+                    name: credit
+                    widget: list
+                    fields:
+                      - {label: Text, name: text, widget: string, required: false}
+                      - {label: Instagram, name: instagram, widget: string, required: false}

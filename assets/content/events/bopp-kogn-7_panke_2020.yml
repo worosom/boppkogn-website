@@ -45,26 +45,74 @@ artists:
 media:
   - image:
       src: /images/_mg_0321-verbessert.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0262.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0329-verbessert.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0287.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0388.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0425.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0462.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0486.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0503.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0522.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0556.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
   - image:
       src: /images/_mg_0571.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
 livestream: https://www.twitch.tv/pankeberlin
