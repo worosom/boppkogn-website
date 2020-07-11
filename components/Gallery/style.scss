@@ -252,9 +252,6 @@
   }
 }
 #modal_credits {
-  .modal-dialog {
-    max-width: fit-content;
-  }
   .modal-content {
     border: none;
     border-radius: 0;
@@ -274,14 +271,21 @@
     }
     a {
       display: inline-flex;
+      justify-content: center;
+      width: 100%;
       color: #FF0;
       border: solid 1px #FF0;
       padding: .25rem;
       padding-right: .45rem;
       position: relative;
       text-decoration: none;
+      span,
+      svg {
+        z-index: 1;
+      }
       span {
-        padding-top: .30rem;
+        padding-left: .5rem;
+        padding-top: .35rem;
       }
       svg {
         fill: #FF0;
@@ -305,7 +309,6 @@
         span, svg {
           animation: activity 100ms linear infinite;
           fill: #F00;
-          z-index: 1;
         }
         svg {
           transform: scale(1.2);
@@ -313,4 +316,10 @@
       }
     }
   }
+}
+#modal_credits___BV_modal_backdrop_ {
+  opacity: 1;
+  transition: all 250ms ease-out;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(20px) contrast(2);
 }

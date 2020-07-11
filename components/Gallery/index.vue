@@ -132,7 +132,8 @@ export default {
         timeout: null,
         mouseOver: false
       },
-      num_thumbnails: 6
+      num_thumbnails: 6,
+      throttledShowUI: throttle(this.showUI, 200, {leading: 'visible'})
     }
   },
   methods: {
@@ -224,7 +225,6 @@ export default {
   },
   mounted() {
     this.is_mounted = true
-    this.throttledShowUI = throttle(this.showUI, 200, {leading: 'visible'})
     document.onkeydown = (ev) => {
       if (this.modal) {
         (ev.key == 'Escape') && this.hide();
