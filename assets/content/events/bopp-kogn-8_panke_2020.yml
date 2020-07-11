@@ -35,7 +35,7 @@ artists:
       role: Live MC
   - artist:
       title: DJ Rookie
-      avatar: /images/dj-rookie_1.jpg
+      avatar: /images/dj_rookie_0.jpg
       from: Germany
       link: https://www.facebook.com/djrookieofficial/
       role: DJ
@@ -47,7 +47,7 @@ artists:
       role: DJ
   - artist:
       title: Metabolism
-      avatar: /images/metabolism.jpg
+      avatar: /images/metabolism_1.jpg
       from: Berlin
       link: https://soundcloud.com/metabolism-sa
       role: DJ
