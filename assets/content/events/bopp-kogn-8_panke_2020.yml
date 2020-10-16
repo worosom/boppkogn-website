@@ -60,14 +60,14 @@ artists:
 media:
   - image:
       title: 'Daybee Dee'
-      src: images/bopp-kogn_25-07-2020_daybee-dee.jpg
+      src: images/bopp-kogn_25-07-2020_daybee-dee_1.jpg
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
   - image:
       title: 'Daybee Dee'
-      src: images/bopp-kogn_25-07-2020_daybee-dee_1.jpg
+      src: images/bopp-kogn_25-07-2020_daybee-dee.jpg
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
