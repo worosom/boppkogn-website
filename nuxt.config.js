@@ -4,7 +4,7 @@ import moment from 'moment'
 process.env.TZ = 'Europe/Berlin'
 
 export default {
-  mode: 'universal',
+  target: 'static',
   /*
    ** Headers of the page
    */
