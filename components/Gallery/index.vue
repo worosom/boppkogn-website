@@ -92,7 +92,8 @@
           <b-row>
             <b-col
               :class="'mx-2 modal_credit'"
-              v-for="credit in credits"
+              v-for="(credit, key) in credits"
+              v-key="key"
               >
               <div v-if="credit.text" class="modal_credit_text">{{credit.text}}</div>
               <a
