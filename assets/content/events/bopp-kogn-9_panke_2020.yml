@@ -20,14 +20,8 @@ description: >-
   it easy protect yourself and protect the others ❤️
 
 
-  <br> <br> LINE UP:<br><br> <b>Mr. Gratzzmatazz</b> (DJ/Vinyl)<br><br> <b>Bianca Ciocca </b> (Live Band)<br><br> <b>Carmel Zoum</b> (MC)<br><br> <b>Sleep Twitch</b> (DJ)<br><br>
+  <br> <br> LINE UP:<br><br> <b>Mr. Grazzmatazz</b> (DJ/Vinyl)<br><br> <b>Bianca Ciocca </b> (Live Band)<br><br> <b>Carmel Zoum</b> (MC)<br><br> <b>Sleep Twitch</b> (DJ)<br><br>
 artists:
-  - artist:
-      title: Mr. Grazzmatazz
-      avatar: /images/image2.jpeg
-      from: Berlin
-      link: https://www.instagram.com/mr._grazzmatazz/?igshid=152v9y23n8yah
-      role: DJ/Vinyl
   - artist:
       title: Bianca Ciocca
       avatar: /images/08032019-126-.jpg
@@ -40,6 +34,12 @@ artists:
       from: Berlin
       link: https://www.carmelzoum.com/
       role: MC
+  - artist:
+      title: Mr. Grazzmatazz
+      avatar: /images/image2.jpeg
+      from: Berlin
+      link: https://www.instagram.com/mr._grazzmatazz/?igshid=152v9y23n8yah
+      role: DJ/Vinyl
   - artist:
       title: Sleep Twitch
       avatar: /images/photo_2020-10-20-21.22.20.jpeg
