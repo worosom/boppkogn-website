@@ -97,7 +97,7 @@
       </b-col>
     </b-row>
 
-    <template v-if="media.length">
+    <template v-if="media && media.length">
       <client-only>
         <b-row>
           <b-col>
@@ -110,7 +110,7 @@
       </client-only>
     </template>
 
-    <template v-if="artists.length">
+    <template v-if="artists && artists.length">
       <b-row>
         <b-col>
           <h1 class="event__lineup_header">Lineup</h1>
