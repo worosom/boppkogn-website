@@ -143,12 +143,14 @@ export default {
       livestream: undefined,
       reservation: undefined,
       ...this.event,
-      date: this.$moment(this.event.date)
+      date: this.$moment(this.event.date),
+      media: this.event.media
     }
   },
   computed: {
     time() { 
-      return `${this.date.format('HH')}h` }
+      return `${this.date.format('HH')}h`
+    }
   }
 }
 </script>
