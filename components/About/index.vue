@@ -3,11 +3,6 @@
   &__header {
     color: #00F;
   }
-  &__highlight {
-    background: #FF0;
-    color: #00F;
-    padding: 0 .5rem;
-  }
   position: relative;
   &__abstract { 
     margin-bottom: 30px;
@@ -18,6 +13,15 @@
       line-height: 1.75;
       hyphens: auto;
       padding: 15px;
+      a {
+        text-decoration: underline;
+      }
+      a, b,
+      &__highlight {
+        background: #FF0;
+        color: #00F;
+        padding: 0 .5rem;
+      }
       @media (min-width: 576px) {
         padding: 30px;
       }
@@ -99,9 +103,16 @@
       </b-col>
       <b-col offset="0"
              sm="12"
-             md="6"
              lg="6"
-             xl="12"
+             xl="6"
+             style="z-index: 100"
+             class="about__abstract">
+        <div class="about__abstract--content"
+             v-html="donations"/>
+      </b-col>
+      <b-col offset="0"
+             sm="12"
+             xl="6"
              style="z-index: 100"
              class="about__abstract">
         <div class="text-center about__abstract--content">
@@ -127,7 +138,8 @@ export default {
     const about = this.$store.state.about
     return {
       abstract: about.abstract.map(ob => ob.part),
-      translations: about.translations.map(ob => ob.translation)
+      translations: about.translations.map(ob => ob.translation),
+      donations: about.donations
     }
   }
 }
