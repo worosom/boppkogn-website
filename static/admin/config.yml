@@ -64,6 +64,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Instagram", name: "instagram", widget: "string", tagname: "h1", required: false}
       - {label: "Facebook", name: "facebook", widget: "string", tagname: "h1", required: false}
       - {label: "Residentadvisor", name: "residentadvisor", widget: "string", tagname: "h1", required: false}
+      - {label: "Live Stream", name: "livestream", widget: "string", tagname: "h1", required: false}
       - {label: "Reservation", name: "reservation", widget: "string", tagname: "h1", required: false}
       - {label: "Description", name: "description", widget: "markdown", required: false}
       - {label: "Meta Description", name: "meta_description", widget: "text", required: false}
