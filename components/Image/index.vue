@@ -54,7 +54,7 @@ export default {
   },
   data() {
     return {
-      computedSrc: '',
+      computedSrc: loaderSvg,
       loaderSvg,
       fullscreenLoaderSvg,
       visible: false,

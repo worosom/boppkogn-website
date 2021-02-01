@@ -28,6 +28,7 @@ export default {
       ]
     }
   },
+  scrollToTop: false,
   layout: 'index',
   components: {
     Event,
