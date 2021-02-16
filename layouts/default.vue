@@ -1,7 +1,7 @@
 <template>
   <section class="main_wrap">
     <bk-logo :slim="true"/>
-    <b-btn title="Back" @click.stop.prevent="$router.go(-1)" class="main-back-btn">
+    <b-btn title="Back" @click.stop.prevent="$router.push('/')" class="main-back-btn">
       <md-arrow-back-icon w="1.5rem" h="1.5rem"/>
     </b-btn>
     <nuxt/>

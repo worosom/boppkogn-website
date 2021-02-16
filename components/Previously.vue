@@ -122,7 +122,7 @@ h1 {
              v-for="(p, index) in previous"
              v-bind:key="index">
         <nuxt-link
-          :to="'/'+p.slug+'#content'"
+          :to="'/'+p.slug+'/#content'"
           class="event_preview__link mb-4"
           >
           <div class="event_preview__image_wrap">

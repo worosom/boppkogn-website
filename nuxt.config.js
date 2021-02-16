@@ -25,6 +25,7 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' }
     ]
   },
+  router: { trailingSlash: true },
   generate: {
     routes: () => {
       const fs = require('fs')
