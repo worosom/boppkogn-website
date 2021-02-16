@@ -8,8 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "export": "nuxt export"
+    "generate": "nuxt generate && curl http://analytics.bopp-kogn.africa/js/plausible.js > dist/plausible.js"
   },
   "repository": {
     "type": "git",
