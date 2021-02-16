@@ -5651,6 +5651,11 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
+plausible-tracker@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/plausible-tracker/-/plausible-tracker-0.3.1.tgz#dd4e1f59cafc7bf1b00e30890567287b3f204efd"
+  integrity sha512-oXnVyfTF2gzkfK3iOZCRZEnf8sH4gBASaJhY+clwWW1orIybfQpfbgg4U5Bwj5dW/4iNstM4tx4jMCVUfMCUbg==
+
 popper.js@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
@@ -7812,6 +7817,14 @@ vue-observe-visibility@^0.4.6:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.6.tgz#878cb8ebcf3078e40807af29774e97105ebd519e"
   integrity sha512-xo0CEVdkjSjhJoDdLSvoZoQrw/H2BlzB5jrCBKGZNXN2zdZgMuZ9BKrxXDjNP2AxlcCoKc8OahI3F3r3JGLv2Q==
+
+vue-plausible@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vue-plausible/-/vue-plausible-1.1.2.tgz#8ad4cda6a4932a04f4a6d84616cdea80ced96191"
+  integrity sha512-qK9ktd4Fyc6L2+MlKIEH6jJl//vaMcOiOTOmdVsRJM12mMJIMFy8doCKHEA/n1Ot+VDhe7gSiFhzzFQgn6crzA==
+  dependencies:
+    defu "^2.0.4"
+    plausible-tracker "^0.3.1"
 
 vue-router@^3.4.6:
   version "3.4.7"

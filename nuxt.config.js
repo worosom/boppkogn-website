@@ -23,9 +23,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preload', type: 'text/css', as: 'style', href: '/webfonts/sporting_grotesque/font.css' },
       { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' }
-    ],
-    script: [
-      { async: true, defer: true, 'data-domain': 'bopp-kogn.africa', src: '/js/plausible.js' }
     ]
   },
   generate: {
@@ -80,8 +77,14 @@ export default {
     '@nuxtjs/markdownit',
     'bootstrap-vue/nuxt',
     ['@nuxtjs/svg', { svgo: true }],
-    ['@nuxtjs/moment', { locales: ['de'] }]
+    ['@nuxtjs/moment', { locales: ['de'] }],
+    'vue-plausible'
   ],
+  plausible: {
+    domain: 'bopp-kogn.africa',
+    hashMode: true,
+    apiHost: 'https://stats.ai-interaction.design'
+  }
   markdownit: {
     injected: true
   },
