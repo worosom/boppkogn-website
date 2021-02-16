@@ -22,7 +22,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preload', type: 'text/css', as: 'style', href: '/webfonts/sporting_grotesque/font.css' },
-      { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' }
+      { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' },
+      { rel: 'script', async: true, defer: true, 'data-domain': 'bopp-kogn.africa' src: 'http://analytics.bopp-kogn.africa/js/plausible.js' }
     ]
   },
   generate: {
