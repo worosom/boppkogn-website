@@ -1,6 +1,6 @@
 [build]
   publish = "dist/"
-  command = "yarn build --target static && yarn export"
+  command = "yarn generate"
 
 [[headers]]
 for = "/*"
