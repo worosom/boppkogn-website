@@ -25,7 +25,7 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/webfonts/sporting_grotesque/font.css' }
     ],
     script: [
-      { async: true, defer: true, 'data-domain': 'bopp-kogn.africa', src: '/plausible.js' }
+      { async: true, defer: true, 'data-domain': 'bopp-kogn.africa', src: '/js/plausible.js' }
     ]
   },
   generate: {
