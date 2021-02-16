@@ -85,7 +85,7 @@ export default {
     domain: 'bopp-kogn.africa',
     hashMode: true,
     apiHost: 'https://stats.ai-interaction.design'
-  }
+  },
   markdownit: {
     injected: true
   },
