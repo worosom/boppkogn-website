@@ -41,7 +41,97 @@ artists:
       from: Cologne/Berlin
       link: https://www.instagram.com/sleep.twitch/?hl=en
       role: DJ
-media: []
+media:
+  - image:
+      src: /images/2A5A7326-3.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7419.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7481.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7350.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7340.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7298.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7640.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7394.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7240-3.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7524.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7435.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7576.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7662.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7635.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
+  - image:
+      src: /images/2A5A7650.jpg
+      credits:
+        - credit:
+          text: 'Photo by: Maria Mai'
+          instagram: 'mary_wonka'
 livestream: https://www.twitch.tv/pankeberlin
 date: 2020-10-23 05:00pm
 venue:
