@@ -36,8 +36,11 @@ export default {
     About,
     Partners,
   },
-  computed: {
-    ...mapGetters(['upcoming', 'previous'])
+  async asyncData({store}) {
+    return {
+      upcoming: store.getters.upcoming,
+      previous: store.getters.previous
+    }
   }
 }
 </script>

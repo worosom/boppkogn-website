@@ -19,8 +19,10 @@ export default {
     Event,
     Partners
   },
-  computed: {
-    event() { return this.$store.state.events.filter(e => e.slug == this.$route.params.slug)[0] }
+  async asyncData({store, route}) {
+    return {
+      event: store.state.events.filter(e => e.slug == route.params.slug)[0]
+    }
   },
   layout: 'default'
 }
