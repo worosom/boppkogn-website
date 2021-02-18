@@ -9,7 +9,7 @@
         <h1>
           <span class="event__title">{{title}}</span>
           <span class="event__type">{{type}}</span>
-          <span class="event__date">{{date.format('DD.MM.YYYY')}}</span>
+          <span class="event__date">{{date}}</span>
         </h1>
       </b-col>
       <b-col
@@ -131,6 +131,14 @@ import Artist from '~/components/Artist'
 import Gallery from '~/components/Gallery'
 import './style.scss'
 
+const dateFormat = (date) => {
+  let day = String(date.getDay())
+  day = day.length == 1 ? '0' + day : day
+  let month = String(date.getMonth()+1)
+  month = month.length == 1 ? '0' + month : month
+  return `${day}.${month}.${date.getFullYear()}`
+}
+
 export default {
   components: { Artist, Gallery },
   props: ['event'],
@@ -143,13 +151,9 @@ export default {
       livestream: undefined,
       reservation: undefined,
       ...this.event,
-      date: this.$moment(this.event.date),
-      media: this.event.media
-    }
-  },
-  computed: {
-    time() { 
-      return `${this.date.format('HH')}h`
+      date: dateFormat(this.event.date),
+      media: this.event.media,
+      time: `${this.event.date.getHours()}h`
     }
   }
 }

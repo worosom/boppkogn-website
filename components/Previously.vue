@@ -147,7 +147,7 @@ export default {
   components: {LImage},
   props: ['previous'],
   computed: {
-    dates() { return this.previous.map(({date}) => this.$moment(date)) },
+    dates() { return this.previous.map(({date}) => date) },
     images() {
       return this.previous.map(({image}) => {
         try {

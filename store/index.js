@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 export const state = () => ({
   about: {
     abstract: [],
@@ -8,9 +6,11 @@ export const state = () => ({
   events: []
 })
 
+const datum = (date) => new Date(Date.parse(date.slice(0, -2) + ' ' + date.slice(-2)))
+
 export const mutations = {
   setEvents(state, list) {
-    state.events = list
+    state.events = list.map(event => ({...event, date: datum(event.date)}))
   },
   setAbout(state, list) {
     state.about = list
@@ -18,13 +18,13 @@ export const mutations = {
 }
 
 export const getters = {
-  todaysDate: _ => moment(),
+  todaysDate: _ => new Date(),
   upcoming: state => state.events.filter(ev => {
-    return moment().diff(ev.date) <= 0
-  }).sort((a, b) => -moment(a.date).diff(b.date)),
+    return new Date() - ev.date <= 0
+  }).sort((a, b) => - (a.date - b.date)),
   previous: state => state.events.filter(ev => {
-    return moment().diff(ev.date) > 0
-  }).sort((a, b) => -moment(a.date).diff(b.date))
+    return new Date() - ev.date > 0
+  }).sort((a, b) => - (a.date - b.date))
 }
 
 export const actions = {
@@ -37,7 +37,6 @@ export const actions = {
             .filter(filename => filename.endsWith('yml'))
             .forEach(filename => {
         const event = require(`~/${events_path}/${filename}`)
-        event.date = moment(event.date, 'YYYY-MM-DD hh:mma')
         events.push(event)
       })
       const about = require('~/assets/content/about/about.yml')

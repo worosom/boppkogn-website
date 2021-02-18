@@ -1,7 +1,7 @@
 import path from 'path'
-import moment from 'moment'
 
 process.env.TZ = 'Europe/Berlin'
+const datum = (date) => new Date(Date.parse(date.slice(0, -2) + ' ' + date.slice(-2)))
 
 export default {
   target: 'static',
@@ -40,7 +40,7 @@ export default {
         .filter(filename => filename.endsWith('md'))
         .map(filename => {
           const event = require(`./${join(events_path, filename)}`)
-          event.date = moment(event.date, 'YYYY-MM-DD hh:mma').utc()
+          event.date = datum(event.date)
           return {
             route: `/${event.slug}`
           }
@@ -78,7 +78,6 @@ export default {
     '@nuxtjs/markdownit',
     'bootstrap-vue/nuxt',
     ['@nuxtjs/svg', { svgo: true }],
-    ['@nuxtjs/moment', { locales: ['de'] }],
     'vue-plausible'
   ],
   plausible: {
@@ -93,6 +92,7 @@ export default {
    ** Build configuration
    */
   build: {
+    // analyze: true,
     /*
      ** You can extend webpack config here
      */
@@ -103,6 +103,7 @@ export default {
       config.module.rules.push(
         {
           test: /\.yml$/,
+          include: [path.resolve(__dirname, './assets/content')],
           loader: 'yml-loader'
         }
       )

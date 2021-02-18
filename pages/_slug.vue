@@ -9,7 +9,7 @@ import Partners from '~/components/Partners'
 export default {
   head() {
     return {
-      title: `🎤${this.event.title} ${this.event.venue.name} ${this.$moment(this.event.date).format('YYYY')}`,
+      title: `🎤${this.event.title} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
       meta: [
 	{ hid: 'description', name: 'description', content: this.event.meta_description }
       ] 
