@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Value", name: "value", widget: "string"}
   - name: "artists"
     summary: "{{name}}"
-    label: "Artist"
+    label: "Artists"
     folder: "content/artists"
     extension: "yml"
     slug: "{{fields.slug}}"
@@ -91,6 +91,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: object
             required: false
             fields:
+              - {label: Artist, name: relation, widget: relation, collection: artists, value_field: slug, search_fields: title, required: false}
               - {label: Name, name: title, widget: string, required: false}
               - {label: Role, name: role, widget: string, required: false}
               - {label: From, name: from, widget: string, required: false}
