@@ -111,7 +111,10 @@ collections: # A list of collections the CMS should be able to edit
               - label: Artists
                 name: artists
                 widget: list
-                field: relation
+                fields:
+                  - label: Artist
+                    name: artist
+                    widget: relation
               - label: Credits
                 name: credits
                 widget: object
