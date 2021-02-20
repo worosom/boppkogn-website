@@ -122,7 +122,7 @@ h1 {
              v-for="(p, index) in previous"
              v-bind:key="index">
         <nuxt-link
-          :to="'/'+p.slug+'/#content'"
+          :to="'/events/'+p.slug+'/#content'"
           class="event_preview__link mb-4"
           >
           <div class="event_preview__image_wrap">
@@ -134,7 +134,7 @@ h1 {
           <h3 class="event_preview__info event_preview__title mt-3">{{p.title}}</h3>
           <h4 class="event_preview__info event_preview__type">{{p.type}}</h4>
           <span class="event_preview__info event_preview__location">{{p.venue.name}}</span>
-          <span class="event_preview__info event_preview__year">({{dates[index].year()}})</span>
+          <span class="event_preview__info event_preview__year">({{dates[index].getFullYear()}})</span>
         </nuxt-link>
       </b-col>
     </b-row>

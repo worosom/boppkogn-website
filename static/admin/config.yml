@@ -2,16 +2,16 @@ backend:
   name: git-gateway
   branch: master
 
-site_url: https://bopp-kogn.africa
-display_url: https://bopp-kogn.africa
-logo_url: https://bopp-kogn.africa/bopp-kogn-inline.svg
+site_url: "https://bopp-kogn.africa"
+display_url: "https://bopp-kogn.africa"
+logo_url: "https://bopp-kogn.africa/bopp-kogn-inline.svg"
 media_folder: "static/images" # Media files will be stored in the repo under images/uploads
 public_folder: "/images"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "about"
     label: "About"
-    folder: "assets/content/about"
+    folder: "content/en/about"
     extension: "yml"
     format: "yml"
     slug: "about"
@@ -40,7 +40,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "events" # Used in routes, ie.: /admin/collections/:slug/edit
     summary: "{{title}} | {{type}}"
     label: "Event" # Used in the UI, ie.: "New Post"
-    folder: "assets/content/events"
+    folder: "content/en/events"
     extension: "yml"
     format: "yml"
     slug: "{{fields.slug}}"

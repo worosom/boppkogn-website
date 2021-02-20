@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import VueObserveVisibility from 'vue-observe-visibility'
+import ObserveVisiblity from 'vue-observe-visibility/src/directives/observe-visibility'
 
-Vue.use(VueObserveVisibility)
+Vue.directive('observe-visibility', ObserveVisiblity)

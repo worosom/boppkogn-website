@@ -134,12 +134,10 @@
 </template>
 <script>
 export default {
+  props: ['about'],
   data() {
-    const about = this.$store.state.about
     return {
-      abstract: about.abstract.map(ob => ob.part),
-      translations: about.translations.map(ob => ob.translation),
-      donations: about.donations
+      ...this.about
     }
   }
 }

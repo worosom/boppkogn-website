@@ -25,15 +25,8 @@
         <logo-instagram w="2.5rem" h="2.5rem"/>
       </a>
     </div>
-    <div v-if="!slim && $store.getters.upcoming.length" class="logo__cta">
-      <a href="#upcoming" title="Upcoming">
-        <h2>Upcoming</h2>
-        <md-arrow-round-down-icon w="2.5rem" h="2.5rem"/>
-      </a>
-    </div>
-    <div v-else-if="!slim && $store.getters.previous.length" class="logo__cta">
-      <a href="#previously" title="Previously">
-        <h2>Previously</h2>
+    <div class="logo__cta">
+      <a href="#events" title="Events">
         <md-arrow-round-down-icon w="2.5rem" h="2.5rem"/>
       </a>
     </div>

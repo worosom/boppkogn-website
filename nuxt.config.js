@@ -1,7 +1,5 @@
 import path from 'path'
-
-process.env.TZ = 'Europe/Berlin'
-const datum = (date) => new Date(Date.parse(date.slice(0, -2) + ' ' + date.slice(-2)))
+import { datum } from './util.js'
 
 export default {
   target: 'static',
@@ -26,29 +24,6 @@ export default {
     ]
   },
   router: { trailingSlash: true },
-  generate: {
-    routes: () => {
-      const fs = require('fs')
-      const {join} = require('path')
-      const events_path = './assets/content/events'
-
-      const routes = [
-        {
-          route: '/'
-        },
-        ...fs.readdirSync(events_path)
-        .filter(filename => filename.endsWith('md'))
-        .map(filename => {
-          const event = require(`./${join(events_path, filename)}`)
-          event.date = datum(event.date)
-          return {
-            route: `/${event.slug}`
-          }
-        })
-      ]
-      return routes
-    }
-  },
   /*
    ** Customize the progress-bar color
    */
@@ -75,38 +50,60 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/markdownit',
+    '@nuxt/content',
     'bootstrap-vue/nuxt',
     ['@nuxtjs/svg', { svgo: true }],
     'vue-plausible'
   ],
+  content: {
+    liveEdit: false
+  },
+  bootstrapVue: {
+    componentPlugins: [
+      'LayoutPlugin',
+      'ModalPlugin',
+      'ButtonPlugin'
+    ]
+  },
   plausible: {
     domain: 'bopp-kogn.africa',
     hashMode: true,
     apiHost: 'https://stats.ai-interaction.design'
   },
-  markdownit: {
-    injected: true
+  generate: {
+    async routes () {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('en/events', { deep: true }).fetch()
+      const about = await $content('en/about/about').fetch()
+      return files.map(file => ({
+        route: file.path.slice(3) + '/',
+        payload: {
+          event: {
+            ...file,
+            date: datum(file.date)
+          },
+          about: {
+            abstract: about.abstract.map(ob => ob.part),
+            translations: about.translations.map(ob => ob.translation),
+            donations: about.donations
+          }
+        }
+      }))
+    }
   },
   /*
    ** Build configuration
    */
   build: {
     // analyze: true,
+    // extractCSS: true,
     /*
      ** You can extend webpack config here
      */
-    extend (config, _ctx) {
-      config.node = {
-        fs: "empty"
-      };
-      config.module.rules.push(
-        {
-          test: /\.yml$/,
-          include: [path.resolve(__dirname, './assets/content')],
-          loader: 'yml-loader'
-        }
-      )
+    extend (config, ctx) {
+      if (ctx.isClient) {
+        config.devtool = 'source-map'
+      }
     }
   }
 }

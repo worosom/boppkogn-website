@@ -9,7 +9,10 @@
     v-observe-visibility="{
       callback: visibilityChanged,
       once: true,
-      throttle: 150
+      throttle: 50,
+      throttleOptions: {
+        leading: 'hidden'
+      }
     }"
     :class="imgClass"
     :src="computedSrc"

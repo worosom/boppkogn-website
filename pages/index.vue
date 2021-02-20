@@ -1,23 +1,23 @@
 <template>
-  <b-container fluid>
+  <b-container id="events" class="pt-1" fluid>
     <event v-if="upcoming"
            v-for="(u, id) in upcoming"
            :key="id"
            id="upcoming"
            :event="u"/>
     <previously v-if="previous.length" id="previously" :previous="previous" />
-    <about/>
+    <about :about="about"/>
     <partners/>
   </b-container>
 </template>
 
 
 <script>
-import { mapGetters } from 'vuex'
 import Event from '~/components/Event'
 import Previously from '~/components/Previously'
 import About from '~/components/About'
 import Partners from '~/components/Partners'
+import { datum } from '~/util.js'
 
 export default {
   head() {
@@ -36,10 +36,22 @@ export default {
     About,
     Partners,
   },
-  async asyncData({store}) {
+  async asyncData({$content, store, payload}) {
+    let events = await $content('en/events').fetch()
+    events = events.map(event => ({...event, date: datum(event.date)}))
+    const about = await $content('en/about/about').fetch()
     return {
-      upcoming: store.getters.upcoming,
-      previous: store.getters.previous
+      upcoming: events.filter(ev => {
+        return new Date() - ev.date <= 0
+      }).sort((a, b) => - (a.date - b.date)),
+      previous: events.filter(ev => {
+        return new Date() - ev.date > 0
+      }).sort((a, b) => - (a.date - b.date)),
+      about: {
+        abstract: about.abstract.map(ob => ob.part),
+        translations: about.translations.map(ob => ob.translation),
+        donations: about.donations
+      }
     }
   }
 }

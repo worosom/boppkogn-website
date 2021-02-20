@@ -625,3 +625,15 @@ h3 {
     }
   }
 }
+
+.color-picker {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .color {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+  }
+}

@@ -5,8 +5,6 @@
       <md-arrow-back-icon w="1.5rem" h="1.5rem"/>
     </b-btn>
     <nuxt/>
-    <bk-about/>
-    <bk-partners/>
     <bk-contact/>
     <bk-footer/>
   </section>
@@ -40,8 +38,6 @@ body {
 </style>
 <script>
 import BkLogo from '~/components/Logo'
-import BkAbout from '~/components/About'
-import BkPartners from '~/components/Partners'
 import BkContact from '~/components/Contact'
 import BkFooter from '../components/Footer';
 import MdArrowBackIcon from 'vue-ionicons/dist/md-arrow-back.vue'
@@ -49,8 +45,6 @@ import MdArrowBackIcon from 'vue-ionicons/dist/md-arrow-back.vue'
 export default {
   components: {
     BkLogo,
-    BkAbout,
-    BkPartners,
     BkContact,
     BkFooter,
     MdArrowBackIcon
