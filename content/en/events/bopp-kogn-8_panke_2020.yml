@@ -10,6 +10,7 @@ venue:
 address: Gerichtstraße 23, Berlin
 instagram: https://www.instagram.com/boppkognfestival/
 facebook: https://www.facebook.com/events/400977987522625/
+livestream: https://www.twitch.tv/pankeberlin
 reservation: https://docs.google.com/forms/d/e/1FAIpQLSdL144Kj2P7Z3yVebtZjbdc17Qua1NRSY4Wwsb0IDl1Dhbr_w/viewform?usp=sf_link
 description: It’s all about hip hop.<br> There is so much that we can learn from
   each other. <a
@@ -57,152 +58,152 @@ artists:
       from: Berlin
       link: https://mixcloud.com/djprimark/
       role: DJ
+      relation: dj-primark
 media:
   - image:
-      title: 'Daybee Dee'
+      title: Daybee Dee
       src: /images/bopp-kogn_25-07-2020_daybee-dee_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Daybee Dee'
+      title: Daybee Dee
       src: /images/bopp-kogn_25-07-2020_daybee-dee.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'DJ Primark'
+      title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'DJ Primark'
+      title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'DJ Primark'
+      title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark_2.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'GALV / DJ Rookie'
+      title: GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_0.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'GALV / DJ Rookie'
+      title: GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'John Known / GALV / DJ Rookie'
+      title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'John Known / GALV / DJ Rookie'
+      title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'John Known / GALV / DJ Rookie'
+      title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known_2.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'John Known'
+      title: John Known
       src: /images/bopp-kogn_25-07-2020_john-known.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Metabolism'
+      title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Metabolism'
+      title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Metabolism'
+      title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism_2.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'El Che Baba Cherif'
+      title: El Che Baba Cherif
       src: /images/bopp-kogn_25-07-2020_el-che.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Traphousekitchen Berlin'
+      title: Traphousekitchen Berlin
       src: /images/bopp-kogn_25-07-2020_traphousekitchen.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Bopp Kogn'
+      title: Bopp Kogn
       src: /images/bopp-kogn_25-07-2020.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Bopp Kogn'
+      title: Bopp Kogn
       src: /images/bopp-kogn_25-07-2020_0.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Bopp Kogn'
+      title: Bopp Kogn
       src: /images/bopp-kogn_25-07-2020_1.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Bopp Kogn'
+      title: Bopp Kogn
       src: /images/bopp-kogn_25-07-2020_2.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
   - image:
-      title: 'Bopp Kogn'
+      title: Bopp Kogn
       src: /images/bopp-kogn_25-07-2020_3.jpg
       credits:
-        - credit:
-          text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
-livestream: https://www.twitch.tv/pankeberlin
+        - credit: null
+          text: "Photo by: Maria Mai"
+          instagram: mary_wonka
