@@ -81,6 +81,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: dj-primark
   - image:
       title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark_1.jpg
@@ -88,6 +90,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: dj-primark
   - image:
       title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark_2.jpg
@@ -95,6 +99,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: dj-primark
   - image:
       title: GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_0.jpg
