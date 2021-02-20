@@ -108,6 +108,10 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Title, name: title, widget: string, required: false}
               - {label: Image, name: src, widget: image}
+              - label: Artists
+                name: artists
+                widget: list
+                field: relation
               - label: Credits
                 name: credits
                 widget: object
