@@ -111,14 +111,8 @@ collections: # A list of collections the CMS should be able to edit
               - label: Artists
                 name: artists
                 widget: list
-                field:
-                  - label: Artist
-                    name: artist
-                    widget: relation
-                    collection: artists
-                    value_field: slug
-                    search_fields: ['title', 'slug', 'role']
-                    required: false
+                fields:
+                  - {label: Artist, name: relation, widget: relation, collection: artists, value_field: slug, search_fields: ['title', 'slug', 'role'], required: false}
               - label: Credits
                 name: credits
                 widget: object
