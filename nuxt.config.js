@@ -87,13 +87,14 @@ export default {
             }
           })
         }) 
+        const artists = await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`artists/${artist.relation}`).fetch() : artist))
         return {
           route: `/events/${route}/`,
           payload: {
             event: {
               ...event,
               date: datum(event.date),
-              artists: await Promise.all(event.artists.map(async artist => artist.relation ? (await $content(`artists/${artist.relation}`).fetch()) : artist))
+              artists
             },
             about: {
               abstract: about.abstract.map(ob => ob.part),
