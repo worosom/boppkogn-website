@@ -25,7 +25,7 @@
         <logo-instagram w="2.5rem" h="2.5rem"/>
       </a>
     </div>
-    <div class="logo__cta">
+    <div v-if="!slim" class="logo__cta">
       <a href="#events" title="Events">
         <md-arrow-round-down-icon w="2.5rem" h="2.5rem"/>
       </a>
