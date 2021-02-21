@@ -29,7 +29,12 @@ export default {
   async asyncData({$content, route, payload}) {
     if (payload) return payload;
     let event = await $content(`en/events/${route.params.slug}`).fetch()
-    event = {...event, date: datum(event.date)}
+    const artists = await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`artists/${artist.relation}`).fetch() : artist))
+    event = {
+      ...event,
+      date: datum(event.date),
+      artists,
+    }
     const about = await $content('en/about/about').fetch()
     return {
       event,

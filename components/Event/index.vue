@@ -120,7 +120,7 @@
       <b-row>
         <artist v-for="(artist, key) in artists"
                 :key="key"
-                :artist="artist.artist"/>
+                :artist="artist"/>
       </b-row>
     </template>
   </b-container>

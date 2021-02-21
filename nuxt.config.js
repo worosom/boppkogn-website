@@ -1,5 +1,5 @@
 import path from 'path'
-import { datum } from './util.js'
+import { datum, imageURI } from './util.js'
 
 export default {
   target: 'static',
@@ -73,22 +73,37 @@ export default {
   generate: {
     async routes () {
       const { $content } = require('@nuxt/content')
-      const files = await $content('en/events', { deep: true }).fetch()
       const about = await $content('en/about/about').fetch()
-      return files.map(file => ({
-        route: file.path.slice(3) + '/',
-        payload: {
-          event: {
-            ...file,
-            date: datum(file.date)
-          },
-          about: {
-            abstract: about.abstract.map(ob => ob.part),
-            translations: about.translations.map(ob => ob.translation),
-            donations: about.donations
+      const files = await $content('en/events', { deep: true }).fetch()
+      const gallery = []
+      const events = await Promise.all(files.map(async event => {
+        const route = event.path.split('/')[3]
+        event.media && event.media.forEach((m, i) => {
+          const _route = imageURI(route, i, m.image)
+          gallery.push({
+            route: _route,
+            payload: {
+              media: event.media
+            }
+          })
+        }) 
+        return {
+          route: `/events/${route}/`,
+          payload: {
+            event: {
+              ...event,
+              date: datum(event.date),
+              artists: await Promise.all(event.artists.map(async artist => artist.relation ? (await $content(`artists/${artist.relation}`).fetch()) : artist))
+            },
+            about: {
+              abstract: about.abstract.map(ob => ob.part),
+              translations: about.translations.map(ob => ob.translation),
+              donations: about.donations
+            }
           }
         }
       }))
+      return [...events, ...gallery]
     }
   },
   /*

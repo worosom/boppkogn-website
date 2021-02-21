@@ -1,0 +1,343 @@
+
+.media {
+  width: 100%;
+  &__thumbnail_wrapper {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &::before {
+      background-color: yellow;
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__thumbnail {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 150ms ease-in-out;
+    will-change: transform;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__links_wrap {
+    margin: 3rem 0;
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00f;
+      z-index: -1;
+      transform: rotate(-3deg);
+      transition: background-color 200ms ease, transform 200ms ease;
+    }
+    &:hover::before {
+      background-color: #ff0;
+      transform: rotate(-3deg) translate3d(5px, 5px, 0);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15%;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      background-image: url('/contact-yellow.svg#svgView(preserveAspectRatio(none))');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      z-index: -2;
+      transform: rotate(7deg);
+      transition: transform 200ms ease;
+    }
+    &:hover::after {
+      background-image: url('/contact.svg#svgView(preserveAspectRatio(none))');
+      transform: rotate(-3deg) translate3d(-1px, -3px, 0);
+    }
+
+    .btn {
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-family: "Sporting Grotesque_Bold";
+      z-index: 1;
+      padding: 1rem 2rem;
+      color: #ff0;
+      &:hover {
+        background-color: transparent;
+        color: #f00;
+      }
+      &:active {
+        background-color: transparent !important;
+        animation: activity 50ms infinite alternate linear;
+      }
+    }
+  }
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery_modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#gallery_modal {
+  .modal-content {
+    border-radius: 0;
+    header, footer {
+      border-radius: 0;
+      will-change: transform;
+      transition: transform 200ms ease-out;
+    }
+    header {
+      transform: translate3d(0, -100%, 0);
+    }
+    footer {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  cursor: none;
+  &.active {
+    header, footer {
+    }
+    .modal-content {
+      header {
+        transform: translate3d(0, 0%, 0);
+      }
+      footer {
+        transform: translate3d(0, 0%, 0);
+      }
+    }
+    cursor: auto;
+  }
+  .modal {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-width: unset;
+    .modal-header,
+    .modal-footer {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      background: rgba(255,0,0,1);
+      border: none;
+      // backdrop-filter: blur(10px) contrast(2);
+    }
+    .modal-header {
+      top: 0;
+      left: 0;
+      padding: .25;
+      .title {
+        margin: 0;
+        position: relative;
+        padding-top: .35rem;
+        padding-left: .4rem;
+        padding-right: .4rem;
+        font-family: "Sporting Grotesque_Regular";
+        font-size: 1rem;
+        background-color: #00F;
+        color: #FF0;
+      }
+    }
+    .modal-footer {
+      bottom: 0;
+      left: 0;
+      padding: .25;
+      line-height: 1;
+      .gallery_progress {
+        line-height: 1;
+        background-color: #00F;
+        color: #FF0;
+        position: relative;
+        margin: 0;
+        padding-top: .35rem;
+        padding-left: .4rem;
+        padding-right: .4rem;
+        font-family: "Sporting Grotesque_Regular";
+        font-size: 1rem;
+      }
+    }
+    .gallery_modal__ui {
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      line-height: 1;
+      padding: 0;
+      margin: 0;
+      .btn {
+        background: #00F;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        display: inline-flex;
+        svg {
+          color: #FF0;
+        }
+        &:hover:not(.disabled),
+        &:active:not(.disabled),
+        &:focus:not(.disabled) {
+          border-radius: 100%;
+          transition: border-radius 150ms ease-out;
+          background: #FF0;
+          svg {
+            color: #00F;
+            animation: activity 50ms infinite alternate linear;
+          }
+        }
+      }
+      &--helper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        user-select: none;
+      }
+    }
+    &-content {
+      background: #000;
+      border-width: 0;
+      height: 100%;
+    }
+    &-body {
+      padding: 0;
+    }
+    &__media {
+      border-radius: 0;
+      border-width: 0;
+      overflow: hidden;
+    }
+    &__image {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+      user-select: none;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+      }
+      &-large::before {
+        content: " ";
+        display: block;
+        padding-top: 100%;
+      }
+      &--current {
+        display: block;
+      }
+    }
+    @keyframes active {
+      0% { background: #F00; color: #00F; }
+      50% { background: #FF0; color: #F00; }
+      100% { background: #00F; color: #FF0; }
+    }
+  }
+}
+#modal_credits {
+  .modal-content {
+    border: none;
+    border-radius: 0;
+    background: #F00;
+  }
+  .modal-body {
+    font-family: "Sporting Grotesque_Bold";
+    padding: 2rem 1.5rem;
+  }
+  .modal_credit {
+    background-color: #00F;
+    color: #FF0;
+    line-height: 1.5;
+    padding: 1.5rem;
+    &_text {
+      margin-bottom: .5rem;
+    }
+    a {
+      display: inline-flex;
+      justify-content: center;
+      width: 100%;
+      color: #FF0;
+      border: solid 1px #FF0;
+      padding: .25rem;
+      padding-right: .45rem;
+      position: relative;
+      text-decoration: none;
+      span,
+      svg {
+        z-index: 1;
+      }
+      span {
+        padding-left: .5rem;
+        padding-top: .35rem;
+      }
+      svg {
+        fill: #FF0;
+        transition: transform 150ms ease-out;
+      }
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #FF0;
+        transition: width 150ms ease-in-out;
+      }
+      &:hover, &:focus, &:active {
+        border-color: red;
+        &::before {
+          width: 100%;
+        }
+        span, svg {
+          animation: activity 100ms linear infinite;
+          fill: #F00;
+        }
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+#modal_credits___BV_modal_backdrop_ {
+  opacity: 1;
+  transition: all 250ms ease-out;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(20px) contrast(2);
+}
