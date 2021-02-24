@@ -189,6 +189,11 @@ export async function asyncData({route, $content}) {
 export default {
   layout: 'default',
   components: {Gallery, LImage},
+  head() {
+    return {
+      title: `${this.title} Boppkogn`,
+    }
+  },
   data() {
     return {
       tags: undefined,
