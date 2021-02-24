@@ -151,40 +151,9 @@
 <script>
 import Gallery from '~/components/Gallery'
 import LImage from '~/components/Image'
-import { imageURI } from '~/util'
+import { imageURI, artistData } from '~/util'
 
-Number.prototype.mod = function(n) {
-    return ((this%n)+n)%n;
-};
-
-export async function asyncData({route, $content}) {
-  const data = await $content(`en/artists/${route.params.artist}`).fetch()
-  const all_events = await $content('en/events').fetch()
-  const events = all_events
-    .filter(event => event.artists.filter(({artist}) => artist.relation == data.slug).length)
-  let i = 0
-  let media = all_events.map(({slug, media}) => {
-    if (media) {
-      const _media = media.filter(({image}) => image.artists && image.artists.filter(({relation}) => relation == data.slug).length > 0)
-      _media.forEach(m => {
-        m.slug = slug
-        m.uri = imageURI(route, i, m)
-        i += 1
-      })
-      return _media
-    }
-  }).flat().filter(m => !!m)
-  data.media && (media = Array.concat(data.media,  media))
-  for (let i = 0; i < media.length; i++)  {
-    media[i].previous = media[Number(i-1).mod(media.length)].uri
-    media[i].next = media[Number(i+1).mod(media.length)].uri
-  }
-  return {
-    ...data,
-    events,
-    media
-  }
-}
+export const asyncData = artistData
 
 export default {
   layout: 'default',
@@ -200,6 +169,6 @@ export default {
       bio: undefined
     }
   },
-  asyncData
+  asyncData: artistData
 }
 </script>

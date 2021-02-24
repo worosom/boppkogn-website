@@ -1,5 +1,5 @@
 import path from 'path'
-import { datum, imageURI } from './util.js'
+import { datum, imageURI, artistData } from './util.js'
 
 export default {
   target: 'static',
@@ -98,6 +98,7 @@ export default {
           payload: {
             event: {
               ...event,
+              media: event.media && event.media.map((m, i) => ({...m, uri: imageURI(route, i, m)})),
               date: datum(event.date),
               artists
             },
@@ -109,7 +110,26 @@ export default {
           }
         }
       }))
-      return [...events, ...gallery]
+      const artists = await Promise.all((await $content('en/artists').fetch()).map(async artist =>{
+        const route = {
+          params: {
+            artist: artist.slug
+          }
+        }
+        const data = await artistData({route, $content})
+        if (data.media) {
+          data.media.forEach((m, i) => {
+            gallery.push({
+              route: imageURI(route, i, m.image),
+              payload: {
+                media: data.media
+              }
+            })
+          })
+        }
+        return data
+      }))
+      return [...events, ...gallery, ...artists]
     }
   },
   /*
