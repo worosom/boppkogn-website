@@ -105,8 +105,8 @@
             Resident
           </section>
         </b-col>
-        <b-col sm="4">
-          <l-image :src="avatar" width="100%"/>
+        <b-col md="5" lg="6">
+          <l-image :src="avatar" :smartcrop="false" width="100%"/>
         </b-col>
       </b-row>
       <b-row class="artist_events mb-5">
