@@ -17,7 +17,7 @@ import Event from '~/components/Event'
 import Previously from '~/components/Previously'
 import About from '~/components/About'
 import Partners from '~/components/Partners'
-import { datum } from '~/util.js'
+import { imageURI, datum } from '~/util.js'
 import { resolveArtists }  from '~/pages/events/_slug/index.vue'
 
 export default {
@@ -37,14 +37,18 @@ export default {
     About,
     Partners,
   },
-  async asyncData({$content, store, payload}) {
+  async asyncData({route, $content, store, payload}) {
     let events = await $content('en/events').fetch()
     events = events.map(event => ({...event, date: datum(event.date)}))
     const about = await $content('en/about/about').fetch()
     let upcoming = events.filter(ev => {
         return new Date() - ev.date <= 0
       }).sort((a, b) => - (a.date - b.date))
-    upcoming = await Promise.all(upcoming.map(async event => ({...event, artists: await resolveArtists(event, $content)})))
+    upcoming = await Promise.all(upcoming.map(async event => ({
+      ...event, 
+      media: event.media.map((m, i) => ({...m, uri: imageURI({...route, params: {slug: event.slug}}, i, m)})),
+      artists: await resolveArtists(event, $content)
+    })))
     return {
       upcoming,
       previous: events.filter(ev => {

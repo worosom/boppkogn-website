@@ -59,6 +59,7 @@
     </div>
     <b-modal
       id="modal_credits"
+      ref="modal_credits"
       body-bg-variant="#00F"
       body-text-variant="#FF0"
       lazy centered hide-footer hide-header>
@@ -93,7 +94,7 @@
   </div>
 </template>
 <script>
-import { throttle, imageURI } from '~/util'
+import { throttle, imageURI, artistData } from '~/util'
 import { asyncData } from '~/pages/artists/_artist'
 import MdCloseIcon from 'vue-ionicons/dist/md-close.vue'
 import MdInformationIcon from 'vue-ionicons/dist/md-information.vue'
@@ -109,11 +110,13 @@ export default {
   layout: 'gallery',
   async asyncData(context) {
     const {params, payload, $content} = context
+    let media;
     if (payload) return payload;
     if (params.artist) {
-      return { media: (await asyncData(context)).media }
+      media = (await asyncData(context)).media
+    } else {
+      media = (await $content(`en/events/${params.slug}`).only('media').fetch()).media
     }
-    let { media } = await $content(`en/events/${params.slug}`).only('media').fetch()
     return {
       media
     }
@@ -171,7 +174,7 @@ export default {
       }
     },
     showUI() {
-      if (!this.modal_ui.show) {
+      if (!this.modal_ui.show && (!this.$refs.modal_credits || !this.$refs.modal_credits.isShow)) {
         this.modal_ui.show = true;
         this._modal_original_class = document.getElementById('gallery_modal').className
         document.getElementById('gallery_modal').className += ' active'
@@ -246,6 +249,9 @@ export default {
     },
     credits() {
       return this.media[this.index].image.credits
+    },
+    artists() {
+      return this.media[this.index].image.artists
     }
   }
 }

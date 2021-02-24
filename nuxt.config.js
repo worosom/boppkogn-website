@@ -40,7 +40,8 @@ export default {
    */
   plugins: [
     { src: '~/plugins/vue-hammer.js', ssr: false },
-    { src: '~/plugins/visibility.js', ssr: false }
+    { src: '~/plugins/visibility.js', ssr: false },
+    { src: '~/plugins/load-script.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules

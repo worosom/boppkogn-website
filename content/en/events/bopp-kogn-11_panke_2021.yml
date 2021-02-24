@@ -11,7 +11,12 @@ address: Gerichtstraße 23, Berlin
 instagram: https://www.instagram.com/boppkognfestival/
 facebook: https://www.facebook.com/events/155699423031013/
 residentadvisor: https://ra.co/events/1437389
-livestream: https://www.twitch.tv/pankeberlin
+livestream:
+  link: https://www.twitch.tv/pankeberlin
+  startTime: 2021-02-27 08:50pm
+  endTime: 2021-02-27 02:00am
+  twitch:
+    channel: pankeberlin
 description: "Bopp Kogn celebrates <b>Panke Culture 10 Years Birthday</b> 🥳
   <br> Let's meet again online, Chat, Connect and enjoy good music... 1LOV
   <br><br> We're connecting good old friends with good new friends, moving minds
@@ -32,4 +37,8 @@ media:
       src: /images/pre-show_bopp-kogn-stream-overlays-27.02.2021.jpg
       title: ""
       credits:
-        credit: []
+        - credit:
+          text: 'Graphic design by: Fabian Tombers'
+          website: 'https://fabiantombers.hotglue.me/'
+      artists:
+        - relation: fabian-tombers

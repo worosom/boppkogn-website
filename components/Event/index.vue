@@ -1,6 +1,21 @@
 <template>
   <b-container v-if="event" class="event" id="content">
-    <b-row>
+    <b-row id="event.slug">
+      <client-only>
+        <b-col
+          v-if="livestreamActive"
+          cols="12"
+          class="pl-0 mb-4"
+          style="position: relative; padding-bottom: 56.25%">
+          <vue-twitch-player
+            width="100%"
+            height="100%"
+            style="position: absolute; width: 100%; height: 100%"
+            :channel="event.livestream.twitch.channel"
+            :volume="1"
+            />
+        </b-col>
+      </client-only>
       <b-col
         cols="12"
         md="7"
@@ -77,7 +92,7 @@
           </b-btn>
         </div>
         <div class="event__links_wrap" v-if='livestream'>
-          <b-btn :href="livestream"
+          <b-btn :href="typeof(livestream) == 'object' ? livestream.link : livestream"
                  target="_blank"
                  variant="primary"
                  rel="noopener">
@@ -127,6 +142,8 @@
 </template>
 
 <script>
+import VueTwitchPlayer from 'vue-twitch-player'
+import { datum } from '~/util'
 import Artist from '~/components/Artist'
 import Gallery from '~/components/Gallery'
 import './style.scss'
@@ -140,7 +157,7 @@ const dateFormat = (date) => {
 }
 
 export default {
-  components: { Artist, Gallery },
+  components: { VueTwitchPlayer, Artist, Gallery },
   props: ['event'],
   data() {
     return {
@@ -154,6 +171,11 @@ export default {
       date: dateFormat(this.event.date),
       media: this.event.media,
       time: `${this.event.date.getHours()}h`
+    }
+  },
+  computed: {
+    livestreamActive() {
+      return typeof this.livestream == 'object' && this.livestream.twitch && (Date.now() - datum(this.livestream.startTime) >= 0) && (Date.now() - datum(this.livestream.endTime) <= 0)
     }
   }
 }

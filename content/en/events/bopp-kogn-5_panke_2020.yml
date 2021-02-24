@@ -70,8 +70,13 @@ media:
       src: "/images/BK5-Poster-1.jpg"
       credits:
         - credit:
+          text: 'Graphic Design by: Fabian Tombers'
+          website: 'https://fabiantombers.hotglue.me/'
+        - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: fabian-tombers
   - image:
       src: "/images/BK5-Logo-1.jpg"
       credits:
