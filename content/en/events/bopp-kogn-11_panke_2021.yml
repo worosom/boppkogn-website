@@ -23,7 +23,7 @@ description: "Bopp Kogn celebrates <b>Panke Culture 10 Years Birthday</b> 🥳
   and bodies with the music of these beautiful people: <br><br> 
     <b>Flash Tarzan & Derron</b><br><br><b>MAL
   ÉLEVÉ</b>(Live) <br><br> <b>Sorah & Intare</b>(Live) <br><br> <b>DJ O</b>(DJ)
-  <br><br> <b>Daybee Dee</b>(DJ)"
+  <br><br> <b>Daybee Dee</b>(DJ) <br><br> <b>Flash Tarzan & Derron</b>(DJ)"
 artists:
   - artist:
       relation: mal-eleve
@@ -42,8 +42,8 @@ media:
       src: /images/pre-show_bopp-kogn-stream-overlays-27.02.2021.jpg
       title: ""
       credits:
-        - credit:
-          text: 'Graphic design by: Fabian Tombers'
-          website: 'https://fabiantombers.hotglue.me/'
+        - credit: null
+          text: "Graphic design by: Fabian Tombers"
+          website: https://fabiantombers.hotglue.me/
       artists:
         - relation: fabian-tombers
