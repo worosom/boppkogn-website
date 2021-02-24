@@ -20,7 +20,8 @@ livestream:
 description: "Bopp Kogn celebrates <b>Panke Culture 10 Years Birthday</b> 🥳
   <br> Let's meet again online, Chat, Connect and enjoy good music... 1LOV
   <br><br> We're connecting good old friends with good new friends, moving minds
-  and bodies with the music of these beautiful people: <br><br> <b>MAL
+  and bodies with the music of these beautiful people: <br><br> 
+    <b>Flash Tarzan & Derron</b><br><br><b>MAL
   ÉLEVÉ</b>(Live) <br><br> <b>Sorah & Intare</b>(Live) <br><br> <b>DJ O</b>(DJ)
   <br><br> <b>Daybee Dee</b>(DJ)"
 artists:
@@ -28,6 +29,10 @@ artists:
       relation: mal-eleve
   - artist:
       relation: sorah-intare
+  - artist:
+      relation: flash-tarzan
+  - artist:
+      relation: derron
   - artist:
       relation: dj-o
   - artist:

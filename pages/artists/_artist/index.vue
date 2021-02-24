@@ -20,7 +20,7 @@
     color: yellow;
     background: blue;
     padding: 1rem;
-    font-family: "Sporting Grotesque";
+    font-family: "Sporting Grotesque_Regular";
     hyphens: auto;
   } 
   a {
