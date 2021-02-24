@@ -51,6 +51,35 @@ collections: # A list of collections the CMS should be able to edit
       - {label: From, name: from, widget: string, required: false}
       - {label: Link, name: link, widget: string, required: false}
       - {label: Avatar, name: avatar, widget: image, required: false}
+      - label: "Media"
+        name: "media"
+        widget: "list"
+        fields:
+          - label: Image
+            name: image
+            summary: '{{title}}'
+            widget: object
+            required: false
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Image, name: src, widget: image}
+              - label: Artists
+                name: artists
+                widget: list
+                fields:
+                  - {label: Artist, name: relation, widget: relation, collection: artists, value_field: slug, display_fields: ['title'], search_fields: ['title', 'slug', 'role'], required: false}
+              - label: Credits
+                name: credits
+                widget: object
+                required: false
+                fields:
+                  - label: Credit
+                    name: credit
+                    widget: list
+                    fields:
+                      - {label: Text, name: text, widget: string, required: false}
+                      - {label: Instagram, name: instagram, widget: string, required: false}
+                      - {label: Website, name: website, widget: string, required: false}
   - name: "events" # Used in routes, ie.: /admin/collections/:slug/edit
     summary: "{{title}} | {{type}}"
     label: "Event" # Used in the UI, ie.: "New Post"

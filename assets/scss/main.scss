@@ -186,12 +186,34 @@ h3 {
 }
 
 .artist {
+  display: block;
   position: relative;
   margin-bottom: 2rem;
+  text-decoration: none !important;
 
-  a {
-    text-decoration: none;
+  &:hover,
+  &:focus {
+    outline: none;
+    .artist__wrap--inner {
+      &:before,
+      &:before {
+        width: 100%;
+      }
+      .artist__image {
+        transform: scale(1.2);
+      }
+    }
+    .artist__title {
+      color: #f00;
+    }
+    .artist__role {
+      color: #00f;
+    }
+    .artist__from {
+      color: #00F;
+    }
   }
+
   &__wrap--inner {
     position: relative;
     &::before {
@@ -202,14 +224,6 @@ h3 {
       background-color: yellow;
       transition: width 200ms ease;
       z-index: -1;
-    }
-    &:hover::before {
-      width: 100%;
-    }
-    &:hover {
-      .artist__image {
-        transform: scale(1.2);
-      }
     }
   }
 

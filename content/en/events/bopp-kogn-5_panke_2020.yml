@@ -33,12 +33,14 @@ artists:
       from: Berlin
       link: 'https://www.mal-eleve.com/'
       role: MC
+      relation: mal-eleve
   - artist:
       title: Terra Pete
       avatar: /images/terra-pete.jpeg
       from: Berlin
       link: 'https://krekpek.bandcamp.com/album/erdenmann'
       role: MC
+      relation: terra-pete
   - artist:
       title: John Known
       avatar: /images/john-known.jpeg
@@ -88,6 +90,8 @@ media:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: el-che-44
   - image:
       src: "/images/BK5-Panke-2.jpg"
       credits:
@@ -148,159 +152,214 @@ media:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: beatpete
   - image:
       src: "/images/BK5-Beat_Pete_2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: beatpete
   - image:
       src: "/images/BK5-Beat_Pete_3.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: beatpete
   - image:
       src: "/images/BK5-Beat_Pete_4.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: beatpete
+        - relation: el-che-44
   - image:
       src: "/images/BK5-B2BCrew-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: b2bcrew
   - image:
       src: "/images/BK5-B2BCrew-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: b2bcrew
   - image:
       src: "/images/BK5-DJ_Gizzel-Alice_Dee-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: b2bcrew
   - image:
       src: "/images/BK5-Leila_A.-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: b2bcrew
   - image:
       src: "/images/BK5-John_Known-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: john-known
   - image:
       src: "/images/BK5-John_Known-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: john-known
   - image:
       src: "/images/BK5-John_Known-3.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: john-known
   - image:
       src: "/images/BK5-Terra_Pete-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: terra-pete
   - image:
       src: "/images/BK5-Terra_Pete-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: terra-pete
   - image:
       src: "/images/BK5-Terra_Pete-3.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: terra-pete
   - image:
       src: "/images/BK5-Terra_Pete-4.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: terra-pete
   - image:
       src: "/images/BK5-Terra_Pete-5.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: terra-pete
   - image:
       src: "/images/BK5-Mal_Eleve-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: mal-eleve
   - image:
       src: "/images/BK5-Mal_Eleve-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: mal-eleve
   - image:
       src: "/images/BK5-Mal_Eleve-3.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: mal-eleve
   - image:
       src: "/images/BK5-Mal_Eleve-4.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: mal-eleve
   - image:
       src: "/images/BK5-Hityawitthat-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: hityawitthat
   - image:
       src: "/images/BK5-Hityawitthat-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: hityawitthat
   - image:
       src: "/images/BK5-Hityawitthat-3.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: hityawitthat
   - image:
       src: "/images/BK5-Hityawitthat-4.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: hityawitthat
   - image:
       src: "/images/BK5-Hityawitthat-5.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: hityawitthat
   - image:
       src: "/images/BK5-Dope_est._Dope-John_Known-1.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: dope-est-dope
   - image:
       src: "/images/BK5-Dope_est._Dope-John_Known-2.jpg"
       credits:
         - credit:
           text: 'Photo by: Maria Mai'
           instagram: 'mary_wonka'
+      artists:
+        - relation: dope-est-dope

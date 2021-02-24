@@ -111,7 +111,7 @@
     </template>
 
     <template v-if="artists && artists.length">
-      <b-row>
+      <b-row id="lineup">
         <b-col>
           <h1 class="event__lineup_header">Lineup</h1>
         </b-col>

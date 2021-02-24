@@ -67,7 +67,7 @@ export default {
   },
   plausible: {
     domain: 'bopp-kogn.africa',
-    hashMode: true,
+    hashMode: false,
     apiHost: 'https://stats.ai-interaction.design'
   },
   generate: {
@@ -77,7 +77,12 @@ export default {
       const files = await $content('en/events', { deep: true }).fetch()
       const gallery = []
       const events = await Promise.all(files.map(async event => {
-        const route = event.path.split('/')[3]
+        let route = event.path.split('/')[3]
+        route = {
+          params: {
+            slug: route
+          }
+        }
         event.media && event.media.forEach((m, i) => {
           const _route = imageURI(route, i, m.image)
           gallery.push({
@@ -87,9 +92,9 @@ export default {
             }
           })
         }) 
-        const artists = await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`artists/${artist.relation}`).fetch() : artist))
+        const artists = await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`en/artists/${artist.relation}`).fetch() : artist))
         return {
-          route: `/events/${route}/`,
+          route: `/events/${route.params.slug}/`,
           payload: {
             event: {
               ...event,
@@ -113,6 +118,7 @@ export default {
   build: {
     // analyze: true,
     // extractCSS: true,
+    followSymlinks: true,
     /*
      ** You can extend webpack config here
      */

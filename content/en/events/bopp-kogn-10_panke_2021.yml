@@ -15,8 +15,6 @@ livestream: https://www.twitch.tv/pankeberlin
 description: >-
   <b> BOPP KOGN </b> comes back in <b> 2021 </b> <br> with an original <b>
   Lockdown Groove Livestream </b>, comin' straight to your home base!
-
-
   <br> <br> LINE UP:<br><br> <b>Trixter</b> (DJ)<br><br> <b>Fritzi Noirhomme </b>(Live)<br><br> <b>El Sheik</b> (DJ)<br><br> <b>EMBE.CLASSIC</b> (DJ)<br><br>
 artists:
   - artist:
@@ -25,21 +23,25 @@ artists:
       from: Berlin
       avatar: /images/promopic-trixter.jpg
       link: https://www.mixcloud.com/trixterVUP/
+      relation: trixter
   - artist:
       title: FRITZI NOIRHOMME
       role: Live Band
       from: Berlin
       link: https://fritzinoirhomme.com
       avatar: /images/eb32b710-6122-4ac2-8396-addbd23eac68.jpeg
+      relation: fritzi-noirhomme
   - artist:
       title: EL SHEIK
       role: DJ
       from: Berlin
       avatar: /images/_dsc4102.jpg
       link: https://www.mixcloud.com/djelsheik/
+      relation: el-sheik
   - artist:
       title: EMBE.CLASSIC
       role: DJ
       from: Berlin
       link: https://soundcloud.com/embeclassic
       avatar: /images/embe_photo_bridge.jpg
+      relation: embe.classic

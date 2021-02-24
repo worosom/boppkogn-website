@@ -20,14 +20,14 @@
           </header>
           <footer class="modal-footer">
             <div class="gallery_modal__ui gallery_modal__ui--bottom hidden" @mouseover="mouseOverUI" @mouseleave="mouseLeaveUI">
-              <b-btn title="Previous" @click="prev()">
+              <b-btn v-if="media.length > 0" title="Previous" @click="prev()">
                 <md-arrow-back-icon w="1.5rem" h="1.5rem"/>
               </b-btn>
               <span class="gallery_progress">
                 {{index+1}} /
                 {{num}}
               </span>
-              <b-btn title="Next" @click="next()">
+              <b-btn v-if="media.length > 0" title="Next" @click="next()">
                 <md-arrow-forward-icon w="1.5rem" h="1.5rem"/>
               </b-btn>
             </div>
@@ -78,6 +78,14 @@
               <logo-instagram w="2rem" h="2rem"/>
               <span>@{{credit.instagram}}</span>
             </a>
+            <a
+              :href="credit.website"
+              target="_blank"
+              title="Website"
+              v-if="credit.website">
+              <logo-open w="2rem" h="2rem"/>
+              <span>Website</span>
+            </a>
           </b-col>
         </b-row>
       </b-container>
@@ -85,20 +93,27 @@
   </div>
 </template>
 <script>
-import { throttle, imageURI } from '~/util.js'
+import { throttle, imageURI } from '~/util'
+import { asyncData } from '~/pages/artists/_artist'
 import MdCloseIcon from 'vue-ionicons/dist/md-close.vue'
 import MdInformationIcon from 'vue-ionicons/dist/md-information.vue'
 import MdArrowForwardIcon from 'vue-ionicons/dist/md-arrow-forward.vue'
 import MdArrowBackIcon from 'vue-ionicons/dist/md-arrow-back.vue'
 import LogoInstagram from 'vue-ionicons/dist/logo-instagram.vue'
+import LogoOpen from 'vue-ionicons/dist/md-open.vue'
 import Thumbnail from '~/components/Gallery/Thumbnail'
 import LImage from '~/components/Image'
 
 export default {
-  components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram },
+  components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram, LogoOpen },
   layout: 'gallery',
-  async asyncData({params, payload, $content}) {
-    const { media } = await $content(`en/events/${params.slug}`).only('media').fetch()
+  async asyncData(context) {
+    const {params, payload, $content} = context
+    if (payload) return payload;
+    if (params.artist) {
+      return { media: (await asyncData(context)).media }
+    }
+    let { media } = await $content(`en/events/${params.slug}`).only('media').fetch()
     return {
       media
     }
@@ -121,16 +136,16 @@ export default {
       this.modal_ui.show = false;
       clearTimeout(this.modal_ui.timeout)
       this.modal_ui.timeout = null;
-      this.$router.push(`/events/${this.$route.params.slug}/` + '#pics');
+      this.$router.push(this.$route.params.artist ? `/artists/${this.$route.params.artist}/#pics` : `/events/${this.$route.params.slug}/#pics`);
     },
     next() {
       const index = (this.index + 1) % this.media.length;
-      this.$router.push(imageURI(this.$route.params.slug, index, this.media[index].image))
+      this.$router.push(imageURI(this.$route, index, this.media[index].image))
       document.activeElement.blur();
     },
     prev() {
       const index = (this.index - (this.index ? 1 : -this.num+1)) % this.media.length;
-      this.$router.push(imageURI(this.$route.params.slug, index, this.media[index].image))
+      this.$router.push(imageURI(this.$route, index, this.media[index].image))
       document.activeElement.blur();
     },
     modal__image_class(i) {
@@ -144,6 +159,9 @@ export default {
       else return `${res} modal__image--current`
     },
     delta(i) {
+      if (this.media.length == 1) {
+        return 0
+      }
       if (this.index == this.num - 1 && i == 0) {
         return this.num
       } else if ( this.index == 0 && i == this.num -1) {
@@ -218,6 +236,7 @@ export default {
       return parseInt(index)
     },
     visible() {
+      if (this.media.length == 1) return [true];
       return this.media.map((val, i) => {
         return this.delta(i) == 0 || (this.currentIsLoaded && Math.abs(this.delta(i)) <= 1)
       })

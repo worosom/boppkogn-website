@@ -12,6 +12,13 @@
       display: block;
       padding-top: 100%;
     }
+    &:hover,
+    &:focus {
+      outline: none;
+      .media__thumbnail {
+        transform: scale(1.2);
+      }
+    }
   }
   &__thumbnail {
     position: absolute;
@@ -22,9 +29,6 @@
     height: 100%;
     transition: transform 150ms ease-in-out;
     will-change: transform;
-    &:hover {
-      transform: scale(1.2);
-    }
   }
   &__links_wrap {
     margin: 3rem 0;

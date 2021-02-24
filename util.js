@@ -30,5 +30,6 @@ export function throttle (callback, delay, options = {}) {
 
 export const imageURI = (route, i, image) => {
   const image_title = image.title || ''
-  return `/events/${route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
+  const _route = route.params.artist ? `/artists/${route.params.artist}` : `/events/${route.params.slug}`
+  return `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
 }

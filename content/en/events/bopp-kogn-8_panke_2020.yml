@@ -34,24 +34,28 @@ artists:
       from: Germany
       link: https://soundcloud.com/der-galv
       role: Live MC
+      relation: galv
   - artist:
       title: DJ Rookie
       avatar: /images/dj_rookie_0.jpg
       from: Germany
       link: https://www.facebook.com/djrookieofficial/
       role: DJ
+      relation: dj-rookie
   - artist:
       title: Daybee Dee
       avatar: /images/daybee-dee.jpg
       from: Berlin
       link: https://soundcloud.com/daybee-dee
       role: DJ
+      relation: daybee-dee
   - artist:
       title: Metabolism
       avatar: /images/metabolism_1.jpg
       from: Berlin
       link: https://soundcloud.com/metabolism-sa
       role: DJ
+      relation: metabolism
   - artist:
       title: DJ Primark
       avatar: /images/dj-primark_1.jpg
@@ -67,6 +71,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: daybee-dee
   - image:
       title: Daybee Dee
       src: /images/bopp-kogn_25-07-2020_daybee-dee.jpg
@@ -74,6 +80,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: daybee-dee
   - image:
       title: DJ Primark
       src: /images/bopp-kogn_25-07-2020_dj-primark.jpg
@@ -108,6 +116,9 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: galv
+        - relation: dj-rookie
   - image:
       title: GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_1.jpg
@@ -115,6 +126,9 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: galv
+        - relation: dj-rookie
   - image:
       title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known.jpg
@@ -122,6 +136,10 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: john-known
+        - relation: galv
+        - relation: dj-rookie
   - image:
       title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known_1.jpg
@@ -129,6 +147,10 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: john-known
+        - relation: galv
+        - relation: dj-rookie
   - image:
       title: John Known / GALV / DJ Rookie
       src: /images/bopp-kogn_25-07-2020_galv_dj-rookie_john-known_2.jpg
@@ -136,6 +158,10 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: john-known
+        - relation: galv
+        - relation: dj-rookie
   - image:
       title: John Known
       src: /images/bopp-kogn_25-07-2020_john-known.jpg
@@ -143,6 +169,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: john-known
   - image:
       title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism.jpg
@@ -150,6 +178,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: metabolism
   - image:
       title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism_1.jpg
@@ -157,6 +187,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: metabolism
   - image:
       title: Metabolism
       src: /images/bopp-kogn_25-07-2020_metabolism_2.jpg
@@ -164,6 +196,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: metabolism
   - image:
       title: El Che Baba Cherif
       src: /images/bopp-kogn_25-07-2020_el-che.jpg
@@ -171,6 +205,8 @@ media:
         - credit: null
           text: "Photo by: Maria Mai"
           instagram: mary_wonka
+      artists:
+        - relation: el-che-44
   - image:
       title: Traphousekitchen Berlin
       src: /images/bopp-kogn_25-07-2020_traphousekitchen.jpg

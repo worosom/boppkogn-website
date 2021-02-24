@@ -119,10 +119,11 @@ h1 {
              md="6"
              lg="4"
              xl="3"
+             :id="p.slug"
              v-for="(p, index) in previous"
              v-bind:key="index">
         <nuxt-link
-          :to="'/events/'+p.slug+'/#content'"
+          :to="'/events/'+p.slug+`/?origin=${encodeURIComponent($route.path+'#'+p.slug)}`+'#content'"
           class="event_preview__link mb-4"
           >
           <div class="event_preview__image_wrap">

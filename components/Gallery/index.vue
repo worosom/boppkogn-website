@@ -12,7 +12,7 @@
                md="4"
                class="mb-3 mt-3"
                :key="i">
-          <thumbnail :href="imageURI($route.params.slug, i, value[i].image)"
+          <thumbnail :href="item.uri"
                      @click.prevent.stop="show(i)"
                      :title="`Gallery image ${item.image.title ? item.image.title : ''}`"
                      :value="item.image"/>
@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     show(_i) {
-      this.$router.push(imageURI(this.$route.params.slug, _i, this.value[_i].image))
+      this.$router.push(imageURI(this.$route, _i, this.value[_i].image))
     },
     showMore() {
       this.num_thumbnails += Math.min(30, this.num - this.num_thumbnails)
@@ -54,8 +54,6 @@ export default {
   },
   mounted() {
     this.is_mounted = true
-  },
-  beforeDestroy() {
   },
   computed: {
     num() { return this.value.length },
