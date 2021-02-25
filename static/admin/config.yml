@@ -40,7 +40,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: "artists"
     summary: "{{title}}"
     label: "Artists"
-    folder: "content/artists"
+    folder: "content/en/artists"
     extension: "yml"
     slug: "{{fields.slug}}"
     create: true
