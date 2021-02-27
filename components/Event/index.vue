@@ -1,6 +1,6 @@
 <template>
   <b-container v-if="event" class="event" id="content">
-    <b-row id="event.slug">
+    <b-row :id="event.slug">
       <client-only>
         <b-col
           v-if="livestreamActive"
@@ -14,6 +14,18 @@
             :channel="event.livestream.twitch.channel"
             :volume="1"
             />
+        </b-col>
+        <b-col
+          v-else-if="timeToStream && timeToStream < 0"
+          ref="timeToStream"
+          cols="12"
+          class="pl-0 mb-4"
+          style="background-color: yellow; position: relative; padding-bottom: 56.25%">
+          <div class="livestream_counter ">
+            <div>
+              {{timeToStreamString}} 
+            </div>
+          </div>
         </b-col>
       </client-only>
       <b-col
@@ -143,13 +155,13 @@
 
 <script>
 import VueTwitchPlayer from 'vue-twitch-player'
-import { datum } from '~/util'
+import { mod, datum } from '~/util'
 import Artist from '~/components/Artist'
 import Gallery from '~/components/Gallery'
 import './style.scss'
 
 const dateFormat = (date) => {
-  let day = String(date.getDay())
+  let day = String(date.getDate())
   day = day.length == 1 ? '0' + day : day
   let month = String(date.getMonth()+1)
   month = month.length == 1 ? '0' + month : month
@@ -170,13 +182,65 @@ export default {
       ...this.event,
       date: dateFormat(this.event.date),
       media: this.event.media,
-      time: `${this.event.date.getHours()}h`
+      time: `${this.event.date.getHours()}h`,
+      timeToStream: false,
+      realTime: Date.now(),
+      interval: undefined,
+      livestreamActive: false
     }
   },
   computed: {
-    livestreamActive() {
-      return typeof this.livestream == 'object' && this.livestream.twitch && (Date.now() - datum(this.livestream.startTime) >= 0) && (Date.now() - datum(this.livestream.endTime) <= 0)
+    realStartTime() { return typeof this.livestream == 'object' && this.livestream.twitch && datum(this.livestream.startTime) },
+    realEndTime() { return typeof this.livestream == 'object' && this.livestream.twitch && datum(this.livestream.endTime) },
+    timeToStreamString() {
+      const ms = Math.abs(this.timeToStream)
+      let d, h, m, s;
+      s = Math.floor(ms / 1000)
+      m = Math.floor(s / 60)
+      s = mod(s, 60)
+      h = Math.floor(m / 60)
+      m = mod(m, 60)
+      d = Math.floor(h / 24)
+      h = mod(h, 24)
+      const str = (x) => {
+        return String(x).length == 1 ? '0' + x : x
+      }
+      let ret = ''
+      if (d > 0) {
+        ret += `${str(d)} Day${d > 1 ? 's' : ''}`
+      }
+      if (h > 0) {
+        ret += ` ${str(h)} Hour${h > 1 ? 's' : ''}`
+      }
+      if (m > 0) {
+        ret += ` ${str(m)} Minute${m > 1 ? 's' : ''}`
+      }
+      if (s > 0) {
+        ret += ` ${str(s)} Second${s > 1 ? 's' : ''}`
+      }
+      return ret
     }
+  },
+  methods: {
+    updateTime() {
+      this.realTime = new Date(Date.now())
+      if (this.realTime - this.realEndTime <= 0) {
+        this.timeToStream = this.realTime - this.realStartTime
+        this.livestreamActive = this.timeToStream > 0 && this.timeToStream < (this.realEndTime - this.realStartTime)
+      } else {
+        this.interval = clearInterval(this.interval)
+        this.livestreamActive = false
+        this.timeToStream = false
+      }
+    }
+  },
+  mounted() {
+    this.realTime = Date.now()
+    this.updateTime()
+    this.interval = setInterval(
+      _ => this.updateTime(),
+      1000
+    )
   }
 }
 </script>

@@ -34,7 +34,7 @@ export const imageURI = (route, i, image) => {
   return `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
 }
 
-const mod = (a, n) => {
+export const mod = (a, n) => {
   return ((a%n)+n)%n;
 }
 

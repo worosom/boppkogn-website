@@ -113,7 +113,7 @@ export default {
     let media;
     if (payload) return payload;
     if (params.artist) {
-      media = (await asyncData(context)).media
+      media = (await artist.asyncData(context)).media
     } else {
       media = (await $content(`en/events/${params.slug}`).only('media').fetch()).media
     }
