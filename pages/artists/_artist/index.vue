@@ -177,7 +177,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: title,
+          content: description,
         },
         {
           hid: 'og:type',

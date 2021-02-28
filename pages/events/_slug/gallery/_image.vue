@@ -298,7 +298,7 @@ export default {
         return this.media.description
       } else if (this.event && this.event.description) {
         return this.event.description.replace(/<[^>]+>/g,'')
-      } else if (this.event && this.artist.bio) {
+      } else if (this.artist && this.artist.bio) {
         return this.artist.bio.replace(/<[^>]+>/g,'')
       }
     },
