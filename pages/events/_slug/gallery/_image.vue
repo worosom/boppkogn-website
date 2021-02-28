@@ -115,6 +115,11 @@ export default {
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `${this.title} - Bopp Kogn HipHop Festival`,
+        },
+        {
           hid: 'description',
           name: 'description',
           content: this.description
@@ -276,8 +281,8 @@ export default {
   },
   computed: {
     title() { 
-      if (this.media.title) {
-        return this.media.title
+      if (this.media[this.index].title) {
+        return this.media[this.index].title
       } else if (this.event.title) {
         return `${this.event.title} ${this.event.type}`
       } else if (this.artist.title) {
@@ -285,7 +290,7 @@ export default {
       }
     },
     description() {
-      if (this.media.description) {
+      if (this.media[this.index].description) {
         return this.media.description
       } else if (this.event.description) {
         return this.event.description.replace(/<[^>]+>/g,'')

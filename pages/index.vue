@@ -29,6 +29,11 @@ export default {
         { hid: 'description', name: 'description', content: 'Bopp Kogn brings people together. Originating from a unique connection between African and European Hip-Hop scenes, this is the first project designed to connect Hip-Hop cultures on a global scale.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
+          hid: 'og:title',
+          property: 'og:title',
+          content: '🎤Hip Hop Festival Bopp Kogn'
+        },
+        {
           hid: 'og:type',
           property: 'og:type',
           content: 'website'
@@ -37,7 +42,22 @@ export default {
           hid: 'og:url',
           property: 'og:url',
           content: process.env.BASE_URL
-        }
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: process.env.BASE_URL + '/boppkogn_header.jpg'
+        },
+        {
+          hid: 'og:image:type',
+          property: 'og:image:type',
+          content: 'image/jpeg'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        },
       ]
     }
   },

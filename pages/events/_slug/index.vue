@@ -19,10 +19,14 @@ export default {
   layout: 'default',
   head() {
     return {
-      title: `🎤${this.event.title} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
+      title: `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: this.event.meta_description || this.event.description.replace(/<[^>]+>/g,'') },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
+        },
         {
           hid: 'og:type',
           property: 'og:type',

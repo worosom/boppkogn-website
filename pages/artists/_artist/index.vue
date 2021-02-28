@@ -167,7 +167,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.bio.replace(/<[^>]+>/g,'')
+          content: this.bio ? this.bio.replace(/<[^>]+>/g,'') : `${this.title} at Bopp Kogn`
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: `${this.title} - Bopp Kogn HipHop Festival`,
         },
         {
           hid: 'og:type',
