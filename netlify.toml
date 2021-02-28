@@ -2,11 +2,6 @@
   publish = "dist/"
   command = "yarn generate --modern"
 
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  [plugins.inputs]
-    buildDir = "dist"
-
 [[headers]]
 for = "/*"
 [headers.values]

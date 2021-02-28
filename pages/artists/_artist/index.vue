@@ -160,7 +160,41 @@ export default {
   components: {Gallery, LImage},
   head() {
     return {
-      title: `${this.title} Boppkogn`,
+      title: `${this.title} - Bopp Kogn HipHop Festival`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.bio.replace(/<[^>]+>/g,'')
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: process.env.BASE_URL + this.$route.path
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: process.env.BASE_URL + this.avatar + '?nf_resize=smartcrop&w=2400&h=1260'
+        },
+        {
+          hid: 'og:image:type',
+          property: 'og:image:type',
+          content: 'image/jpeg'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        },
+      ],
     }
   },
   data() {

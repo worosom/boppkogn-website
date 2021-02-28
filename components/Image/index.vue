@@ -1,9 +1,3 @@
-<style>
-.img-hidden {
-  opacity: 0;
-}
-</style>
-
 <template>
   <img
     v-observe-visibility="{

@@ -89,7 +89,8 @@ export default {
           gallery.push({
             route: _route,
             payload: {
-              media: event.media
+              media: event.media,
+              event
             }
           })
         }) 
@@ -123,7 +124,8 @@ export default {
             gallery.push({
               route: imageURI(route, i, m.image),
               payload: {
-                media: data.media
+                media: data.media,
+                artist: data
               }
             })
           })

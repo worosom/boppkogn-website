@@ -1,4 +1,4 @@
-<style lang="scss">
+<style scoped lang="scss">
 @import '~/assets/scss/gallery.scss';
 </style>
 <template>

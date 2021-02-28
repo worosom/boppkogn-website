@@ -20,7 +20,7 @@
           ref="timeToStream"
           cols="12"
           class="pl-0 mb-4"
-          style="background-color: yellow; position: relative; padding-bottom: 56.25%">
+          style="background-color: yellow; position: relative; padding-bottom: 28%">
           <div class="livestream_counter ">
             <div>
               {{timeToStreamString}} 
@@ -209,21 +209,15 @@ export default {
       if (d > 0) {
         ret += `${str(d)} Day${d > 1 ? 's' : ''}`
       }
-      if (h > 0) {
-        ret += ` ${str(h)} Hour${h > 1 ? 's' : ''}`
-      }
-      if (m > 0) {
-        ret += ` ${str(m)} Minute${m > 1 ? 's' : ''}`
-      }
-      if (s > 0) {
-        ret += ` ${str(s)} Second${s > 1 ? 's' : ''}`
-      }
+      ret += `${str(h)}:`
+      ret += `${str(m)}`
+      ret += `:${str(s)}`
       return ret
     }
   },
   methods: {
     updateTime() {
-      this.realTime = new Date(Date.now())
+      this.realTime = Date.now()
       if (this.realTime - this.realEndTime <= 0) {
         this.timeToStream = this.realTime - this.realStartTime
         this.livestreamActive = this.timeToStream > 0 && this.timeToStream < (this.realEndTime - this.realStartTime)

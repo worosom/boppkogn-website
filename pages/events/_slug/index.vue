@@ -21,8 +21,34 @@ export default {
     return {
       title: `🎤${this.event.title} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
       meta: [
-	{ hid: 'description', name: 'description', content: this.event.meta_description }
-      ] 
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: this.event.meta_description || this.event.description.replace(/<[^>]+>/g,'') },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: process.env.BASE_URL + this.$route.path
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: process.env.BASE_URL + this.event.image + '?nf_resize=smartcrop&w=2400&h=1260'
+        },
+        {
+          hid: 'og:image:type',
+          property: 'og:image:type',
+          content: 'image/jpeg'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: `${this.event.title} ${this.event.type}`
+        },
+      ],
     }
   },
   components: {

@@ -108,16 +108,59 @@ import LImage from '~/components/Image'
 export default {
   components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram, LogoOpen },
   layout: 'gallery',
+  head() {
+    return {
+      title: `${this.title} - Bopp Kogn HipHop Festival`,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: process.env.BASE_URL + this.$route.path
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: process.env.BASE_URL + this.media[this.index].image.src + '?nf_resize=smartcrop&w=2400&h=1260'
+        },
+        {
+          hid: 'og:image:type',
+          property: 'og:image:type',
+          content: 'image/jpeg'
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        },
+      ],
+    }
+  },
   async asyncData(context) {
     const {params, payload, $content} = context
-    let media;
+    let media, artist = {}, event = {};
     if (payload) return payload;
     if (params.artist) {
-      media = (await artist.asyncData(context)).media
+      artist = (await asyncData(context))
+      media = artist.media
     } else {
-      media = (await $content(`en/events/${params.slug}`).only('media').fetch()).media
+      event = (await $content(`en/events/${params.slug}`).fetch())
+      media = event.media
     }
     return {
+      event,
+      artist,
       media
     }
   },
@@ -232,6 +275,24 @@ export default {
     document.onkeydown = undefined
   },
   computed: {
+    title() { 
+      if (this.media.title) {
+        return this.media.title
+      } else if (this.event.title) {
+        return `${this.event.title} ${this.event.type}`
+      } else if (this.artist.title) {
+        return this.artist.title
+      }
+    },
+    description() {
+      if (this.media.description) {
+        return this.media.description
+      } else if (this.event.description) {
+        return this.event.description.replace(/<[^>]+>/g,'')
+      } else if (this.artist.bio) {
+        return this.artist.bio.replace(/<[^>]+>/g,'')
+      }
+    },
     num() { return this.media.length },
     index() {
       const image = this.$route.params.image;
@@ -245,7 +306,7 @@ export default {
       })
     },
     title() {
-      return this.media[this.index].image.title
+      return this.media[this.index].image.title || this.event.title || this.artist.title
     },
     credits() {
       return this.media[this.index].image.credits
