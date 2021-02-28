@@ -159,20 +159,25 @@ export default {
   layout: 'default',
   components: {Gallery, LImage},
   head() {
+    const title = `${this.title} - Bopp Kogn HipHop Festival`,
+      description = this.bio ? this.bio.replace(/<[^>]+>/g,'') : `${this.title} at Bopp Kogn`
     return {
-      title: `${this.title} - Bopp Kogn HipHop Festival`,
+      title,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           hid: 'description',
           name: 'description',
-          content: this.bio ? this.bio.replace(/<[^>]+>/g,'') : `${this.title} at Bopp Kogn`
+          content: description
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `${this.title} - Bopp Kogn HipHop Festival`,
+          content: title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: title,
         },
         {
           hid: 'og:type',

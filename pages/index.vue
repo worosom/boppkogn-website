@@ -22,16 +22,23 @@ import { resolveArtists }  from '~/pages/events/_slug/index.vue'
 
 export default {
   head() {
+    const title = '🎤Hip Hop Festival Bopp Kogn',
+      description = 'Bopp Kogn brings people together. Originating from a unique connection between African and European Hip-Hop scenes, this is the first project designed to connect Hip-Hop cultures on a global scale.'
     return {
-      title: '🎤Hip Hop Festival Bopp Kogn',
+      title,
       meta: [
         { charset: 'utf-8' },
-        { hid: 'description', name: 'description', content: 'Bopp Kogn brings people together. Originating from a unique connection between African and European Hip-Hop scenes, this is the first project designed to connect Hip-Hop cultures on a global scale.' },
+        { hid: 'description', name: 'description', content: description },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: '🎤Hip Hop Festival Bopp Kogn'
+          content: title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
         },
         {
           hid: 'og:type',

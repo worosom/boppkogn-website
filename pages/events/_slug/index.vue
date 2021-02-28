@@ -18,14 +18,21 @@ export const resolveArtists = async (event, $content) => {
 export default {
   layout: 'default',
   head() {
+    const title = `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
+      description = this.event.meta_description || this.event.description.replace(/<[^>]+>/g,'')
     return {
-      title: `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
+      title,
       meta: [
-        { hid: 'description', name: 'description', content: this.event.meta_description || this.event.description.replace(/<[^>]+>/g,'') },
+        { hid: 'description', name: 'description', content: description },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
+          content: title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description,
         },
         {
           hid: 'og:type',

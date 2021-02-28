@@ -109,20 +109,24 @@ export default {
   components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram, LogoOpen },
   layout: 'gallery',
   head() {
+    const title = `${this.title} - Bopp Kogn HipHop Festival`
     return {
-      title: `${this.title} - Bopp Kogn HipHop Festival`,
+      title,
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
         {
           hid: 'og:title',
           property: 'og:title',
           content: `${this.title} - Bopp Kogn HipHop Festival`,
         },
         {
-          hid: 'description',
-          name: 'description',
-          content: this.description
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description,
         },
         {
           hid: 'og:type',
@@ -283,18 +287,18 @@ export default {
     title() { 
       if (this.media[this.index].title) {
         return this.media[this.index].title
-      } else if (this.event.title) {
+      } else if (this.event && this.event.title) {
         return `${this.event.title} ${this.event.type}`
-      } else if (this.artist.title) {
+      } else if (this.artist && this.artist.title) {
         return this.artist.title
       }
     },
     description() {
       if (this.media[this.index].description) {
         return this.media.description
-      } else if (this.event.description) {
+      } else if (this.event && this.event.description) {
         return this.event.description.replace(/<[^>]+>/g,'')
-      } else if (this.artist.bio) {
+      } else if (this.event && this.artist.bio) {
         return this.artist.bio.replace(/<[^>]+>/g,'')
       }
     },
@@ -309,9 +313,6 @@ export default {
       return this.media.map((val, i) => {
         return this.delta(i) == 0 || (this.currentIsLoaded && Math.abs(this.delta(i)) <= 1)
       })
-    },
-    title() {
-      return this.media[this.index].image.title || this.event.title || this.artist.title
     },
     credits() {
       return this.media[this.index].image.credits
