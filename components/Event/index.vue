@@ -40,12 +40,11 @@
         </h1>
       </b-col>
       <b-col
-        v-if="subtitle"
         cols="12"
         md="6"
         lg="3"
         class="event__info">
-        <h2>{{subtitle}}</h2>
+        <h2 v-if="subtitle">{{subtitle}}</h2>
         <div class="pb-2">
           <share-button verbose @click="$refs.modal_share.show()" class="event__share-button"/>
         </div>
@@ -157,7 +156,7 @@
       ref="modal_share"
       :url="url"
       :title="title"
-      :description="description"
+      :description="strippedDescription"
       />
   </b-container>
 </template>
@@ -225,6 +224,9 @@ export default {
       ret += `${str(m)}`
       ret += `:${str(s)}`
       return ret
+    },
+    strippedDescription() {
+      return this.description.replace(/<[^>]+>/g,'')
     }
   },
   methods: {

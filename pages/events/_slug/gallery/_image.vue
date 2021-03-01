@@ -1,9 +1,12 @@
+<style lang="scss">
+@import "@/assets/scss/gallery_image.scss";
+</style>
 <template>
   <div class="gallery_modal">
     <div
       ref="modal"
       id="gallery_modal">
-      <div class="modal">
+      <div class="modal"  style="z-index: 1040;">
         <div class="modal-content">
           <header class="modal-header">
             <div class="gallery_modal__ui gallery_modal__ui--top" @mouseover="mouseOverUI" @mouseleave="mouseLeaveUI">
@@ -65,7 +68,7 @@
       ref="modal_credits"
       body-bg-variant="#00F"
       body-text-variant="#FF0"
-      lazy centered hide-footer hide-header>
+      static lazy centered hide-footer hide-header>
       <b-container>
         <b-row>
           <b-col

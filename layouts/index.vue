@@ -1,27 +1,24 @@
 <template>
   <section class="main_wrap">
-    <bk-logo/>
+    <bk-logo @share="$refs.modal_share.show()"/>
     <nuxt/>
     <bk-contact/>
     <bk-footer/>
+    <share-modal ref="modal_share"/>
   </section>
 </template>
-
-<style>
-body {
-  background: #FF0000;
-}
-</style>
 <script>
 import BkLogo from '~/components/Logo'
 import BkContact from '~/components/Contact'
 import BkFooter from '../components/Footer';
+import ShareModal from '~/components/Share/Modal'
 
 export default {
   components: {
     BkLogo,
     BkContact,
-    BkFooter
+    BkFooter,
+    ShareModal
   }
 }
 </script>

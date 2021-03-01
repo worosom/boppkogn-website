@@ -2,10 +2,14 @@
 @import '@/assets/scss/variables.scss';
 
 h1 {
-  color: $red;
+  color: #0FF;
 }
 
 .container {
+  position: relative;
+}
+
+.event_previews {
   position: relative;
   &::after {
     content: " ";
@@ -16,10 +20,6 @@ h1 {
     height: 100%;
     background-color: $yellow;
   }
-}
-
-.event_previews {
-  position: relative;
 }
 
 .event_preview {

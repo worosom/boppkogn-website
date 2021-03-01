@@ -9,7 +9,7 @@
 import Event from '~/components/Event'
 import About from '~/components/About'
 import Partners from '~/components/Partners'
-import { imageURI, datum } from '~/util.js'
+import { imageURI, datum } from '~/util'
 
 export const resolveArtists = async (event, $content) => {
   return await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`en/artists/${artist.relation}`).fetch() : artist))

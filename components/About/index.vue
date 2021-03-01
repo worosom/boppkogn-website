@@ -1,6 +1,6 @@
 <template>
-  <b-container class="about--container mb-5">
-    <b-row class="mt-5">
+  <b-container class="about--container">
+    <b-row class="mt-3">
       <b-col>
         <h1 class="about__header">Bopp Kogn</h1>
       </b-col>

@@ -24,6 +24,7 @@
          rel="noopener">
         <logo-instagram w="2.5rem" h="2.5rem"/>
       </a>
+      <share-button @click="$emit('share')" w="2.5rem" h="2.5rem"/>
     </div>
     <div v-if="!slim" class="logo__cta">
       <a href="#events" title="Events">
@@ -37,10 +38,11 @@
 import MdArrowRoundDownIcon from 'vue-ionicons/dist/md-arrow-round-down.vue'
 import LogoInstagram from 'vue-ionicons/dist/logo-instagram.vue'
 import LogoFacebook from 'vue-ionicons/dist/logo-facebook.vue'
+import ShareButton from '~/components/Share/Button'
 
 export default {
   props: ['slim'],
-  components: {MdArrowRoundDownIcon, LogoFacebook, LogoInstagram},
+  components: {MdArrowRoundDownIcon, LogoFacebook, LogoInstagram, ShareButton},
   mounted() {
     if (!this.slim)
       this.$el.setAttribute('style', `min-height: ${this.$el.offsetHeight}px;`);
