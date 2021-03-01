@@ -13,7 +13,6 @@
              md="6"
              lg="6"
              xl="4"
-             style="z-index: 100"
              class="about__abstract">
         <div class="about__abstract--content"
              v-html="part"/>
@@ -22,7 +21,6 @@
              sm="12"
              lg="6"
              xl="6"
-             style="z-index: 100"
              class="about__abstract">
         <div class="about__abstract--content"
              v-html="donations"/>
@@ -30,7 +28,6 @@
       <b-col offset="0"
              sm="12"
              xl="6"
-             style="z-index: 100"
              class="about__abstract">
         <div class="text-center about__abstract--content">
           <template v-for="translation in translations">

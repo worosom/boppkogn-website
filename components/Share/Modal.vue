@@ -28,6 +28,7 @@
       align-items: center;
       width: 100%;
       outline: none;
+      border: none;
       background: #FF0;
       color: #009;
       padding: 1rem;
@@ -36,6 +37,9 @@
       overflow: hidden;
       min-height: 3rem;
       word-break: break-all;
+      &:hover {
+        background: #F00;
+      }
       &::selection {
         background: #009;
         color: #FF0;
@@ -89,9 +93,14 @@
     grid-auto-flow: column;
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, 3rem);
+    @media (min-width: 245px) {
+      grid-template-columns: repeat(3, 3rem);
+    }
+    @media (min-width: 30rem) {
+      grid-template-columns: repeat(6, 3rem);
+    }
     grid-auto-flow: dense;
-    justify-content: space-between;
+    justify-content: space-around;
     a {
       display: flex;
       width: 3rem;
@@ -116,7 +125,7 @@
             <b-container>
               <b-row>
                 <b-col>
-                  <h1>Share it</h1>
+                  <h1>Share this</h1>
                 </b-col>
                 <b-col ref="url" class="p-0 share_url_container" cols="12">
                   <textarea
