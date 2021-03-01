@@ -21,7 +21,7 @@
               </div>
             </div>
           </header>
-          <footer class="modal-footer">
+          <footer v-if="num > 1" class="modal-footer">
             <div class="gallery_modal__ui gallery_modal__ui--bottom hidden" @mouseover="mouseOverUI" @mouseleave="mouseLeaveUI">
               <b-btn v-if="media.length > 0" title="Previous" @click="prev()">
                 <md-arrow-back-icon w="1.5rem" h="1.5rem"/>
