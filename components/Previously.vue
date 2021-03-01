@@ -1,6 +1,8 @@
 <style scoped lang="scss">
+@import '@/assets/scss/variables.scss';
+
 h1 {
-  color: #ff0;
+  color: $red;
 }
 
 .container {
@@ -12,7 +14,7 @@ h1 {
     left: -5px;
     width: 3px;
     height: 100%;
-    background-color: #ff0;
+    background-color: $yellow;
   }
 }
 
@@ -33,14 +35,14 @@ h1 {
       position: absolute;
       width: 3px;
       height: 100%;
-      background: #ff0;
+      background: $yellow;
       z-index: -1;
       transition: width 150ms ease-in-out;
     }
     &:hover {
       &__type *,
       &__location *{
-        color: #00f !important;
+        color: $blue !important;
       }
       .event_preview__image {
         transform: scale(1.2);
@@ -76,20 +78,20 @@ h1 {
     }
   }
   &__info {
-    color: #00f;
+    color: $blue;
     padding: 0 0 0 15px;
     transition: color 200ms ease-in-out;
   }
   &__title, &__year {
     :hover > & {
-      color: #F00;
+      color: $red;
     }
   }
   &__type {
-    color: #ff0;
+    color: $yellow;
     margin-bottom: 2rem;
     :hover > & {
-      color: #00F;
+      color: $blue;
     }
   }
   &__location {
@@ -97,7 +99,7 @@ h1 {
     font-weight: bold;
     text-decoration: underline;
     :hover > & {
-      color: #F00;
+      color: $red;
     }
   }
   &__year {

@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .media {
   width: 100%;
   &__thumbnail_wrapper {
@@ -155,7 +157,6 @@ body,
       z-index: 1;
       background: rgba(255,0,0,1);
       border: none;
-      // backdrop-filter: blur(10px) contrast(2);
     }
     .modal-header {
       top: 0;
@@ -169,8 +170,10 @@ body,
         padding-right: .4rem;
         font-family: "Sporting Grotesque_Regular";
         font-size: 1rem;
-        background-color: #00F;
+        background-color: $blue;
         color: #FF0;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
     .modal-footer {
@@ -180,7 +183,7 @@ body,
       line-height: 1;
       .gallery_progress {
         line-height: 1;
-        background-color: #00F;
+        background-color: $blue;
         color: #FF0;
         position: relative;
         margin: 0;
@@ -198,12 +201,23 @@ body,
       line-height: 1;
       padding: 0;
       margin: 0;
+      &--top {
+        &__buttons {
+          display: grid;
+          grid-auto-flow: column;
+          grid-column-gap: 1rem; 
+        }
+      }
       .btn {
-        background: #00F;
+        background: $blue;
         border: none;
         border-radius: 0;
         padding: 0;
+        width: 1.5rem;
+        height: 1.5rem;
         display: inline-flex;
+        justify-content: center;
+        align-items: center;
         svg {
           color: #FF0;
         }
@@ -214,7 +228,7 @@ body,
           transition: border-radius 150ms ease-out;
           background: #FF0;
           svg {
-            color: #00F;
+            color: $blue;
             animation: activity 50ms infinite alternate linear;
           }
         }
@@ -266,9 +280,9 @@ body,
       }
     }
     @keyframes active {
-      0% { background: #F00; color: #00F; }
+      0% { background: #F00; color: $blue; }
       50% { background: #FF0; color: #F00; }
-      100% { background: #00F; color: #FF0; }
+      100% { background: $blue; color: #FF0; }
     }
   }
 }
@@ -283,7 +297,7 @@ body,
     padding: 2rem 1.5rem;
   }
   .modal_credit {
-    background-color: #00F;
+    background-color: $blue;
     color: #FF0;
     line-height: 1.5;
     padding: 1.5rem;
@@ -338,7 +352,8 @@ body,
     }
   }
 }
-#modal_credits___BV_modal_backdrop_ {
+#modal_credits___BV_modal_backdrop_,
+#modal_share___BV_modal_backdrop_ {
   opacity: 1;
   transition: all 250ms ease-out;
   background-color: rgba(0, 0, 0, .5);

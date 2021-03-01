@@ -57,7 +57,8 @@ export default {
     '@nuxt/content',
     'bootstrap-vue/nuxt',
     ['@nuxtjs/svg', { svgo: true }],
-    'vue-plausible'
+    'vue-plausible',
+    'vue-social-sharing/nuxt'
   ],
   content: {
     liveEdit: false

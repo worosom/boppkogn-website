@@ -46,6 +46,9 @@
         lg="3"
         class="event__info">
         <h2>{{subtitle}}</h2>
+        <div class="pb-2">
+          <share-button verbose @click="$refs.modal_share.show()" class="event__share-button"/>
+        </div>
       </b-col>
       <b-col
         cols="5"
@@ -150,6 +153,12 @@
                 :artist="artist"/>
       </b-row>
     </template>
+    <share-modal
+      ref="modal_share"
+      :url="url"
+      :title="title"
+      :description="description"
+      />
   </b-container>
 </template>
 
@@ -159,17 +168,19 @@ import { mod, datum } from '~/util'
 import Artist from '~/components/Artist'
 import Gallery from '~/components/Gallery'
 import './style.scss'
+import ShareButton from '~/components/Share/Button'
+import ShareModal from '~/components/Share/Modal'
 
 const dateFormat = (date) => {
   let day = String(date.getDate())
   day = day.length == 1 ? '0' + day : day
   let month = String(date.getMonth()+1)
   month = month.length == 1 ? '0' + month : month
-  return `${day}.${month}.${date.getFullYear()}`
+  return `${day}.${month} ${date.getFullYear()}`
 }
 
 export default {
-  components: { VueTwitchPlayer, Artist, Gallery },
+  components: { ShareButton, ShareModal, VueTwitchPlayer, Artist, Gallery },
   props: ['event'],
   data() {
     return {
@@ -190,6 +201,7 @@ export default {
     }
   },
   computed: {
+    url() { return process.env.BASE_URL + this.path.slice(3) + '/' },
     realStartTime() { return typeof this.livestream == 'object' && this.livestream.twitch && datum(this.livestream.startTime) },
     realEndTime() { return typeof this.livestream == 'object' && this.livestream.twitch && datum(this.livestream.endTime) },
     timeToStreamString() {

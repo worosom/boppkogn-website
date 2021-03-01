@@ -94,7 +94,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
       - {label: "Type", name: "type", widget: "string", tagname: "h1", required: false}
       - {label: "Subtitle", name: "subtitle", widget: "string", tagname: "h1", required: false}
-      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma", picker_utc: true}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma", picker_utc: false}
       - label: "Venue"
         name: "venue"
         required: false

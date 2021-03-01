@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+.artist-page {
+  &_meta {
+    h1 {
+      background: yellow;
+      color: $blue;
+    }
+    h2 {
+      color: yellow;
+    }
+    h3 {
+      color: #0FF;
+    }
+    h1, h2, h3 {
+      padding: .7rem .7rem 0 .7rem;
+      display: inline-block;
+    }
+  }
+  &_bio {
+    color: yellow;
+    background: $blue;
+    padding: 1rem;
+    font-family: "Sporting Grotesque_Regular";
+    hyphens: auto;
+  } 
+  a {
+    display: inline-block;
+    font-family: "Sporting Grotesque_Bold";
+    background: yellow;
+    color: red;
+    text-decoration: underline;
+    margin-top: .5rem;
+    padding: 1rem;
+    transition: transform 150ms ease-out, background 150ms ease-out;
+    transform: rotate(-2deg);
+    &:hover,
+    &:active,
+    &:focus {
+      background: $blue;
+      color: #FF0;
+      transform: rotate(0deg) !important;
+      .artist_event_type {
+        color: #0FF;
+      }
+    }
+  }
+  .badge {
+    font-family: "Sporting Grotesque_Bold";
+    background: #0FF;
+    color: #F00;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: transform 150ms ease-out;
+    transform: rotate(3deg);
+    &--1 {
+      transform: rotate(-1deg);
+    }
+    &:hover {
+      transform: rotate(0deg);
+    }
+  }
+  &_events {
+    h1 {
+      color: yellow;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      img {
+        aspect-ratio: 1;
+        object-fit: cover;
+        margin-right: 1rem;
+      }
+    }
+  }
+  &_event_type {
+    color: #00F;
+  }
+}

@@ -13,9 +13,12 @@
               <span v-if="title" class="title">
                 {{title}}
               </span>
-              <b-btn title="Credits" :disabled="!credits" v-b-modal.modal_credits>
-                  <md-information-icon w="1.5rem" h="1.5rem"/>
-              </b-btn>
+              <div class="gallery_modal__ui--top__buttons">
+                <share-button @click="$refs.modal_share.show()"/>
+                <b-btn title="Credits" :disabled="!credits" v-b-modal.modal_credits>
+                    <md-information-icon w="1.5rem" h="1.5rem"/>
+                </b-btn>
+              </div>
             </div>
           </header>
           <footer class="modal-footer">
@@ -91,6 +94,12 @@
         </b-row>
       </b-container>
     </b-modal>
+    <share-modal
+      ref="modal_share"
+      :url="url"
+      :title="title"
+      :description="description"
+      />
   </div>
 </template>
 <script>
@@ -104,9 +113,11 @@ import LogoInstagram from 'vue-ionicons/dist/logo-instagram.vue'
 import LogoOpen from 'vue-ionicons/dist/md-open.vue'
 import Thumbnail from '~/components/Gallery/Thumbnail'
 import LImage from '~/components/Image'
+import ShareButton from '~/components/Share/Button'
+import ShareModal from '~/components/Share/Modal'
 
 export default {
-  components: { LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram, LogoOpen },
+  components: { ShareButton, ShareModal, LImage, Thumbnail, MdCloseIcon, MdArrowForwardIcon, MdArrowBackIcon, MdInformationIcon, LogoInstagram, LogoOpen },
   layout: 'gallery',
   head() {
     const title = `${this.title} - Bopp Kogn HipHop Festival`
@@ -136,7 +147,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: process.env.BASE_URL + this.$route.path
+          content: this.url
         },
         {
           hid: 'og:image',
@@ -226,7 +237,7 @@ export default {
       }
     },
     showUI() {
-      if (!this.modal_ui.show && (!this.$refs.modal_credits || !this.$refs.modal_credits.isShow)) {
+      if (!this.modal_ui.show && (!this.$refs.modal_credits || !this.$refs.modal_credits.isShow) && (!this.$refs.modal_share || !this.$refs.modal_share.isShow)) {
         this.modal_ui.show = true;
         this._modal_original_class = document.getElementById('gallery_modal').className
         document.getElementById('gallery_modal').className += ' active'
@@ -302,6 +313,7 @@ export default {
         return this.artist.bio.replace(/<[^>]+>/g,'')
       }
     },
+    url() { return process.env.BASE_URL + this.$route.path },
     num() { return this.media.length },
     index() {
       const image = this.$route.params.image;

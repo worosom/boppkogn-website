@@ -1,90 +1,11 @@
 <style scoped lang="scss">
-.artist {
-  &_meta {
-    h1 {
-      background: yellow;
-      color: blue;
-    }
-    h2 {
-      color: yellow;
-    }
-    h3 {
-      color: #0FF;
-    }
-    h1, h2, h3 {
-      padding: .7rem .7rem 0 .7rem;
-      display: inline-block;
-    }
-  }
-  &_bio {
-    color: yellow;
-    background: blue;
-    padding: 1rem;
-    font-family: "Sporting Grotesque_Regular";
-    hyphens: auto;
-  } 
-  a {
-    display: inline-block;
-    font-family: "Sporting Grotesque_Bold";
-    background: yellow;
-    color: red;
-    text-decoration: underline;
-    margin-top: .5rem;
-    padding: 1rem;
-    transition: transform 150ms ease-out, background 150ms ease-out;
-    transform: rotate(-2deg);
-    &:hover,
-    &:active,
-    &:focus {
-      background: blue;
-      color: #FF0;
-      transform: rotate(0deg) !important;
-      .artist_event_type {
-        color: #0FF;
-      }
-    }
-  }
-  .badge {
-    font-family: "Sporting Grotesque_Bold";
-    background: #0FF;
-    color: #F00;
-    padding: 1rem;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: transform 150ms ease-out;
-    transform: rotate(3deg);
-    &--1 {
-      transform: rotate(-1deg);
-    }
-    &:hover {
-      transform: rotate(0deg);
-    }
-  }
-  &_events {
-    h1 {
-      color: yellow;
-    }
-    a {
-      display: flex;
-      align-items: center;
-      img {
-        aspect-ratio: 1;
-        object-fit: cover;
-        margin-right: 1rem;
-      }
-    }
-  }
-  &_event_type {
-    color: #00F;
-  }
-}
+@import '@/assets/scss/artist.scss'
 </style>
 <template>
   <b-container fluid>
-    <b-container class="event artist" id="content">
+    <b-container class="event artist-page" id="content">
       <b-row class="mb-5">
-        <b-col class="artist_meta">
+        <b-col class="artist-page_meta">
           <h1>
             {{title}}
           </h1>
@@ -94,7 +15,8 @@
           <h3>
             ({{from}})
           </h3>
-          <section class="artist_bio" v-if="bio" v-html="bio"/>
+          <share-button verbose @click="$refs.modal_share.show()" style="float: right;" class="event__share-button"/>
+          <section class="artist-page_bio" v-if="bio" v-html="bio"/>
           <section>
             <a :href="link" target="_blank">{{link}}</a>
           </section>
@@ -109,7 +31,7 @@
           <l-image :src="avatar" :smartcrop="false" width="100%"/>
         </b-col>
       </b-row>
-      <b-row class="artist_events mb-5">
+      <b-row class="artist-page_events mb-5">
         <b-col
           cols="6"
           sm="6"
@@ -123,10 +45,10 @@
             :to="`/events/${event.slug}/?origin=${encodeURIComponent($route.path+'#'+event.slug)}#${slug}`">
             <l-image :src="event.image" smartcrop style="height: 3rem"/>
             <div>
-              <span class="artist_event_title">
+              <span class="artist-page_event_title">
                 {{event.title}}
               </span>
-              <span class="artist_event_type">
+              <span class="artist-page_event_type">
                 {{event.type}}
               </span>
             </div>
@@ -135,7 +57,7 @@
       </b-row>
       <template v-if="media && media.length">
         <client-only>
-          <b-row class="artist_media">
+          <b-row class="artist-page_media">
             <b-col>
               <h1 class="event__media_header" id="pics">Pics</h1>
             </b-col>
@@ -146,38 +68,44 @@
         </client-only>
       </template>
     </b-container>
+    <share-modal
+      ref="modal_share"
+      :url="url"
+      :title="ogtitle"
+      :description="description"
+      />
   </b-container>
 </template>
 <script>
 import Gallery from '~/components/Gallery'
 import LImage from '~/components/Image'
+import ShareButton from '~/components/Share/Button'
+import ShareModal from '~/components/Share/Modal'
 import { imageURI, artistData } from '~/util'
 
 export const asyncData = artistData
 
 export default {
   layout: 'default',
-  components: {Gallery, LImage},
+  components: {ShareButton, ShareModal, Gallery, LImage},
   head() {
-    const title = `${this.title} - Bopp Kogn HipHop Festival`,
-      description = this.bio ? this.bio.replace(/<[^>]+>/g,'') : `${this.title} at Bopp Kogn`
     return {
-      title,
+      title: this.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: description
+          content: this.description
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: title,
+          content: this.ogtitle,
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: description,
+          content: this.description,
         },
         {
           hid: 'og:type',
@@ -187,7 +115,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: process.env.BASE_URL + this.$route.path
+          content: this.url
         },
         {
           hid: 'og:image',
@@ -213,6 +141,13 @@ export default {
       bio: undefined
     }
   },
-  asyncData: artistData
+  asyncData: artistData,
+  computed: {
+    description() {
+      return this.bio ? this.bio.replace(/<[^>]+>/g,'') : `${this.title} at Bopp Kogn`
+    },
+    ogtitle() { return `${this.title} - Bopp Kogn HipHop Festival` },
+    url() { return process.env.BASE_URL + this.$route.path }
+  }
 }
 </script>
