@@ -205,8 +205,13 @@ export default {
       this.modal_ui.show = false;
       clearTimeout(this.modal_ui.timeout)
       this.modal_ui.timeout = null;
-      console.log(this.$route.query)
-      this.$router.push(this.$route.query.origin + '#pics');
+      if (this.$route.query.origin) {
+        this.$router.push(this.$route.query.origin);
+      } else if (this.$route.params.slug) {
+        this.$router.replace('/events/' + this.$route.params.slug + '/#pics')
+      } else {
+        this.$router.replace('/artists/' + this.$route.params.artist + '/#pics')
+      }
     },
     next() {
       const index = (this.index + 1) % this.media.length;

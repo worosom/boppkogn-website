@@ -4,7 +4,7 @@
 <template>
   <b-container fluid>
     <b-container class="event artist-page" id="content">
-      <b-row class="mb-5">
+      <b-row class="mb-5" :id="title">
         <b-col class="artist-page_meta">
           <h1>
             {{title}}
