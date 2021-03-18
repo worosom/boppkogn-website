@@ -1,13 +1,14 @@
 <style lang="scss">
 .contact_pattern {
+  display: none;
   position: absolute; 
-  width: 400%;
+  width: 100%;
   --contact-pattern-height: 35rem;
   height: var(--contact-pattern-height);
-  left: -150%;
+  left: 0;
   top: 0;
   transform: translateY(calc( -1 * var(--contact-pattern-height) ));
-  transform-style: preserve-3d;
+  // transform-style: preserve-3d;
   z-index: -1;
   perspective: 200px;
   @media (min-width: 576px) {
@@ -24,7 +25,7 @@
   }
   svg {
     transform-origin: 50% 100%;
-    transform: rotateX(45deg);
+    // transform: rotateX(45deg);
   }
 }
 </style>

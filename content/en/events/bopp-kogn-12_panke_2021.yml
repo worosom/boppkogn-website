@@ -18,9 +18,9 @@ livestream:
 description: "We keep good things going, we keep it up for the Music and Art 🙌 <br><br>Join the chat enjoy the show and ATTENTION you may dance as well <b>💃</b>"
 artists:
   - artist:
-      relation: chaarlz_nais-gza
-  - artist:
       relation: bfam
+  - artist:
+      relation: chaarlz_nais-gza
   - artist:
       relation: josi-miller
   - artist:
