@@ -89,7 +89,7 @@ export default {
       }).sort((a, b) => - (a.date - b.date))
     upcoming = await Promise.all(upcoming.map(async event => ({
       ...event, 
-      media: event.media.map((m, i) => ({...m, uri: imageURI({...route, params: {slug: event.slug}}, i, m)})),
+      media: event.media && event.media.map((m, i) => ({...m, uri: imageURI({...route, params: {slug: event.slug}}, i, m)})),
       artists: await resolveArtists(event, $content)
     })))
     return {

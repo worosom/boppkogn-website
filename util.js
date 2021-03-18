@@ -1,4 +1,11 @@
-export const datum = (date) => new Date(Date.parse(date.slice(0, -2) + ' ' + date.slice(-2)))
+export const datum = dateString => {
+  const date = dateString.split(' ')[0].split('-').map(x => Number(x))
+  date[1] -= 1 
+  const time = dateString.split(' ')[1].split(':')
+  const hours = Number(time[0]) + (time.indexOf('pm') ? 12 : 0)
+  const minutes = Number(time[1].slice(0, -2))
+  return new Date(...date, hours, minutes)
+}
 
 export function throttle (callback, delay, options = {}) {
   let timeout
