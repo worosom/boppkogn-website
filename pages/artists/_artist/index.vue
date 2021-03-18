@@ -15,9 +15,9 @@
           <h3>
             ({{from}})
           </h3>
-          <share-button verbose @click="$refs.modal_share.show()" style="float: right;" class="event__share-button"/>
+          <share-button verbose @click="$nuxt.$emit('share', {url, title: ogtitle, description})" style="float: right;" class="event__share-button"/>
           <section class="artist-page_bio" v-if="bio" v-html="bio"/>
-          <section>
+          <section v-if="link">
             <a :href="link" target="_blank">{{link}}</a>
           </section>
           <section class="badge" v-if="tags && tags.indexOf('team') >= 0">
@@ -42,7 +42,7 @@
             :id="event.slug"
             :style="`transform: rotate(${Math.random()*6-3}deg)`"
             :key="event.slug"
-            :to="`/events/${event.slug}/?origin=${encodeURIComponent($route.path+'#'+event.slug)}#${slug}`">
+            :to="`/events/${event.slug}/?origin=${encodeURIComponent($route.fullPath+'#'+event.slug)}#${slug}`">
             <l-image :src="event.image" smartcrop style="height: 3rem"/>
             <div>
               <span class="artist-page_event_title">
@@ -55,39 +55,34 @@
           </nuxt-link>
         </b-col>
       </b-row>
-      <template v-if="media && media.length">
-        <client-only>
-          <b-row class="artist-page_media">
-            <b-col>
-              <h1 class="event__media_header" id="pics">Pics</h1>
-            </b-col>
-          </b-row>
-          <b-row>
-            <gallery :value="media"/>
-          </b-row>
-        </client-only>
-      </template>
+      <div id="pics">
+        <template v-if="media && media.length">
+          <client-only>
+            <b-row class="artist-page_media">
+              <b-col>
+                <h1 class="event__media_header">Pics</h1>
+              </b-col>
+            </b-row>
+            <b-row class="mb-5">
+              <gallery :value="media"/>
+            </b-row>
+          </client-only>
+        </template>
+      </div>
     </b-container>
-    <share-modal
-      ref="modal_share"
-      :url="url"
-      :title="ogtitle"
-      :description="description"
-      />
   </b-container>
 </template>
 <script>
 import Gallery from '~/components/Gallery'
 import LImage from '~/components/Image'
 import ShareButton from '~/components/Share/Button'
-import ShareModal from '~/components/Share/Modal'
-import { imageURI, artistData } from '~/util'
+import { artistData } from '~/util'
 
 export const asyncData = artistData
 
 export default {
   layout: 'default',
-  components: {ShareButton, ShareModal, Gallery, LImage},
+  components: {ShareButton, Gallery, LImage},
   head() {
     return {
       title: this.title,
@@ -138,7 +133,8 @@ export default {
   data() {
     return {
       tags: undefined,
-      bio: undefined
+      bio: undefined,
+      link: undefined
     }
   },
   asyncData: artistData,

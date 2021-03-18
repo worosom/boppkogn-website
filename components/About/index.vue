@@ -39,7 +39,6 @@
                 </span>
               </span>
             </span>
-            &nbsp;
           </template>
         </div>
       </b-col>

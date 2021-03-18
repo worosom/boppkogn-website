@@ -1,8 +1,6 @@
 <template>
-  <b-container fluid>
+  <b-container class="mb-4" fluid>
     <event v-if="event" :event="event"/>
-    <about :about="about"/>
-    <partners/>
   </b-container>
 </template>
 <script>

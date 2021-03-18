@@ -7,7 +7,7 @@
           cols="12"
           class="pl-0 mb-4"
           style="position: relative; padding-bottom: 56.25%">
-          <vue-twitch-player
+          <twitch-player
             width="100%"
             height="100%"
             style="position: absolute; width: 100%; height: 100%"
@@ -46,7 +46,7 @@
         class="event__info">
         <h2 v-if="subtitle">{{subtitle}}</h2>
         <div class="pb-2">
-          <share-button verbose @click="$refs.modal_share.show()" class="event__share-button"/>
+          <share-button verbose @click="$nuxt.$emit('share', {url, title, description: strippedDescription})" class="event__share-button"/>
         </div>
       </b-col>
       <b-col
@@ -89,7 +89,7 @@
             Residentadvisor
           </b-btn>
         </div>
-        <div class="event__links_wrap">
+        <div class="event__links_wrap" v-if='facebook'>
           <b-btn :href="facebook"
                  target="_blank"
                  variant="primary"
@@ -97,7 +97,7 @@
             Facebook
           </b-btn>
         </div>
-        <div class="event__links_wrap">
+        <div class="event__links_wrap" v-if='instagram'>
           <b-btn :href="instagram"
                  target="_blank"
                  variant="primary"
@@ -133,7 +133,7 @@
             <h1 class="event__media_header" id="pics">Pics</h1>
           </b-col>
         </b-row>
-        <b-row>
+        <b-row class="mb-5">
           <gallery v-model="media"/>
         </b-row>
       </client-only>
@@ -152,23 +152,16 @@
                 :artist="artist"/>
       </b-row>
     </template>
-    <share-modal
-      ref="modal_share"
-      :url="url"
-      :title="title"
-      :description="strippedDescription"
-      />
   </b-container>
 </template>
 
 <script>
-import VueTwitchPlayer from 'vue-twitch-player'
+import TwitchPlayer from '~/components/TwitchPlayer'
 import { mod, datum } from '~/util'
 import Artist from '~/components/Artist'
 import Gallery from '~/components/Gallery'
 import './style.scss'
 import ShareButton from '~/components/Share/Button'
-import ShareModal from '~/components/Share/Modal'
 
 const dateFormat = (date) => {
   let day = String(date.getDate())
@@ -179,13 +172,15 @@ const dateFormat = (date) => {
 }
 
 export default {
-  components: { ShareButton, ShareModal, VueTwitchPlayer, Artist, Gallery },
+  components: { ShareButton, TwitchPlayer, Artist, Gallery },
   props: ['event'],
   data() {
     return {
       price: undefined,
       description: undefined,
       subtitle: undefined,
+      facebook: undefined,
+      instagram: undefined,
       residentadvisor: undefined,
       livestream: undefined,
       reservation: undefined,
@@ -218,7 +213,7 @@ export default {
       }
       let ret = ''
       if (d > 0) {
-        ret += `${str(d)} Day${d > 1 ? 's' : ''}`
+        ret += `${str(d)} Day${d > 1 ? 's' : ''} `
       }
       ret += `${str(h)}:`
       ret += `${str(m)}`

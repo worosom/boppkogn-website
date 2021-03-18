@@ -2,24 +2,11 @@
 @import '@/assets/scss/variables.scss';
 
 h1 {
-  color: #0FF;
+  color: $cyan;
 }
 
 .container {
   position: relative;
-}
-
-.event_previews {
-  position: relative;
-  &::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: -5px;
-    width: 3px;
-    height: 100%;
-    background-color: $yellow;
-  }
 }
 
 .event_preview {
@@ -28,27 +15,10 @@ h1 {
     display: block;
     position: relative;
     z-index: 0;
-    padding-bottom: 5px;
     font-family: "Sporting Grotesque_Regular";
-    &::before {
-      content: " ";
-      position: absolute;
-      width: 3px;
-      height: 100%;
-      background: $yellow;
-      z-index: -1;
-      transition: width 150ms ease-in-out;
-    }
     &:hover {
-      &__type *,
-      &__location *{
-        color: $blue !important;
-      }
       .event_preview__image {
         transform: scale(1.2);
-      }
-      &:before {
-        width: calc(100%);
       }
     }
   }
@@ -76,33 +46,6 @@ h1 {
         background-color: yellow;
       }
     }
-  }
-  &__info {
-    color: $blue;
-    padding: 0 0 0 15px;
-    transition: color 200ms ease-in-out;
-  }
-  &__title, &__year {
-    :hover > & {
-      color: $red;
-    }
-  }
-  &__type {
-    color: $yellow;
-    margin-bottom: 2rem;
-    :hover > & {
-      color: $blue;
-    }
-  }
-  &__location {
-    color: #0ff;
-    font-weight: bold;
-    text-decoration: underline;
-    :hover > & {
-      color: $red;
-    }
-  }
-  &__year {
   }
 }
 
@@ -134,10 +77,6 @@ h1 {
               :src="p.image"
               :alt="p.title"/>
           </div>
-          <h3 class="event_preview__info event_preview__title mt-3">{{p.title}}</h3>
-          <h4 class="event_preview__info event_preview__type">{{p.type}}</h4>
-          <span class="event_preview__info event_preview__location">{{p.venue.name}}</span>
-          <span class="event_preview__info event_preview__year">({{dates[index].getFullYear()}})</span>
         </nuxt-link>
       </b-col>
     </b-row>

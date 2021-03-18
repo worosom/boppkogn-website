@@ -205,11 +205,12 @@ export default {
       this.modal_ui.show = false;
       clearTimeout(this.modal_ui.timeout)
       this.modal_ui.timeout = null;
-      this.$router.push(this.$route.params.artist ? `/artists/${this.$route.params.artist}/#pics` : `/events/${this.$route.params.slug}/#pics`);
+      console.log(this.$route.query)
+      this.$router.push(this.$route.query.origin + '#pics');
     },
     next() {
       const index = (this.index + 1) % this.media.length;
-      this.$router.push(imageURI(this.$route, index, this.media[index].image))
+      this.$router.push(imageURI(this.$route, index, this.media[index].image, origin=this.$route.query.origin))
       document.activeElement.blur();
     },
     prev() {

@@ -6,9 +6,9 @@
         alt="Bopp Kogn">
         Bopp Kogn
       </h1>
-      <h1 v-if="!slim" class="logo__sub">
-        Hip Hop<br>Festival
-      </h1>
+      <h3 v-if="!slim" class="logo__sub">
+        Hiphop Worldwide Connection
+      </h3>
       <nuxt-link class="home" exact to="/" title="Pull Up"></nuxt-link>
     </div>
     <div class="logo__social mt-4">

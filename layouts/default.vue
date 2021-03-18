@@ -7,7 +7,7 @@
     <nuxt/>
     <bk-contact/>
     <bk-footer/>
-    <share-modal :url="url" ref="modal_share"/>
+    <share-modal :url="url" :title="title" :description="description" ref="modal_share"/>
   </section>
 </template>
 <script>
@@ -24,6 +24,19 @@ export default {
     BkFooter,
     MdArrowBackIcon,
     ShareModal
+  },
+  created() {
+    this.$nuxt.$on('share', data => {
+      this.title = data.title
+      this.description = data.description
+      this.$refs.modal_share.show()
+    })
+  },
+  data() {
+    return {
+      title: undefined,
+      description: undefined
+    }
   },
   computed: {
     origin() {

@@ -7,6 +7,7 @@
            :event="u"/>
     <previously v-if="previous.length" id="previously" :previous="previous" />
     <about :about="about"/>
+    <team :team="team"/>
     <partners/>
   </b-container>
 </template>
@@ -16,6 +17,7 @@
 import Event from '~/components/Event'
 import Previously from '~/components/Previously'
 import About from '~/components/About'
+import Team from '~/components/Team'
 import Partners from '~/components/Partners'
 import { imageURI, datum } from '~/util.js'
 import { resolveArtists }  from '~/pages/events/_slug/index.vue'
@@ -74,9 +76,11 @@ export default {
     Event,
     Previously,
     About,
+    Team,
     Partners,
   },
   async asyncData({route, $content, store, payload}) {
+    const team = (await $content('en/artists').sortBy('title').fetch()).filter(artist => artist.tags && artist.tags.indexOf('team') >= 0)
     let events = await $content('en/events').fetch()
     events = events.map(event => ({...event, date: datum(event.date)}))
     const about = await $content('en/about/about').fetch()
@@ -97,7 +101,8 @@ export default {
         abstract: about.abstract.map(ob => ob.part),
         translations: about.translations.map(ob => ob.translation),
         donations: about.donations
-      }
+      },
+      team
     }
   }
 }

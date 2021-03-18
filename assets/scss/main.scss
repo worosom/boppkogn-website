@@ -14,7 +14,7 @@ body {
 * {
   &::selection {
     background-color: rgba(0, 0, 0, 0.5);
-    color: #0FF;
+    color: $cyan;
   }
 }
 
@@ -31,11 +31,10 @@ h3 {
 
 .logo {
   &__sub {
-    text-transform: uppercase;
     text-align: center;
   }
   &__wrap {
-    z-index: 2;
+    z-index: 101;
     width: 100%;
     min-height: 100vh;
     perspective: 100px;
@@ -148,13 +147,15 @@ h3 {
 
   &__social {
     font-size: 3rem;
+    z-index: 100;
     a {
       color: #ff0;
       .ion__svg {
         transition: transform 150ms ease-in-out;
       }
     }
-    a:hover {
+    a:hover,
+    a:focus {
       .ion__svg {
         animation: strobe 120ms infinite;
         transform: rotate(-15deg) scale(1.2);
@@ -175,7 +176,8 @@ h3 {
         animation: bob-y 1s ease-in-out infinite;
       }
     }
-    a:hover {
+    a:hover,
+    a:focus {
       animation: strobe 120ms infinite;
     }
   }
@@ -197,7 +199,6 @@ h3 {
   position: relative;
   margin-bottom: 2rem;
   text-decoration: none !important;
-
   &:hover,
   &:focus {
     outline: none;
@@ -217,12 +218,14 @@ h3 {
       color: $blue;
     }
     .artist__from {
-      color: #blue;
+      color: $blue;
     }
   }
 
   &__wrap--inner {
     position: relative;
+    background-color: $red;
+    z-index: 1;
     &::before {
       content: "";
       position: absolute;
@@ -259,18 +262,18 @@ h3 {
     word-break: break-all;
     min-height: 6.5rem;
     :hover > & {
-      color: #f00;
+      color: $red;
     }
   }
   &__role {
-    color: #ff0;
+    color: $yellow;
     :hover > & {
       color: $blue;
     }
   }
   &__from {
     font-family: "Sporting Grotesque_Regular";
-    color: #0ff;
+    color: $cyan;
     :hover > & {
       color: #blue;
     }
@@ -295,59 +298,56 @@ h3 {
     position: relative;
     margin: 2rem 0 6rem 0;
     perspective: 1000;
-    &::after {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: -6px;
-      left: 0;
-      content: "";
-      transform: translate3d(0,0,-1px) rotate(-3deg);
-      background-color: $blue;
-      z-index: -1;
-      transition: background-color 200ms ease, transform 200ms ease;
-    }
-    &::before {
-      position: absolute;
-      width: 90%;
-      height: 140%;
-      top: 6px;
-      left: 0;
-      content: "";
-      transform: translate3d(5%, -10%, -2px) rotate(5deg);
-      z-index: -1;
-      background-image: url('/contact.svg#svgView(preserveAspectRatio(none))');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 100% 100%;
-      transition: transform 200ms ease;
-    }
-    &:hover, &:focus {
-      &::after {
-        background-color: $blue;
-        transform: translate3d(-5px,-5px,-1px) rotate(-3deg);
-      }
-      &::before {
-        background-image: url('/contact-red.svg#svgView(preserveAspectRatio(none))');
-        transform: translate3d(6%, -9%, -2px) rotate(5deg);
-      }
-    }
     .btn {
       font-family: "Sporting Grotesque_Bold";
       text-transform: uppercase;
       border-radius: unset;
       background-color: transparent;
-      color: #ff0;
+      color: $yellow;
       border: none;
       padding: 1.75rem 2.5rem;
       font-size: 2rem;
       @media (min-width: 472px) {
         font-size: 3rem;
       }
-
-      &:hover {
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -6px;
+        left: 0;
+        content: "";
+        transform: translate3d(0,0,-1px) rotate(-3deg);
+        background-color: $blue;
+        z-index: -1;
+        transition: background-color 200ms ease, transform 200ms ease;
+      }
+      &::before {
+        position: absolute;
+        width: 90%;
+        height: 140%;
+        top: 6px;
+        left: 0;
+        content: "";
+        transform: translate3d(5%, -10%, -2px) rotate(5deg);
+        z-index: -1;
+        background-image: url('/contact.svg#svgView(preserveAspectRatio(none))');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        transition: transform 200ms ease;
+      }
+      &:hover, &:focus {
         background-color: transparent;
         color: #f00;
+        &::after {
+          background-color: $blue;
+          transform: translate3d(-5px,-5px,-1px) rotate(-3deg);
+        }
+        &::before {
+          background-image: url('/contact-red.svg#svgView(preserveAspectRatio(none))');
+          transform: translate3d(6%, -9%, -2px) rotate(5deg);
+        }
       }
       &:active {
         background-color: transparent !important;
@@ -366,7 +366,7 @@ h3 {
 
 .event {
   padding-top: 50px;
-  z-index: 0;
+  z-index: 1;
   position: relative;
   &__info {
     color: $yellow;
@@ -375,6 +375,9 @@ h3 {
   &__title,
   &__venue {
     color: $blue;
+  }
+  &__type {
+    white-space: nowrap;
   }
   &__date,
   &__time {
@@ -568,9 +571,17 @@ h3 {
   }
 }
 
+.team {
+  z-index: 1;
+}
+
 .partners--container {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  z-index: 1;
   h1 {
-    color: $blue;
+    color: $cyan;
   }
 
   .container {
@@ -610,9 +621,8 @@ h3 {
     height: calc(100% - 30px);
     object-fit: contain;
     color: transparent;
-    img:not([src]) {
-      display: none;
-    }
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, .7));
+    transition: filter 150ms ease-out 600ms;
   }
 
   .partner_image_wrap {
@@ -649,6 +659,10 @@ h3 {
     &:hover {
       filter: saturate(1);
       transition: filter 200ms ease;
+      .partner_image {
+        filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, .7));
+        transition: filter 150ms ease-out;
+      }
     }
     &:hover::before {
       background: url('/pattern1.webp');
@@ -683,8 +697,11 @@ h3 {
 }
 
 .about {
+  &--container {
+    z-index: 1;
+  }
   &__header {
-    color: $blue;
+    color: $cyan;
   }
   position: relative;
   &__abstract { 
@@ -729,11 +746,18 @@ h3 {
     position: relative;
     cursor: default;
     text-align: left;
+    &:not(:first-child),
+    &:not(:last-child) {
+      margin: 2px;
+    }
+    display: inline-block;
     &--language {
       background-color: #F00;
       padding: 0 .5rem;
       display: inline-block;
       transform: translate(-50%, 0);
+      height: calc( 100% + 2px );
+      padding-top: 3px;
       &__wrap {
         visibility: hidden;
         will-change: visibility;
@@ -742,7 +766,7 @@ h3 {
         top: 100%;
         left: 50%;
         width: 100%;
-        height: 100%;
+        height: calc( 100% + 2px );
         z-index: 10;
       }
     }
@@ -778,7 +802,7 @@ h3 {
 }
 
 .btn.main-back-btn {
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;

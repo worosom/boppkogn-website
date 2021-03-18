@@ -4,7 +4,7 @@
     :id="slug"
     :to="artistLink"
     :title="artist.title">
-    <div class="artist__wrap--inner">
+    <div class="artist__wrap--inner pb-3">
       <div class="artist__image_wrap">
         <l-image class="artist__image"
              :src="image"
@@ -26,7 +26,7 @@ export default {
     image() { return this.artist.avatar },
     slug() { return this.artist.slug || this.artist.title.toLowerCase().split(' ').join('-') },
     artistLink() {
-      return `/artists/${this.slug}/?origin=` + encodeURIComponent(`${this.$route.path}#${this.slug}`) + '#content' 
+      return `/artists/${this.slug}/?origin=` + encodeURIComponent(`${this.$route.fullPath.split('#')[0]}#${this.slug}`) + '#content' 
     }
   }
 }

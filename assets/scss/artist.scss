@@ -3,14 +3,14 @@
 .artist-page {
   &_meta {
     h1 {
-      background: yellow;
+      background: $yellow;
       color: $blue;
     }
     h2 {
-      color: yellow;
+      color: $yellow;
     }
     h3 {
-      color: #0FF;
+      color: $cyan;
     }
     h1, h2, h3 {
       padding: .7rem .7rem 0 .7rem;
@@ -18,7 +18,7 @@
     }
   }
   &_bio {
-    color: yellow;
+    color: $yellow;
     background: $blue;
     padding: 1rem;
     font-family: "Sporting Grotesque_Regular";
@@ -27,8 +27,8 @@
   a {
     display: inline-block;
     font-family: "Sporting Grotesque_Bold";
-    background: yellow;
-    color: red;
+    background: $yellow;
+    color: $red;
     text-decoration: underline;
     margin-top: .5rem;
     padding: 1rem;
@@ -38,10 +38,10 @@
     &:active,
     &:focus {
       background: $blue;
-      color: #FF0;
+      color: $yellow;
       transform: rotate(0deg) !important;
       .artist_event_type {
-        color: #0FF;
+        color: $cyan;
       }
     }
   }
@@ -64,7 +64,7 @@
   }
   &_events {
     h1 {
-      color: yellow;
+      color: $yellow;
     }
     a {
       display: flex;
@@ -75,8 +75,13 @@
         margin-right: 1rem;
       }
     }
-  }
-  &_event_type {
-    color: #00F;
+    .artist-page_event_type {
+      color: $blue;
+    }
+    a:hover {
+      .artist-page_event_type {
+        color: $cyan;
+      }
+    }
   }
 }

@@ -28,10 +28,10 @@ export function throttle (callback, delay, options = {}) {
   return throttled
 }
 
-export const imageURI = (route, i, image) => {
+export const imageURI = (route, i, image, origin) => {
   const image_title = image.title || ''
   const _route = route.params.artist ? `/artists/${route.params.artist}` : `/events/${route.params.slug}`
-  return `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
+  return `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/?origin=${origin || encodeURIComponent(route.fullPath)}`
 }
 
 export const mod = (a, n) => {
