@@ -39,8 +39,8 @@ export const imageURI = (route, i, image, origin) => {
   const image_title = image.title || ''
   const _route = route.params.artist ? `/artists/${route.params.artist}` : `/events/${route.params.slug}`
   let uri = `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
-  if (origin || route.fullPath) {
-    uri += `?origin=${origin || encodeURIComponent(route.fullPath)}`
+  if (origin) {
+    uri += `?origin=${origin || encodeURIComponent(route.fullPath + '#pics')}`
   }
   return uri
 }

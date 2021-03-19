@@ -215,7 +215,7 @@ export default {
     },
     next() {
       const index = (this.index + 1) % this.media.length;
-      this.$router.push(imageURI(this.$route, index, this.media[index].image, origin=this.$route.query.origin))
+      this.$router.push(imageURI(this.$route, index, this.media[index].image))
       document.activeElement.blur();
     },
     prev() {

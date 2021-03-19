@@ -19,9 +19,9 @@
           v-else-if="timeToStream && timeToStream < 0"
           ref="timeToStream"
           cols="12"
-          class="pl-0 mb-4"
-          style="background-color: yellow; position: relative; padding-bottom: 28%">
-          <div class="livestream_counter ">
+          class="p-0 mb-4"
+          style="background-color: yellow; position: relative">
+          <div class="pt-4 pb-4 livestream_counter ">
             <div>
               {{timeToStreamString}} 
             </div>

@@ -1,5 +1,4 @@
 .livestream_counter {
-    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -9,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border: 1rem solid blue;
     font-size: 2rem;
 }

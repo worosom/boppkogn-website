@@ -1,7 +1,6 @@
 <template>
   <nuxt-link
     :to="href"
-    @click.stop="$emit('click')"
     :title="title"
     class="media__thumbnail_wrapper">
     <l-image class="media__thumbnail"
