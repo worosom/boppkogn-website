@@ -38,11 +38,311 @@ artists:
       relation: daybee-dee
 media:
   - image:
-      src: /images/pre-show_bopp-kogn-stream-overlays-27.02.2021.jpg
-      title: ""
-      credits:
-        - credit: null
-          text: "Graphic design by: Fabian Tombers"
-          website: https://fabiantombers.hotglue.me/
       artists:
-        - relation: fabian-tombers
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_2.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_3.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_dj-o_0.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_1.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_0.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_4.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/intare_sorah_5.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_3.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_2.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_0.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_dj-o_0.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_4.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_5.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_1.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_5.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_1.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_0.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/el-che_0.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_derron_4.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_2.jpg
+  - image:
+      artists:
+      - relation: daybee-dee
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/daybee-dee_3.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_1.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_0.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_2.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_3.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_4.jpg
+  - image:
+      artists:
+      - relation: dj-o
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/dj-o_5.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_0.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_0.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_1.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_1.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_3.jpg
+  - image:
+      artists:
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/derron_5.jpg
+  - image:
+      artists:
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/derron_4.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_2.jpg
+  - image:
+      artists:
+      - relation: flash-tarzan
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/flash-tarzan_2.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/sorah_0.jpg
+  - image:
+      artists:
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/derron_0.jpg
+  - image:
+      artists:
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/derron_1.jpg
+  - image:
+      artists:
+      - relation: sorah-intare
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/sorah_1.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_5.jpg
+  - image:
+      artists:
+      - relation: derron
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/derron_3.jpg
+  - image:
+      artists:
+      - relation: mal-eleve
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/mal-eleve_4.jpg

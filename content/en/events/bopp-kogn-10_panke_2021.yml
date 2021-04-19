@@ -45,3 +45,151 @@ artists:
       link: https://soundcloud.com/embeclassic
       avatar: /images/embe_photo_bridge.jpg
       relation: embe.classic
+media:
+  - image:
+      artists:
+      - relation: 10_embe.classic
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn_10_embe.classic_0.jpg
+  - image:
+      artists:
+      - relation: ''
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_2.jpg
+  - image:
+      artists:
+      - relation: ''
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_3.jpg
+  - image:
+      artists:
+      - relation: ''
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_1.jpg
+  - image:
+      artists:
+      - relation: '10'
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn_10_dj-primark.jpg
+  - image:
+      artists:
+      - relation: ''
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_0.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-che-44_4.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-che-44_1.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-che-44_0.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-che-44_2.jpg
+  - image:
+      artists:
+      - relation: el-che-44
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-che-44_3.jpg
+  - image:
+      artists:
+      - relation: fritzi-noirhomme
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_fritzi-noirhomme_4.jpg
+  - image:
+      artists:
+      - relation: trixter
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_trixter_1.jpg
+  - image:
+      artists:
+      - relation: trixter
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_trixter_0.jpg
+  - image:
+      artists:
+      - relation: el-sheik
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-sheik_0.jpg
+  - image:
+      artists:
+      - relation: fritzi-noirhomme
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_fritzi-noirhomme_2.jpg
+  - image:
+      artists:
+      - relation: fritzi-noirhomme
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_fritzi-noirhomme_3.jpg
+  - image:
+      artists:
+      - relation: el-sheik
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-sheik_1.jpg
+  - image:
+      artists:
+      - relation: fritzi-noirhomme
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_fritzi-noirhomme_1.jpg
+  - image:
+      artists:
+      - relation: fritzi-noirhomme
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_fritzi-noirhomme_0.jpg
+  - image:
+      artists:
+      - relation: el-sheik
+      credits:
+      - instagram: mary_wonka
+        text: 'Photo by: Maria Mai'
+      src: /images/boppkogn-10_el-sheik_2.jpg
