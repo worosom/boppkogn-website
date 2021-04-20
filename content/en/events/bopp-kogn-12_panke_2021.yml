@@ -1,0 +1,28 @@
+title: Bopp Kogn
+slug: bopp-kogn-12_panke_2021
+image: /images/boppkogn-12.jpg
+type: Part 12
+subtitle: Hip Hop Showcase
+date: 2021-03-25 07:00pm
+venue:
+  venueLink: https://bit.ly/2NDGRAK
+  name: Panke
+address: Gerichtstraße 23, Berlin
+instagram: https://www.instagram.com/boppkognfestival/
+livestream:
+  link: https://www.twitch.tv/pankeberlin
+  startTime: 2021-03-25 07:00pm
+  endTime: 2021-03-26 00:00am
+  twitch:
+    channel: pankeberlin
+description: "We keep good things going, we keep it up for the Music and Art 🙌 <br><br>Join the chat enjoy the show and ATTENTION you may dance as well <b>💃</b>"
+artists:
+  - artist:
+      relation: bfam
+  - artist:
+      relation: chaarlz_nais-gza
+  - artist:
+      relation: josi-miller
+  - artist:
+      relation: lai-raw
+media: []
