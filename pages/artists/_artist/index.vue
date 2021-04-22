@@ -1,11 +1,11 @@
-<style scoped lang="scss">
+<style lang="scss">
 @import '@/assets/scss/artist.scss'
 </style>
 <template>
-  <b-container fluid>
+  <b-container fluid class="px-0">
     <b-container class="event artist-page" id="content">
       <b-row class="mb-5" :id="title">
-        <b-col class="artist-page_meta">
+        <b-col cols="12" class="artist-page_head">
           <h1>
             {{title}}
           </h1>
@@ -15,28 +15,34 @@
           <h3>
             ({{from}})
           </h3>
+        </b-col>
+        <b-col order-md="2" class="artist-page_avatar" md="6">
+          <l-image :src="avatar" :smartcrop="false" width="100%"/>
+        </b-col>
+        <b-col order-md="1" class="artist-page_body" md="6">
           <share-button verbose @click="$nuxt.$emit('share', {url, title: ogtitle, description})" style="float: right;" class="event__share-button"/>
           <section class="artist-page_bio" v-if="bio" v-html="bio"/>
+        </b-col>
+        <b-col order-md="3" class="artist-page_footer">
           <section v-if="link">
             <a :href="link" target="_blank">{{link}}</a>
           </section>
-          <section class="badge" v-if="tags && tags.indexOf('team') >= 0">
+          <section v-if="links">
+            <meta-link v-for="link in links" :key="link.href" :value="link"/>
+          </section>
+          <section class="mt-4 badge" v-if="tags && tags.indexOf('team') >= 0">
             Boppkogn Team
           </section>
           <section class="badge badge--1" v-if="tags && tags.indexOf('resident') >= 0">
             Resident
           </section>
         </b-col>
-        <b-col md="5" lg="6">
-          <l-image :src="avatar" :smartcrop="false" width="100%"/>
-        </b-col>
       </b-row>
-      <b-row class="artist-page_events mb-5">
+      <b-row v-if="events.length" class="artist-page_events mb-5">
         <b-col
           cols="6"
           sm="6"
           md="4"
-          v-if="events.length"
           v-for="event in events"  :key="event.slug">
           <nuxt-link
             :id="event.slug"
@@ -74,6 +80,7 @@
 </template>
 <script>
 import Gallery from '~/components/Gallery'
+import MetaLink from '~/components/Link'
 import LImage from '~/components/Image'
 import ShareButton from '~/components/Share/Button'
 import { artistData } from '~/util'
@@ -82,7 +89,7 @@ export const asyncData = artistData
 
 export default {
   layout: 'default',
-  components: {ShareButton, Gallery, LImage},
+  components: {ShareButton, Gallery, MetaLink, LImage},
   head() {
     return {
       title: this.title,
@@ -134,7 +141,8 @@ export default {
     return {
       tags: undefined,
       bio: undefined,
-      link: undefined
+      link: undefined,
+      links: undefined
     }
   },
   asyncData: artistData,

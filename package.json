@@ -20,6 +20,7 @@
     "@nuxtjs/svg": "^0.1.12",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "metaget": "^1.0.7",
     "nuxt": "^2.15.0",
     "sass": "^1.26.9",
     "sass-loader": "10.1.1",

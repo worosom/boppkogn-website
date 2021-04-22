@@ -1,6 +1,6 @@
 title: Bopp Kogn
 slug: bopp-kogn-13_panke_2021
-image: /squiggles.svg
+image: /images/boppkogn-13-square.jpg
 type: Part 13
 subtitle: Hip Hop Showcase
 date: 2021-05-01 08:00pm
@@ -16,5 +16,15 @@ livestream:
   twitch:
     channel: pankeberlin
 description: "No matter what! we keep it going <b>🎶</b> support local artists and our clubs 🚀"
-artists: []
+artists:
+  - artist:
+      relation: nashi-44
+  - artist:
+      relation: andre-damar
+  - artist:
+      relation: adamz
+  - artist:
+      relation: grzly-adams
+  - artist:
+      relation: markus-tone
 media: []

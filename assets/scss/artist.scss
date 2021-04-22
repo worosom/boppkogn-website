@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .artist-page {
-  &_meta {
+  &_head {
     h1 {
       background: $yellow;
       color: $blue;
@@ -15,51 +15,67 @@
     h1, h2, h3 {
       padding: .7rem .7rem 0 .7rem;
       display: inline-block;
+      vertical-align: middle;
     }
   }
   &_bio {
     color: $yellow;
     background: $blue;
-    padding: 2rem;
+    padding: 1rem;
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
     font-family: "Sporting Grotesque_Regular";
     hyphens: auto;
+    p:last-child {
+      margin-bottom: 0;
+    }
   } 
-  a {
-    display: inline-block;
-    font-family: "Sporting Grotesque_Bold";
-    background: $yellow;
-    color: $red;
-    text-decoration: underline;
-    margin-top: .5rem;
-    padding: 1rem;
-    transition: transform 150ms ease-out, background 150ms ease-out;
-    transform: rotate(-2deg);
-    &:hover,
-    &:active,
-    &:focus {
-      background: $blue;
-      color: $yellow;
-      transform: rotate(0deg) !important;
-      .artist_event_type {
-        color: $cyan;
+  &_footer, &_events {
+    a {
+      display: inline-block;
+      font-family: "Sporting Grotesque_Bold";
+      background: $yellow;
+      color: $red;
+      text-decoration: underline;
+      margin-top: .5rem;
+      padding: 1rem;
+      transition: transform 150ms ease-out, background 150ms ease-out;
+      &:hover,
+      &:active,
+      &:focus {
+        background: $blue;
+        color: $yellow;
+        transform: rotate(0deg) !important;
+        .artist_event_type {
+          color: $cyan;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: .5rem;
+      }
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transform-origin: 50% 50%;
+          transform: rotateZ( random(10) - 5 + deg ) translateX( random(10) - 5 + px ) translateY( random(10) - 5 + px );
+        }
+      }
+      z-index: 50;
+      &:hover {
+        z-index: 100;
       }
     }
-  }
-  .badge {
-    font-family: "Sporting Grotesque_Bold";
-    background: #0FF;
-    color: #F00;
-    padding: 1rem;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: transform 150ms ease-out;
-    transform: rotate(3deg);
-    &--1 {
-      transform: rotate(-1deg);
-    }
-    &:hover {
-      transform: rotate(0deg);
+    .badge {
+      font-family: "Sporting Grotesque_Bold";
+      font-size: 1.5rem;
+      background: #0FF;
+      color: #F00;
+      padding: 1rem;
+      text-transform: uppercase;
+      vertical-align: middle;
+      border-radius: 0;
+      transition: transform 150ms ease-out;
+      transform: rotate( random(10) - 5 + deg );
     }
   }
   &_events {

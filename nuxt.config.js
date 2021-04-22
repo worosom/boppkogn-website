@@ -153,6 +153,11 @@ export default {
       if (ctx.isClient) {
         config.devtool = 'source-map'
       }
+      config.node = {
+        fs: 'empty',
+        dns: 'empty',
+        net: 'empty'
+      };
     }
   }
 }

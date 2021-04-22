@@ -50,11 +50,12 @@ export const mod = (a, n) => {
 }
 
 export async function artistData({route, $content}) {
+  const metaget = require('metaget')
   const data = await $content(`en/artists/${route.params.artist}`).fetch()
   const all_events = await $content('en/events').fetch()
   const events = all_events.filter(event => event.artists.filter(({artist}) => artist.relation == data.slug).length)
   let i = 0
-  let media = (await Promise.all(all_events.map(async  ({slug, media}) => {
+  let media = (await Promise.all(all_events.map(async ({slug, media}) => {
     if (media) {
       const _media = media.filter(({image}) => image.artists && image.artists.filter(({relation}) => relation == data.slug).length > 0)
       _media.forEach(async m => {
@@ -66,7 +67,16 @@ export async function artistData({route, $content}) {
       return _media
     }
   }))).flat().filter(m => !!m)
-  data.media && (media = Array.concat(data.media,  media))
+  data.media && (media = data.media.concat(media))
+  media && (media = media.map((m, i) => ({...m, uri: imageURI(route, i, m)})))
+  // if (data.links) {
+  //   for (let i = 0; i < data.links.length; i++) {
+  //     data.links[i] = {
+  //       href: data.links[i],
+  //       ... await metaget.fetch(data.links[i], {headers: {'User-Agent': 'Googlebot'}})
+  //     }
+  //   }
+  // }
   return {
     ...data,
     events,

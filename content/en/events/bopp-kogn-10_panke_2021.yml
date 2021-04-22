@@ -48,7 +48,7 @@ artists:
 media:
   - image:
       artists:
-      - relation: 10_embe.classic
+      - relation: embe.classic
       credits:
       - instagram: mary_wonka
         text: 'Photo by: Maria Mai'
