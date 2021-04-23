@@ -21,7 +21,7 @@
       <b-row class="justify-content-center">
         <b-col cols="auto">
           <p class="footer_text">
-          sane-studio 2021
+          sane studio 2021
           </p>
         </b-col>
       </b-row>

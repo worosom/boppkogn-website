@@ -36,6 +36,11 @@
           <section class="badge badge--1" v-if="tags && tags.indexOf('resident') >= 0">
             Resident
           </section>
+          <section class="badge badge--1" id="webmaster-badge" v-if="tags && tags.indexOf('webmaster') >= 0">
+            <span v-for="(char, i) in 'Webmaster'"
+                  :key="`wm_char_${i}`"
+                  v-html="char"/>
+          </section>
         </b-col>
       </b-row>
       <b-row v-if="events.length" class="artist-page_events mb-5">
@@ -144,6 +149,9 @@ export default {
       link: undefined,
       links: undefined
     }
+  },
+  mounted() {
+    console.log(document.getElementById('webmaster-badge'))
   },
   asyncData: artistData,
   computed: {

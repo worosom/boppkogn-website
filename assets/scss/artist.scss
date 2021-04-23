@@ -75,7 +75,25 @@
       vertical-align: middle;
       border-radius: 0;
       transition: transform 150ms ease-out;
-      transform: rotate( random(10) - 5 + deg );
+      transform-origin: 50% 50%;
+      @for $i from 1 through 10 {
+        &:nth-of-type(#{$i}) {
+          transform: rotateZ( random(10) - 5 + deg ) translateX( random(10) - 5 + px ) translateY( random(10) - 5 + px );
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  #webmaster-badge {
+    span {
+      display: inline-block;
+      @for $i from 1 through 9 {
+        &:nth-of-type(#{$i}) {
+          animation: bob-y 1.5s #{$i * 1/9}s ease-in-out infinite;
+        }
+      }
     }
   }
   &_events {
@@ -99,5 +117,8 @@
         color: $cyan;
       }
     }
+  }
+  .event__share-button {
+    transform: rotate(3deg);
   }
 }
