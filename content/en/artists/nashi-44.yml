@@ -1,19 +1,24 @@
+title: Nashi 44
+slug: nashi-44
+role: MC
+from: Berlin
 avatar: /images/nashi-44_ManonMonjaret_0.jpg
-from: Vietnam / Germany 
-links: 
+links:
   - title: Instagram
     href: https://www.instagram.com/nashi_44_/
   - title: DeutscheWelleStories, 2021
     href: https://fb.watch/4TLXmFQiB5/
   - title: Asiangermanupdates, 2021
     href: https://www.instagram.com/p/CNpu9WJgWzc/
-role: MC
-slug: nashi-44
-title: Nashi 44
-bio: >-
-  Nashi is the self-proclaimed <em>FIERCE VIET GERMAN RAPPER</em>, whose clever and timely lyrics pull from personal experiences: encounters with microaggressions and everyday racism, the exoticization of Asian women, and more. Nashi has been particularly active this year with releasing rap videos on Instagram (2021 is Nashi's year, I'm telling you ). She even performed live at the Berlin demonstration for the victims of Atlanta.“ Asiangermanupdates, 2021
+bio: "Nashi is the self-proclaimed <em>FIERCE VIET GERMAN RAPPER</em>, whose
+  clever and timely lyrics pull from personal experiences: encounters with
+  microaggressions and everyday racism, the exoticization of Asian women, and
+  more. Nashi has been particularly active this year with releasing rap videos
+  on Instagram (2021 is Nashi's year, I'm telling you ). She even performed live
+  at the Berlin demonstration for the victims of Atlanta.“ Asiangermanupdates,
+  2021"
 media:
   - image:
       artists:
-      - relation: nashi-44
+        - relation: nashi-44
       src: /images/nashi-44_0.jpg
