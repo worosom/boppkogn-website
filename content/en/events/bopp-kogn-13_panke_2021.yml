@@ -9,13 +9,15 @@ venue:
   name: Panke
 address: Gerichtstraße 23, Berlin
 instagram: https://www.instagram.com/boppkognfestival/
+residentadvisor: https://ra.co/events/1442273
 livestream:
   link: https://www.twitch.tv/pankeberlin
   startTime: 2021-05-01 08:00pm
   endTime: 2021-05-01 11:30pm
   twitch:
     channel: pankeberlin
-description: "No matter what! we keep it going <b>🎶</b> support local artists and our clubs 🚀"
+description: No matter what! we keep it going <b>🎶</b> support local artists
+  and our clubs 🚀
 artists:
   - artist:
       relation: nashi-44
