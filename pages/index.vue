@@ -30,6 +30,10 @@ export default {
       title,
       meta: [
         { charset: 'utf-8' },
+        {
+          rel: 'canonical',
+          href: process.env.BASE_URL
+        },
         { hid: 'description', name: 'description', content: description },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {

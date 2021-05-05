@@ -100,6 +100,10 @@ export default {
       title: this.title,
       meta: [
         {
+          rel: 'canonical',
+          href: process.env.BASE_URL + this.$route.path
+        },
+        {
           hid: 'description',
           name: 'description',
           content: this.description

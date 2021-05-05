@@ -21,6 +21,10 @@ export default {
     return {
       title,
       meta: [
+        {
+          rel: 'canonical',
+          href: process.env.BASE_URL + this.$route.path
+        },
         { hid: 'description', name: 'description', content: description },
         {
           hid: 'og:title',
