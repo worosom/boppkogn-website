@@ -1,12 +1,18 @@
 backend:
   name: git-gateway
   branch: master
+# backend:
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   branch: master
 
 site_url: "https://bopp-kogn.africa"
 display_url: "https://bopp-kogn.africa"
 logo_url: "https://bopp-kogn.africa/bopp-kogn-inline.svg"
-media_folder: "static/images" # Media files will be stored in the repo under images/uploads
+media_folder: "static/images"
 public_folder: "/images"
+editor:
+  preview: false
 
 collections: # A list of collections the CMS should be able to edit
   - name: "about"
@@ -49,7 +55,17 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Slug, name: slug, widget: string}
       - {label: Role, name: role, widget: string, required: false}
       - {label: From, name: from, widget: string, required: false}
-      - {label: Link, name: link, widget: string, required: false}
+      - label: Links
+        name: links
+        widget: list
+        required: false
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Link
+            name: href
+            widget: string
       - {label: Avatar, name: avatar, widget: image, required: false}
       - label: "Media"
         name: "media"
