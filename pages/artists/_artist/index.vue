@@ -21,7 +21,7 @@
         </b-col>
         <b-col order-md="1" class="artist-page_body" md="6">
           <share-button verbose @click="$nuxt.$emit('share', {url, title: ogtitle, description})" style="float: right;" class="event__share-button"/>
-          <section class="artist-page_bio" v-if="bio" v-html="bio"/>
+          <nuxt-content v-if="body.children.length" class="artist-page_bio" :document="{body}"/>
         </b-col>
         <b-col order-md="3" class="artist-page_footer">
           <section v-if="link">

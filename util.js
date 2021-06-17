@@ -50,7 +50,7 @@ export const mod = (a, n) => {
 }
 
 export async function artistData({route, $content}) {
-  const metaget = require('metaget')
+  // const metaget = require('metaget')
   const data = await $content(`en/artists/${route.params.artist}`).fetch()
   const all_events = await $content('en/events').fetch()
   const events = all_events.filter(event => event.artists.filter(({artist}) => artist.relation == data.slug).length)

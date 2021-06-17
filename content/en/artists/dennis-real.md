@@ -1,0 +1,9 @@
+---
+avatar: /images/img_3563.jpg
+from: Germany
+link: 'https://www.youtube.com/watch?v=4eHhEskUM68'
+role: Live MC
+slug: dennis-real
+title: Dennis Real
+---
+I started to make music at the age of 15\. It all began when my friends and I came to do freestyle sessions. From the very first moment we were addicted. Any place, any time we would challenge each other with rhymes, sometimes all night long. After some time I wrote my first bars. Step by step I developed my own style. Soon I connected with my brother from another mother Meidi Moe, because I knew he was producing beats on his MPC. Together we met the brother Adlib Swayze, who had already produced tracks with other artists. Not long after the three of us met, we founded our label 12 Drunkies. We worked on our first album for nearly three years. The „12 Drunkies Tape #1“ was released on 200 hand numbered tapes and uploaded on DatPiff for free. After the tapes sold out fast we started to work on the first LP.  In the meantime I did some features on releases for Slowy & 12 Vince and AzudemSK and had the chance to meet many more amazing people from the hip hop scene. I released „Datteln mit Speck“, produced by Adlib Swazy, in 2015 in cooperation with the record label Hip Hop Vinyl (HHV) with features from Slowy, 12Vince, AzudemSK, Diggy Mac Dirt & Chezz One & Damian. Three years later in 2018 I recorded the LP “Chrom” together with Slowy and AzudemSK, also produced by Adlib Swayze. It includes features from the Finn from the Sendemast and Maulheld from the Funkverteidiger Crew and was also released by HHV. The “12 Drunkies Tape #1” was rereleased on vinyl in 2019\. By the end of the year Diggy Mac Dirt and I recorded the album „Leathermangrooves“. It includes features from Galv, DJ Rookie, Benman, High Risk Area, Mosie Mos and AzudemSK als was also released by HHV / 12 Drunkies.

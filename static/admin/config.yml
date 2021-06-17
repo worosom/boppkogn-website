@@ -47,7 +47,7 @@ collections: # A list of collections the CMS should be able to edit
     summary: "{{title}}"
     label: "Artists"
     folder: "content/en/artists"
-    extension: "yml"
+    extension: "md"
     slug: "{{fields.slug}}"
     create: true
     fields:
@@ -55,6 +55,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Slug, name: slug, widget: string}
       - {label: Role, name: role, widget: string, required: false}
       - {label: From, name: from, widget: string, required: false}
+      - {label: Bio, name: body, widget: markdown, required: false}
       - label: Links
         name: links
         widget: list
