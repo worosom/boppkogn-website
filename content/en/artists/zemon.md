@@ -3,6 +3,9 @@ title: Zemon
 slug: zemon
 role: DJ
 from: Berlin
+links:
+  - title: Linktree
+    href: https://linktr.ee/zemon
 avatar: /images/zemon.jpg
 ---
 Zemon is a music writer, producer, engineer, DJ and film composer from outer space.
