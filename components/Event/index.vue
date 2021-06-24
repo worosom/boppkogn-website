@@ -122,7 +122,7 @@
              xl="7"
              order-md="1"
              class="event__info event__info--pattern">
-        <p class="event__description" v-html="description"/>
+        <nuxt-content v-if="body.children.length" class="event__description" :document="{body}"/>
       </b-col>
     </b-row>
 

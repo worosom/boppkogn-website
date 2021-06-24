@@ -1,3 +1,4 @@
+---
 title: Bopp Kogn
 slug: bopp-kogn_panke_2018
 image: /images/bopp_kogn_poster.jpg
@@ -12,33 +13,15 @@ price: 6-8€
 instagram: 'https://www.instagram.com/boppkognfestival/'
 facebook: 'https://www.facebook.com/events/2377698398971893/'
 residentadvisor: 'https://www.residentadvisor.net/events/1173679'
-description: >-
-  We invite you to this special Rap event organized in collaboration with <span
-  class='event__description_artist'>AFRICULTURBAN</span> at <span
-  class='event__description_venue'>PANKE</span>!<br><br>Senegalese rapper <span
-  class='event__description_artist'>EL CHE 44</span> aka <span
-  class='event__description_artist'>BABA CHERIF</span> and lithuanian super-star
-  <span class='event__description_artist'>LIEZHUVIS</span> from the Rap-group
-  <span class='event__description_artist'>DESPOTIN FAM</span> host a night full
-  of intercultural rhymes by african rap-icons <span
-  class='event__description_artist'>MATADOR</span> and <span
-  class='event__description_artist'>KEYTI</span> as well as our established
-  friends <span class='event__description_artist'>YANSN</span> and <span
-  class='event__description_artist'>TEKNICAL DEVELOPMENT.IS</span>.<br><br>And
-  on top of that': Hip-Hop-professional <span
-  class='event__description_artist'>FIGUB BRAZLEVIC</span> and our
-  all-time-favorite <span class='event__description_artist'>ARCADEHEAD</span>
-  are going to take over the sound system. What's going to happen then? Join us,
-  bring all your friends and hear for yourself to find out!
 meta_description: >-
-  We invite you to this special Rap event at PANKE! Senegalese rapper EL CHE 44 aka BABA CHERIF and lithuanian super-star LIEZHUVIS from the Rap-group
-  DESPOTIN FAM host a night full
-  of intercultural rhymes by african rap-icons MATADOR and KEYTI as well as our established
-  friends YANSN and TEKNICAL DEVELOPMENT.IS. And
-  on top of that': Hip-Hop-professional FIGUB BRAZLEVIC and our
-  all-time-favorite ARCADEHEAD
-  are going to take over the sound system. What's going to happen then? Join us,
-  bring all your friends and hear for yourself to find out!
+  We invite you to this special Rap event at PANKE! Senegalese rapper EL CHE 44
+  aka BABA CHERIF and lithuanian super-star LIEZHUVIS from the Rap-group
+  DESPOTIN FAM host a night full of intercultural rhymes by african rap-icons
+  MATADOR and KEYTI as well as our established friends YANSN and TEKNICAL
+  DEVELOPMENT.IS. And on top of that': Hip-Hop-professional FIGUB BRAZLEVIC and
+  our all-time-favorite ARCADEHEAD are going to take over the sound system.
+  What's going to happen then? Join us, bring all your friends and hear for
+  yourself to find out!
 artists:
   - artist:
       avatar: /images/matador.jpg
@@ -98,42 +81,42 @@ artists:
       relation: liezhuvis
 media:
   - image:
-      src: "/images/bopp_kogn_poster.jpg"
+      src: /images/bopp_kogn_poster.jpg
       title: Bopp Kogn 2018
       credits:
-        - credit:
+        - credit: null
           text: 'Designed by: Fabian Tombers'
           website: 'https://fabiantombers.hotglue.me/'
   - image:
-      src: "/images/bopp_kogn_01.jpg"
+      src: /images/bopp_kogn_01.jpg
       title: Bopp Kogn 2018
       artists:
         - relation: yansn
   - image:
-      src: "/images/bopp_kogn_02.jpg"
+      src: /images/bopp_kogn_02.jpg
       title: Bopp Kogn 2018
       artists:
         - relation: figub-brazlevic
         - relation: el-che-44
   - image:
-      src: "/images/bopp_kogn_03.jpg"
+      src: /images/bopp_kogn_03.jpg
       title: Bopp Kogn 2018
       artists:
         - relation: teknical-development.is
         - relation: el-che-44
         - relation: figub-brazlevic
   - image:
-      src: "/images/bopp_kogn_04.jpg"
+      src: /images/bopp_kogn_04.jpg
       title: Bopp Kogn 2018
   - image:
-      src: "/images/bopp_kogn_05.jpg"
+      src: /images/bopp_kogn_05.jpg
       title: Bopp Kogn 2018
       artists:
         - relation: figub-brazlevic
         - relation: el-che-44
         - relation: teknical-development.is
   - image:
-      src: "/images/bopp_kogn_06.jpg"
+      src: /images/bopp_kogn_06.jpg
       title: Bopp Kogn 2018
       artists:
         - relation: figub-brazlevic
@@ -141,7 +124,7 @@ media:
         - relation: yansn
         - relation: el-che-44
   - image:
-      src: "/images/yansn_01.jpg"
+      src: /images/yansn_01.jpg
       title: Yansn
       artists:
         - relation: el-che-44
@@ -149,136 +132,142 @@ media:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_02.jpg"
+      src: /images/yansn_02.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_03.jpg"
+      src: /images/yansn_03.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_04.jpg"
+      src: /images/yansn_04.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_05.jpg"
+      src: /images/yansn_05.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_06.jpg"
+      src: /images/yansn_06.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/yansn_07.jpg"
+      src: /images/yansn_07.jpg
       title: Yansn
       artists:
         - relation: arcadehead
         - relation: yansn
   - image:
-      src: "/images/arcadehead_01.jpg"
+      src: /images/arcadehead_01.jpg
       title: Arcadehead
       artists:
         - relation: arcadehead
   - image:
-      src: "/images/arcadehead_02.jpg"
+      src: /images/arcadehead_02.jpg
       title: Arcadehead
       artists:
         - relation: arcadehead
   - image:
-      src: "/images/el_che_01.jpg"
+      src: /images/el_che_01.jpg
       title: El Che
       artists:
         - relation: el-che-44
         - relation: arcadehead
   - image:
-      src: "/images/el_che_02.jpg"
+      src: /images/el_che_02.jpg
       title: El Che
       artists:
         - relation: el-che-44
         - relation: teknical-development.is
   - image:
-      src: "/images/el_che_03.jpg"
+      src: /images/el_che_03.jpg
       title: El Che
       artists:
         - relation: el-che-44
         - relation: figub-brazlevic
   - image:
-      src: "/images/el_che_04.jpg"
+      src: /images/el_che_04.jpg
       title: El Che
       artists:
         - relation: el-che-44
         - relation: figub-brazlevic
   - image:
-      src: "/images/el_che_05.jpg"
+      src: /images/el_che_05.jpg
       title: El Che
       artists:
         - relation: el-che-44
         - relation: figub-brazlevic
         - relation: yansn
   - image:
-      src: "/images/el_che_06.jpg"
+      src: /images/el_che_06.jpg
       title: El Che
       artists:
         - relation: el-che-44
   - image:
-      src: "/images/figub_01.jpg"
+      src: /images/figub_01.jpg
       title: Figub
       artists:
         - relation: figub-brazlevic
   - image:
-      src: "/images/figub_02.jpg"
+      src: /images/figub_02.jpg
       title: Figub
       artists:
         - relation: figub-brazlevic
   - image:
-      src: "/images/teknical_01.jpg"
+      src: /images/teknical_01.jpg
       title: Teknical Development.is
       artists:
         - relation: figub-brazlevic
         - relation: teknical-development.is
   - image:
-      src: "/images/teknical_03.jpg"
+      src: /images/teknical_03.jpg
       title: Teknical Development.is
       artists:
         - relation: teknical-development.is
   - image:
-      src: "/images/teknical_04.jpg"
+      src: /images/teknical_04.jpg
       title: Teknical Development.is
       artists:
         - relation: teknical-development.is
   - image:
-      src: "/images/teknical_05.jpg"
+      src: /images/teknical_05.jpg
       title: Teknical Development.is
       artists:
         - relation: teknical-development.is
   - image:
-      src: "/images/keyti_01.jpg"
+      src: /images/keyti_01.jpg
       title: Keyti
       artists:
         - relation: keyti
   - image:
-      src: "/images/keyti_02.jpg"
+      src: /images/keyti_02.jpg
       title: Keyti
       artists:
         - relation: keyti
   - image:
-      src: "/images/matador_01.jpg"
+      src: /images/matador_01.jpg
       title: Matador
       artists:
         - relation: matador
         - relation: el-che-44
   - image:
-      src: "/images/matador_02.jpg"
+      src: /images/matador_02.jpg
       title: Matador
       artists:
         - relation: matador
+---
+We invite you to this special Rap event organized in collaboration with **AFRICULTURBAN** at **PANKE**!  
+  
+Senegalese rapper **EL CHE 44** aka **BABA CHERIF** and lithuanian super-star **LIEZHUVIS** from the Rap-group **DESPOTIN FAM** host a night full of intercultural rhymes by african rap-icons **MATADOR** and **KEYTI** as well as our established friends **YANSN** and **TEKNICAL DEVELOPMENT.IS**.  
+  
+And on top of that': Hip-Hop-professional **FIGUB BRAZLEVIC** and our all-time-favorite **ARCADEHEAD** are going to take over the sound system. What's going to happen then? Join us, bring all your friends and hear for yourself to find out!

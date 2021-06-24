@@ -1,3 +1,4 @@
+---
 title: Berlin Soul
 slug: bopp-kogn-4-berlin-soul_panke_2019
 image: /images/berlin-soul-pic-01.png
@@ -12,28 +13,6 @@ price: ''
 instagram: 'https://www.instagram.com/boppkognfestival/'
 facebook: 'https://www.facebook.com/events/395876971050954/'
 residentadvisor: 'https://www.residentadvisor.net/events/1336171'
-description: >-
-  Together as one is definitely the best way to make dreams happen and <span
-  class='event__description_artist'>Bopp Kogn</span> Crew make this huge
-  connection between best Friends happen at <span
-  class='event__description_venue'>Panke</span> the place to be and Wedding the
-  Soul of Berlin City.
-
-  <br><br>
-
-  <span class='event__description_artist'>There is no description for this
-  event!</span>
-
-  <br><br>
-
-  Prepare yourself for a night full of <span
-  class='event__description_artist'>DJs</span> and <span
-  class='event__description_artist'>Producers</span> who will give you nice
-  bouncing <span class='event__description_artist'>Hip Hop</span>, <span
-  class='event__description_artist'>Soul</span>, <span
-  class='event__description_artist'>Afro</span> and <span
-  class='event__description_artist'>Funky vibes</span> all night till the early
-  morning.
 meta_description: >-
   Together as one is definitely the best way to make dreams happen and Bopp Kogn
   Crew make this huge connection between best Friends happen at Panke the place
@@ -91,48 +70,54 @@ media:
   - image:
       src: /images/boppkogn-berlin-soul_0.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_1.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_2.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_4.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_5.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_7.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_8.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
   - image:
       src: /images/boppkogn-berlin-soul_9.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Photo by: Maria Mai'
-          instagram: 'mary_wonka'
+          instagram: mary_wonka
+---
+Together as one is definitely the best way to make dreams happen and **Bopp Kogn** Crew make this huge connection between best Friends happen at **Panke** the place to be and Wedding the Soul of Berlin City.  
+  
+**There is no description for this event!**  
+  
+Prepare yourself for a night full of **DJs** and **Producers** who will give you nice bouncing **Hip Hop**, **Soul**, **Afro** and **Funky vibes** all night till the early morning.

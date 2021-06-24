@@ -427,18 +427,19 @@ h3 {
     @media (min-width: --breakpoint-md) {
       font-size: 1.2rem;
     }
-    b, &_artist,
-    &_venue,
-    &_highlight {
+    strong {
       color: $blue;
       padding: 0 0.5rem;
       background-color: #ff0;
       font-family: "Sporting Grotesque_Bold";
+      &:hover {
+        animation: activity 50ms infinite alternate linear;
+      }
     }
-    b:hover, &_artist:hover,
-    &_venue:hover,
-    &_highlight:hover {
-      animation: activity 50ms infinite alternate linear;
+    table {
+      th, td {
+        padding: .5rem;
+      }
     }
   }
   &__media {

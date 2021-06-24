@@ -26,7 +26,9 @@ export default {
     image() { return this.artist.avatar },
     slug() { return this.artist.slug || this.artist.title.toLowerCase().split(' ').join('-') },
     artistLink() {
-      return `/artists/${this.slug}/?origin=` + encodeURIComponent(`${this.$route.fullPath.split('#')[0]}#${this.slug}`) + '#content' 
+      return `/artists/${this.slug}/?origin=`
+        + encodeURIComponent(`${this.$route.fullPath.split('#')[0]}#${this.slug}`)
+        + '#content' 
     }
   }
 }

@@ -1,3 +1,4 @@
+---
 title: Bopp Kogn
 slug: bopp-kogn_panke_2019
 image: /images/img_5076.jpg
@@ -12,11 +13,6 @@ instagram: 'https://www.instagram.com/boppkognfestival/'
 facebook: 'https://www.facebook.com/events/2465715196794252/'
 residentadvisor: 'https://www.residentadvisor.net/events/1282118'
 meta_description: Bopp Kogn Hip Hop Festival Berlin 2019
-description: >-
-  Bopp Kogn Crew bring again people together on the 20 July at Panke for a mega LIVE show according to our ''Soli parties and preparing our JOURNEY TO DAKAR 2020''<br></br>
-  Bopp Kogn means AROUND the CORNER, Um die Ecke....
-  Come and join the Hip-Hop World wide Connection and bring your friends with and enjoy a beautiful night with a heavy line up.
-
 artists:
   - artist:
       avatar: /images/foto-28.12.18-03-20-50.jpg
@@ -78,7 +74,7 @@ media:
   - image:
       src: /images/img_5076.jpg
       credits:
-        - credit:
+        - credit: null
           text: 'Graphic design by: Fabian Tombers'
           website: 'https://fabiantombers.hotglue.me/'
       artists:
@@ -179,3 +175,7 @@ media:
         - relation: teknical-development.is
   - image:
       src: /images/img_5073.jpg
+---
+Bopp Kogn Crew bring again people together on the 20 July at Panke for a mega LIVE show according to our ''Soli parties and preparing our JOURNEY TO DAKAR 2020''  
+
+ Bopp Kogn means AROUND the CORNER, Um die Ecke.... Come and join the Hip-Hop World wide Connection and bring your friends with and enjoy a beautiful night with a heavy line up.

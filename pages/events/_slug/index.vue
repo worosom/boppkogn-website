@@ -17,7 +17,7 @@ export default {
   layout: 'default',
   head() {
     const title = `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
-      description = this.event.meta_description || this.event.description.replace(/<[^>]+>/g,'')
+      description = this.event.meta_description || this.event.body
     return {
       title,
       meta: [
