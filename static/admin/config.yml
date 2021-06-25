@@ -101,8 +101,7 @@ collections: # A list of collections the CMS should be able to edit
     summary: "{{title}} | {{type}}"
     label: "Event" # Used in the UI, ie.: "New Post"
     folder: "content/en/events"
-    extension: "yml"
-    format: "yml"
+    extension: "md"
     slug: "{{fields.slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
