@@ -432,6 +432,10 @@ h3 {
       padding: 0 0.5rem;
       background-color: #ff0;
       font-family: "Sporting Grotesque_Bold";
+    }
+    a {
+      color: $blue;
+      text-decoration: underline;
       &:hover {
         animation: activity 50ms infinite alternate linear;
       }
