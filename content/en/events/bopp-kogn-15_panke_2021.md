@@ -31,16 +31,16 @@ artists:
       relation: beatpete
 media: []
 ---
-We invite you back to our lovely Garden Session at [Panke!](https://www.pankeculture.com/)
+We invite you back to our lovely Garden Session at **[Panke!](https://www.pankeculture.com/)**
 
 We keep the good things going!
 
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#0d00ff', 'B0B75D8AW');kofiwidget2.draw();</script> 
 
-
-|     | **Timetable**                                                    |
-| --- | ---------------------------------------------------------------- |
-| 17h | Panke Vibes                                                      |
-| 19h | [Wan.illa NICE](https://bopp-kogn.africa/artists/wan-illa-nice/) |
-| 20h | [El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)         |
-| 21h | [Neshii](https://bopp-kogn.africa/artists/neshii/)               |
-| 22h | [Beatpete](https://bopp-kogn.africa/artists/beatpete/)           |
+|     | **Timetable**                                                        |
+| --- | -------------------------------------------------------------------- |
+| 17h | **Panke Vibes**                                                      |
+| 19h | **[Wan.illa NICE](https://bopp-kogn.africa/artists/wan-illa-nice/)** |
+| 20h | **[El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)**         |
+| 21h | **[Neshii](https://bopp-kogn.africa/artists/neshii/)**               |
+| 22h | **[Beatpete](https://bopp-kogn.africa/artists/beatpete/)**           |
