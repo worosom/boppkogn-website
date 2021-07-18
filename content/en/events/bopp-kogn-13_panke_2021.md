@@ -4,17 +4,17 @@ slug: bopp-kogn-13_panke_2021
 image: /images/boppkogn-13-igPoster.jpg
 type: Part 13
 subtitle: Hip Hop Showcase
-date: '2021-05-01 08:00pm'
+date: 2021-05-01 08:00pm
 venue:
-  venueLink: 'https://bit.ly/2NDGRAK'
+  venueLink: https://bit.ly/2NDGRAK
   name: Panke
-address: 'Gerichtstraße 23, Berlin'
-instagram: 'https://www.instagram.com/boppkognfestival/'
-residentadvisor: 'https://ra.co/events/1442273'
+address: Gerichtstraße 23, Berlin
+instagram: https://www.instagram.com/boppkognfestival/
+residentadvisor: https://ra.co/events/1442273
 livestream:
-  link: 'https://www.twitch.tv/pankeberlin'
-  startTime: '2021-05-01 08:00pm'
-  endTime: '2021-05-01 11:30pm'
+  link: https://www.twitch.tv/pankeberlin
+  startTime: 2021-05-01 08:00pm
+  endTime: 2021-05-01 11:30pm
   twitch:
     channel: pankeberlin
 artists:
@@ -28,6 +28,16 @@ artists:
       relation: grzly-adams
   - artist:
       relation: markus-tone
-media: []
+media:
+  - image:
+      src: /images/img_99865.jpeg
+  - image:
+      src: /images/img_9996d.jpeg
+  - image:
+      src: /images/img_9957.jpeg
+  - image:
+      src: /images/img_9990.jpeg
+  - image:
+      src: /images/img_0838.jpeg
 ---
 No matter what! we keep it going **🎶** support local artists and our clubs 🚀
