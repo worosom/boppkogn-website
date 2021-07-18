@@ -35,7 +35,7 @@ We invite you back to our lovely Garden Session at **[Panke!](https://www.pankec
 
 We keep the good things going!
 
-<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#0d00ff', 'B0B75D8AW');kofiwidget2.draw();</script> 
+
 
 |     | **Timetable**                                                        |
 | --- | -------------------------------------------------------------------- |
