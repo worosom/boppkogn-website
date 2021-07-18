@@ -69,5 +69,15 @@ media:
       src: /images/img_0372.jpeg
   - image:
       src: /images/img_0342.jpeg
+  - image:
+      src: /images/img_0315.jpeg
+  - image:
+      src: /images/img_0265.jpeg
+  - image:
+      src: /images/img_0301.jpeg
+  - image:
+      src: /images/img_0251.jpeg
+  - image:
+      src: /images/img_0197.jpeg
 ---
 No matter what! we keep it going **🎶** support local artists and our clubs 🚀
