@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './markdown.scss';
 
 html {
   scroll-behavior: smooth;
@@ -420,31 +421,7 @@ h3 {
   }
   &__description {
     align-self: center;
-    font-family: "Sporting Grotesque_Regular";
-    color: #ff0;
-    line-height: 1.5;
-    hyphens: auto;
-    @media (min-width: --breakpoint-md) {
-      font-size: 1.2rem;
-    }
-    strong {
-      color: $blue;
-      padding: 0 0.5rem;
-      background-color: #ff0;
-      font-family: "Sporting Grotesque_Bold";
-    }
-    a {
-      color: $blue;
-      text-decoration: underline;
-      &:hover {
-        animation: activity 50ms infinite alternate linear;
-      }
-    }
-    table {
-      th, td {
-        padding: .5rem;
-      }
-    }
+    @include markdown;
   }
   &__media {
     &_header {

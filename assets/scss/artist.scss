@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './markdown.scss';
 
 .artist-page {
   &_head {
@@ -19,17 +20,12 @@
     }
   }
   &_bio {
-    color: $yellow;
     background: $blue;
     padding: 1rem;
     @media (min-width: 768px) {
       padding: 2rem;
     }
-    font-family: "Sporting Grotesque_Regular";
-    hyphens: auto;
-    p:last-child {
-      margin-bottom: 0;
-    }
+    @include markdown;
   } 
   &_footer, &_events {
     a {
