@@ -89,5 +89,19 @@ media:
       src: /images/img_0045.jpeg
   - image:
       src: /images/img_0015-2.jpeg
+  - image:
+      src: /images/img_0018.jpeg
+  - image:
+      src: /images/img_0x026.jpeg
+  - image:
+      src: /images/img_0d017.jpeg
+  - image:
+      src: /images/img_0007.jpeg
+  - image:
+      src: /images/img_0011.jpeg
+  - image:
+      src: /images/img_00e03.jpeg
+  - image:
+      src: /images/img_0e342.jpeg
 ---
 No matter what! we keep it going **🎶** support local artists and our clubs 🚀
