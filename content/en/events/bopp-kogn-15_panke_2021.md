@@ -33,7 +33,9 @@ artists:
       relation: dj-primark
 media: []
 ---
-We invite you back to our lovely Garden Session at **[Panke!](https://www.pankeculture.com/)**
+We invite you back to our lovely Garden Session at
+
+**[Panke!](https://www.pankeculture.com/)**
 
 We keep the good things going!
 
