@@ -29,6 +29,8 @@ artists:
       relation: neshii
   - artist:
       relation: beatpete
+  - artist:
+      relation: dj-primark
 media: []
 ---
 We invite you back to our lovely Garden Session at **[Panke!](https://www.pankeculture.com/)**
@@ -39,7 +41,7 @@ We keep the good things going!
 
 |     | **Timetable**                                                        |
 | --- | -------------------------------------------------------------------- |
-| 17h | **Panke Vibes**                                                      |
+| 17h | **[DJ Primark](https://bopp-kogn.africa/artists/dj-primark/)**       |
 | 19h | **[Wan.illa NICE](https://bopp-kogn.africa/artists/wan-illa-nice/)** |
 | 20h | **[El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)**         |
 | 21h | **[Neshii](https://bopp-kogn.africa/artists/neshii/)**               |
