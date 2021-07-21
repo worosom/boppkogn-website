@@ -18,9 +18,6 @@
     &:hover {
       animation: activity 50ms infinite alternate linear;
     }
-    &::before {
-      content: '↗ ';
-    }
   }
   table {
     th, td {
