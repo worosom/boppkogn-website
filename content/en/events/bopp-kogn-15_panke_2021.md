@@ -43,8 +43,7 @@ We keep the good things going!
 
 |     | **Timetable**                                                        |
 | --- | -------------------------------------------------------------------- |
-| 17h | **[DJ Primark](https://bopp-kogn.africa/artists/dj-primark/)**       |
-| 19h | **[Wan.illa NICE](https://bopp-kogn.africa/artists/wan-illa-nice/)** |
-| 20h | **[El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)**         |
-| 21h | **[Neshii](https://bopp-kogn.africa/artists/neshii/)**               |
-| 22h | **[Beatpete](https://bopp-kogn.africa/artists/beatpete/)**           |
+| 18h | **[Beatpete](https://bopp-kogn.africa/artists/beatpete/)**           |
+| 19h | **[El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)**         |
+| 20h | **[Neshii](https://bopp-kogn.africa/artists/neshii/)**               |
+| 21h | **[Wan.Illa Nice](https://bopp-kogn.africa/artists/wan-illa-nice/)** |
