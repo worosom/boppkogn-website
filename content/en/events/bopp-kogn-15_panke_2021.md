@@ -29,8 +29,6 @@ artists:
       relation: neshii
   - artist:
       relation: beatpete
-  - artist:
-      relation: dj-primark
 media: []
 ---
 We invite you back to our lovely Garden Session at
