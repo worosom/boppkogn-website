@@ -127,16 +127,16 @@
     </b-row>
 
     <template v-if="media && media.length">
-      <client-only>
-        <b-row>
-          <b-col>
-            <h1 class="event__media_header" id="pics">Pics</h1>
-          </b-col>
-        </b-row>
-        <b-row class="mb-5">
+      <b-row>
+        <b-col>
+          <h1 class="event__media_header" id="pics">Pics</h1>
+        </b-col>
+      </b-row>
+      <b-row class="mb-5">
+        <client-only>
           <gallery v-model="media"/>
-        </b-row>
-      </client-only>
+        </client-only>
+      </b-row>
     </template>
 
     <template v-if="artists && artists.length">
