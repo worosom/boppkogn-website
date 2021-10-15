@@ -1,49 +1,47 @@
 ---
 title: Bopp Kogn
-slug: bopp-kogn-16_panke_2021
-image: /images/245683213_289124156367596_1475960034403803616_n.jpg
-type: Part 16
-subtitle: 3rd Birthday Party
-date: 2021-10-23 09:00pm
+slug: bopp-kogn-15_panke_2021
+image: /images/210559673_527668341757341_3892701400242372876_n.jpg
+type: Part 15
+subtitle: Garden Session
+date: 2021-07-24 05:00pm
 venue:
   venueLink: https://bit.ly/2NDGRAK
   name: Panke
 address: Gerichtstraße 23, Berlin
 instagram: https://www.instagram.com/boppkognfestival/
-facebook: https://www.facebook.com/events/411493707201650/
-residentadvisor: ""
+facebook: https://www.facebook.com/events/182969460474609
+residentadvisor: https://ra.co/events/1452369
 livestream: ""
 reservation: https://closecontact.club/
 meta_description: >-
-  3 Years Birthday of the HH Worldwide Connection!
+  We invite you back to our lovely Garden Session at
   [Panke!](https://www.pankeculture.com/)
 
 
   We keep the good things going!
 artists:
   - artist:
-      relation: toni-l
+      relation: wan-illa-nice
   - artist:
-      relation: shacke-one
+      relation: el-bufonk
   - artist:
-      relation: daybee-dee
+      relation: neshii
   - artist:
-      relation: ef
+      relation: beatpete
 media: []
 ---
+We invite you back to our lovely Garden Session at
 
-3 Years Birthday of the HH Worldwide Connection!
-presented by
 **[Panke!](https://www.pankeculture.com/)**
 
 We keep the good things going!
 
 **[SUPPORT](https://ko-fi.com/boppkogn)**
 
-|     | **Artists**                                                        |
+|     | **Timetable**                                                        |
 | --- | -------------------------------------------------------------------- |
-|     | **[Toni L](https://bopp-kogn.africa/artists/toni-l/)**           |
-|     | **[Schacke One](https://bopp-kogn.africa/artists/shacke-one/)**         |
-|     | **[Daybee Dee](https://bopp-kogn.africa/artists/daybee-dee/)**          |
-|     | **[DJ EF](https://bopp-kogn.africa/artists/ef/)** |
-|     | **[Diskohengst](https://bopp-kogn.africa/artists/diskohengst/)** |
+| 18h | **[Beatpete](https://bopp-kogn.africa/artists/beatpete/)**           |
+| 19h | **[El Bufonk](https://bopp-kogn.africa/artists/el-bufonk/)**         |
+| 20h | **[Neshii](https://bopp-kogn.africa/artists/neshii/)**               |
+| 21h | **[Wan.Illa Nice](https://bopp-kogn.africa/artists/wan-illa-nice/)** |
