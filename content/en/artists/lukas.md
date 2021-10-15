@@ -1,9 +1,8 @@
 ---
-avatar: /images/lukas.webp
-from: Germany
-role: Core Member
-slug: lukas
 title: Lukas
+slug: lukas-tombers
+role: Core Member
+from: Berlin
+avatar: /images/lukas.webp
 tags: team
 ---
-
