@@ -4,7 +4,7 @@ slug: bopp-kogn-16_panke_2021
 image: /images/245683213_289124156367596_1475960034403803616_n.jpg
 type: Part 16
 subtitle: 3rd Birthday Party
-date: 2021-10-23 09:23pm
+date: 2021-10-23 09:00pm
 venue:
   venueLink: https://bit.ly/2NDGRAK
   name: Panke
