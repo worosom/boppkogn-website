@@ -1,5 +1,5 @@
 ---
-title: Lukas
+title: LUKAS TOMBERS
 slug: lukas-tombers
 role: Core Member
 from: Berlin
