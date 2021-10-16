@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+import { imageURI } from '~/util.js'
 import Thumbnail from './Thumbnail'
 import LImage from '~/components/Image'
 
@@ -38,7 +39,8 @@ export default {
   data() {
     return {
       is_mounted: false,
-      num_thumbnails: 6
+      num_thumbnails: 6,
+      imageURI
     }
   },
   methods: {

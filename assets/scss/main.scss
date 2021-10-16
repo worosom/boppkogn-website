@@ -190,13 +190,9 @@ h3 {
 }
 
 @keyframes bob-y {
-  0% { transform: translate3D(0, 0, 5px); }
-  50% { transform: translate3D(0, 10px, 5px); }
-  100% { transform: translate3D(0, 0, 5px); }
-}
-@keyframes spin {
-  0% { transform: rotate3D(0, 1, 0, 0); }
-  100% { transform: rotate3D(0, 1, 0, 360deg); }
+  0% { transform: translate3D(0, 0, 0); }
+  50% { transform: translate3D(0, 10px, 0); }
+  100% { transform: translate3D(0, 0, 0); }
 }
 
 .artist {

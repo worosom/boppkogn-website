@@ -18,9 +18,9 @@
               </span>
               <div class="gallery_modal__ui--top__buttons">
                 <share-button @click="$refs.modal_share.show()"/>
-                  <b-btn title="Credits" v-b-modal.modal_credits>
+                <b-btn title="Credits" :disabled="!credits" v-b-modal.modal_credits>
                     <md-information-icon w="1.5rem" h="1.5rem"/>
-                  </b-btn>
+                </b-btn>
               </div>
             </div>
           </header>
@@ -40,102 +40,73 @@
           </footer>
           <div class="modal-body">
             <div
-                class="modal__media">
+              class="modal__media">
               <div :class="modal__image_class(_i)"
-                v-for="(item, _i) in media"
-                :key="_i"
-                v-if="visible[_i]">
-                <l-image
-                    class='modal__image-large'
-                    @onload="onLoad(_i)"
-                    :smartcrop="false"
-                    :lazy="false"
-                    :fullscreen="true"
-                    height="100%"
-                    :src="item.image.src"
-                    :alt="item.image.title"/>
+                   v-for="(item, _i) in media"
+                   :key="_i"
+                   v-if="visible[_i]">
+                   <l-image
+                     class='modal__image-large'
+                     @onload="onLoad(_i)"
+                     :smartcrop="false"
+                     :lazy="false"
+                     :fullscreen="true"
+                     height="100%"
+                     :src="item.image.src"
+                     :alt="item.image.title"/>
               </div>
             </div>
           </div>
           <div
-              class="gallery_modal__ui--helper"
-              v-hammer:swipe="swipeHandler"/>
-          </div>
+            class="gallery_modal__ui--helper"
+            v-hammer:swipe="swipeHandler"/>
         </div>
       </div>
-      <b-modal
-          id="modal_credits"
-          ref="modal_credits"
-          body-bg-variant="#00F"
-          body-text-variant="#FF0"
-          static lazy centered hide-footer hide-header>
-        <b-container>
-          <b-row v-if="event">
-            <b-col
-              :class="'mx-2 modal_credit'"
-              >
-              <nuxt-link
-                  :to="`/events/${event.slug}/?origin=${encodeURIComponent($route.fullPath)}#content`"
-                  class="title"
-                  >
-                  <img style="height: 3.5rem; z-index: 1" :src="event.image+'?h=56'"><span>{{event.title}} {{event.type}}<br>{{event.subtitle}}</span>
-              </nuxt-link>
-            </b-col>
-          </b-row>
-          <b-row
-            v-for="({title, slug}) in artists"
-            :key="`artist_link_${title}`"
-            >
-            <b-col
-                :class="'mx-2 modal_credit'"
-                >
-              <nuxt-link
-                  :to="`/artists/${slug}/?origin=${encodeURIComponent($route.fullPath)}#content`"
-                  class="title"
-                  >
-                  <span>
-                    {{title}}
-                  </span>
-              </nuxt-link>
-            </b-col>
-          </b-row>
-          <b-row v-if="credits">
-            <b-col
-                :class="'mx-2 modal_credit'"
-                v-for="(credit, key) in credits"
-                :key="`credit_${key}`"
-                >
-                <div v-if="credit.text" class="modal_credit_text">{{credit.text}}</div>
-                <a
-                    :href="`https://instagram.com/${credit.instagram}/`"
-                    target="_blank"
-                    :title="`Instagram @${credit.instagram}`"
-                    v-if="credit.instagram">
-                  <logo-instagram w="2rem" h="2rem"/>
-                    <span>@{{credit.instagram}}</span>
-                </a>
-                <a
-                    :href="credit.website"
-                    target="_blank"
-                    title="Website"
-                    v-if="credit.website">
-                  <logo-open w="2rem" h="2rem"/>
-                    <span>Website</span>
-                </a>
-            </b-col>
-          </b-row>
-        </b-container>
-      </b-modal>
-      <share-modal
-          ref="modal_share"
-          :url="url"
-          :title="title"
-          :description="description"
-          />
     </div>
+    <b-modal
+      id="modal_credits"
+      ref="modal_credits"
+      body-bg-variant="#00F"
+      body-text-variant="#FF0"
+      static lazy centered hide-footer hide-header>
+      <b-container>
+        <b-row>
+          <b-col
+            :class="'mx-2 modal_credit'"
+            v-for="(credit, key) in (credits.credit || credits)"
+            :key="`credit_${key}`"
+            >
+            <div v-if="credit.text" class="modal_credit_text">{{credit.text}}</div>
+            <a
+              :href="`https://instagram.com/${credit.instagram}/`"
+              target="_blank"
+              :title="`Instagram @${credit.instagram}`"
+              v-if="credit.instagram">
+              <logo-instagram w="2rem" h="2rem"/>
+              <span>@{{credit.instagram}}</span>
+            </a>
+            <a
+              :href="credit.website"
+              target="_blank"
+              title="Website"
+              v-if="credit.website">
+              <logo-open w="2rem" h="2rem"/>
+              <span>Website</span>
+            </a>
+          </b-col>
+        </b-row>
+      </b-container>
+    </b-modal>
+    <share-modal
+      ref="modal_share"
+      :url="url"
+      :title="title"
+      :description="description"
+      />
+  </div>
 </template>
 <script>
-import { throttle, imageURI, artistData, ast2str } from '~/util'
+import { throttle, imageURI, artistData } from '~/util'
 import { asyncData } from '~/pages/artists/_artist'
 import MdCloseIcon from 'vue-ionicons/dist/md-close.vue'
 import MdInformationIcon from 'vue-ionicons/dist/md-information.vue'
@@ -168,7 +139,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: title,
+          content: `${this.title} - Bopp Kogn HipHop Festival`,
         },
         {
           hid: 'og:description',
@@ -198,14 +169,14 @@ export default {
         {
           hid: 'og:image:alt',
           property: 'og:image:alt',
-          content: this.artists?.map(({title}) => title).join(', ') || this.title
+          content: this.title
         },
       ],
     }
   },
   async asyncData(context) {
     const {params, payload, $content} = context
-    let media, artist = null, event = null;
+    let media, artist = {}, event = {};
     if (payload) return payload;
     if (params.artist) {
       artist = (await asyncData(context))
@@ -214,22 +185,10 @@ export default {
       event = (await $content(`en/events/${params.slug}`).fetch())
       media = event.media
     }
-    const image = media[parseInt(context.route.params.image.split('_')[0])].image
-    event = event || await $content(`en/events/${image.slug}`).fetch()
-    const artists = image.artists && await Promise.all(
-      image.artists.map(async ({relation}) => 
-        await asyncData({
-          ...context,
-          route: { params: { artist: relation }}
-        })
-      )
-    )
     return {
       event,
       artist,
-      media,
-      artists,
-      image
+      media
     }
   },
   data() {
@@ -316,13 +275,13 @@ export default {
     },
     swipeHandler({offsetDirection}) {
       switch (offsetDirection) {
-        case 8:
+          case 8:
           this.hide();
           break;
-        case 2:
+          case 2:
           this.next();
           break;
-        case 4:
+          case 4:
           this.prev();
       }
     },
@@ -352,8 +311,6 @@ export default {
     title() { 
       if (this.media[this.index].title) {
         return this.media[this.index].title
-      } else if (this.artists) {
-        return `${this.artists.map(({title}) => title).join(', ')}`
       } else if (this.event && this.event.title) {
         return `${this.event.title} ${this.event.type}`
       } else if (this.artist && this.artist.title) {
@@ -361,26 +318,12 @@ export default {
       }
     },
     description() {
-      const imageArtists = this.artists
-      const imageDescription = this.media[this.index].image.description
-      if (imageDescription) {
-        return imageDescription
-      } else if (this.artist) {
-        if (this.artist.body?.children.length) {
-          const bio = ast2str(this.artist.body)
-          if (bio) {
-            return bio
-          }
-        }
-        return this.artist.title
-      } else if (imageArtists) {
-        return this.artists.map(({title}) => title).join(', ')
-      } else if (this.event) {
-        if (this.event.body?.children.length) {
-          return ast2str(this.event.body)
-        } else {
-          return `${this.event.title} ${this.event.type}`
-        }
+      if (this.media[this.index].description) {
+        return this.media.description
+      } else if (this.event && this.event.description) {
+        return this.event.description.replace(/<[^>]+>/g,'')
+      } else if (this.artist && this.artist.bio) {
+        return this.artist.bio.replace(/<[^>]+>/g,'')
       }
     },
     url() { return process.env.BASE_URL + this.$route.path },
@@ -397,8 +340,11 @@ export default {
       })
     },
     credits() {
-      return (this.image.credits?.credit || this.image.credits)
+      return this.media[this.index].image.credits
     },
+    artists() {
+      return this.media[this.index].image.artists
+    }
   }
 }
 </script>
