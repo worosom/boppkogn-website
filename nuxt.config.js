@@ -90,16 +90,23 @@ export default {
             slug: route
           }
         }
-        event.media && event.media.forEach((m, i) => {
-          const _route = imageURI(route, i, m.image)
+        event.media && await Promise.all(event.media.map(async (m, i) => {
+          const artists = m.image.artists && await Promise.all(
+            m.image.artists.map(async artist => {
+              return {...await $content(`en/artists/${artist.relation}`).fetch(), relation: artist.relation}
+            })
+          )
+          const _route = imageURI(route, i, {image: {...m.image, artists}}, 'config')
           gallery.push({
             route: _route,
             payload: {
               media: event.media,
-              event
+              event,
+              artists,
+              image: m
             }
           })
-        }) 
+        }))
         const artists = await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`en/artists/${artist.relation}`).fetch() : artist))
         return {
           route: `/events/${route.params.slug}/`,
@@ -118,7 +125,7 @@ export default {
           }
         }
       }))
-      const artists = await Promise.all((await $content('en/artists').fetch()).map(async artist =>{
+      const artists = await Promise.all((await $content('en/artists').fetch()).map(async artist => {
         const route = {
           params: {
             artist: artist.slug
@@ -127,16 +134,20 @@ export default {
         const data = await artistData({route, $content})
         if (data.media) {
           data.media.forEach((m, i) => {
+            const _route = imageURI(route, i, {...m.image, artists: m.image.artists})
             gallery.push({
-              route: imageURI(route, i, m.image),
+              route: _route,
               payload: {
+                ...m,
                 media: data.media,
-                artist: data
+                artist: data,
+                artists: m.image.artists,
+                image: m.image
               }
             })
           })
         }
-        return data
+        return {...data, slug: artist.slug}
       }))
       return [...events, ...gallery, ...artists]
     }

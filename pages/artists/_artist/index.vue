@@ -31,15 +31,16 @@
             <meta-link v-for="link in links" :key="link.href" :value="link"/>
           </section>
           <section class="mt-4 badge" v-if="tags && tags.indexOf('team') >= 0">
-            Boppkogn Team
+            <span>Boppkogn Team</span>
           </section>
           <section class="badge badge--1" v-if="tags && tags.indexOf('resident') >= 0">
-            Resident
+            <span>Resident</span>
           </section>
           <section class="badge badge--1" id="webmaster-badge" v-if="tags && tags.indexOf('webmaster') >= 0">
             <span v-for="(char, i) in 'Webmaster'"
                   :key="`wm_char_${i}`"
-                  v-html="char"/>
+                  class="outer"
+                  v-html="`<span class='inner'>${char}</span>`"/>
           </section>
         </b-col>
       </b-row>
@@ -155,7 +156,6 @@ export default {
     }
   },
   mounted() {
-    console.log(document.getElementById('webmaster-badge'))
   },
   asyncData: artistData,
   computed: {

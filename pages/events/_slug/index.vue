@@ -7,7 +7,7 @@
 import Event from '~/components/Event'
 import About from '~/components/About'
 import Partners from '~/components/Partners'
-import { imageURI, datum } from '~/util'
+import { imageURI, datum, ast2str } from '~/util'
 
 export const resolveArtists = async (event, $content) => {
   return await Promise.all(event.artists.map(async ({artist}) => artist.relation ? $content(`en/artists/${artist.relation}`).fetch() : artist))
@@ -17,7 +17,7 @@ export default {
   layout: 'default',
   head() {
     const title = `🎤${this.event.title} ${this.event.type} ${this.event.subtitle} ${this.event.venue.name} ${this.event.date.getFullYear()}`,
-      description = this.event.meta_description || this.event.body
+      description = this.event.meta_description || ast2str(this.event.body)
     return {
       title,
       meta: [
