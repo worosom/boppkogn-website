@@ -31,7 +31,6 @@ artists:
       relation: ef
 media: []
 ---
-
 3 Years Birthday of the HH Worldwide Connection!
 presented by
 **[Panke!](https://www.pankeculture.com/)**
@@ -40,10 +39,10 @@ We keep the good things going!
 
 **[SUPPORT](https://ko-fi.com/boppkogn)**
 
-|     | **Artists**                                                        |
-| --- | -------------------------------------------------------------------- |
+|     | **Artists**                                                      |
+| --- | ---------------------------------------------------------------- |
 |     | **[Toni L](https://bopp-kogn.africa/artists/toni-l/)**           |
-|     | **[Schacke One](https://bopp-kogn.africa/artists/shacke-one/)**         |
-|     | **[Daybee Dee](https://bopp-kogn.africa/artists/daybee-dee/)**          |
-|     | **[DJ EF](https://bopp-kogn.africa/artists/ef/)** |
-|     | **[Diskohengst](https://bopp-kogn.africa/artists/diskohengst/)** |
+|     | **[Schacke One](https://bopp-kogn.africa/artists/shacke-one/)**  |
+|     | **[Daybee Dee](https://bopp-kogn.africa/artists/daybee-dee/)**   |
+|     | **[DJ EF](https://bopp-kogn.africa/artists/ef/)**                |
+|     | **[Diskohengst](https://bopp-kogn.africa/artists/schacke-one/)** |
