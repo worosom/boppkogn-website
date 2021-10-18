@@ -11,15 +11,13 @@ venue:
 address: Gerichtstraße 23, Berlin
 instagram: https://www.instagram.com/boppkognfestival/
 facebook: https://www.facebook.com/events/411493707201650/
-residentadvisor: ""
+residentadvisor: https://ra.co/events/1472914
 livestream: ""
 reservation: https://closecontact.club/
-meta_description: >-
+meta_description: >+
   3 Years Birthday of the HH Worldwide Connection!
   [Panke!](https://www.pankeculture.com/)
 
-
-  We keep the good things going!
 artists:
   - artist:
       relation: toni-l
@@ -29,13 +27,17 @@ artists:
       relation: daybee-dee
   - artist:
       relation: ef
+  - artist:
+      relation: Diskohengst
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
 presented by
 **[Panke!](https://www.pankeculture.com/)**
 
-We keep the good things going!
+Presented by EL CHE & LIEZHUVIS 
+
+2G Rules 
 
 **[SUPPORT](https://ko-fi.com/boppkogn)**
 
