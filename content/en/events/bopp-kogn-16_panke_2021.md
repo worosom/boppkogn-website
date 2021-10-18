@@ -29,7 +29,7 @@ artists:
   - artist:
       relation: ef
   - artist:
-      relation: Diskohengst
+      relation: diskohengst
       avatar: /images/download-1-.jpeg
       link: https://soundcloud.com/diskohengst
 media: []

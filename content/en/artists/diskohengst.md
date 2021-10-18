@@ -1,6 +1,6 @@
 ---
 title: Diskohengst
-slug: Diskohengst
+slug: diskohengst
 role: Dj
 from: Berlin
 links:
@@ -10,9 +10,9 @@ links:
     href: https://www.facebook.com/daszuendet
   - href: https://www.laut.de/Shacke-One
     title: laut.de
-  - title: Discohengst
+  - title: Diskohengst
     href: https://soundcloud.com/diskohengst
-avatar: /images/download.jpeg
+avatar: /images/download-1-.jpeg
 media: []
 ---
 "Nordberlin! Betret' den Kosmos und begreife, unser Leben spielt sich ab zwischen Zugdepot und Kneipe. Ich bin hungrig und verteil' Platzverweise an Dullis. Der Orpheus vom Nordkreuz wummert geile Muttis." Berliner Rapper neigen seit jeher dazu, den Mikrokosmos ihres Bezirks bedingungslos zu repräsentieren und in den Fokus ihrer Musik zu rücken. Ende der 1990er erhoben Kool Savas und Taktloss mit aggressivem Battle-Rap Westberlin zum Mittelpunkt Rap-Deutschlands. Shacke One bewegt sich 20 Jahre später noch immer im Fahrwasser des Duos.
