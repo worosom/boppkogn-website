@@ -39,7 +39,9 @@ Presented by EL CHE & LIEZHUVIS
 
 2G Rules 
 
-**[SUPPORT](https://ko-fi.com/boppkogn)**
+Bopp Kogn is a Social project inside the heart of Panke e.V
+
+we are thankful for any **[SUPPORT](https://ko-fi.com/boppkogn)**
 
 |     | **Artists**                                                      |
 | --- | ---------------------------------------------------------------- |
