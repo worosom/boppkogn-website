@@ -25,10 +25,13 @@ artists:
       relation: shacke-one
   - artist:
       relation: daybee-dee
+      avatar: /images/dj-daybee-dee-at-o2-logo.jpg
   - artist:
       relation: ef
   - artist:
       relation: Diskohengst
+      avatar: /images/download-1-.jpeg
+      link: https://soundcloud.com/diskohengst
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
@@ -37,9 +40,9 @@ presented by
 
 Presented by EL CHE & LIEZHUVIS 
 
-2G Rules 
+2G rules required for this Event 
 
-Bopp Kogn is a Social project inside the heart of Panke e.V
+Bopp Kogn is an youth social project in the heart of Panke e.V
 
 we are thankful for any **[SUPPORT](https://ko-fi.com/boppkogn)**
 
