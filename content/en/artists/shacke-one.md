@@ -10,6 +10,8 @@ links:
     href: https://www.facebook.com/mcshacke/about
   - href: https://www.laut.de/Shacke-One
     title: laut.de
+  - title: Discohengst
+    href: https://soundcloud.com/diskohengst
 avatar: /images/243587334_705365807013242_8627735221958741855_n.jpg
 media: []
 ---
