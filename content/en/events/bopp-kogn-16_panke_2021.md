@@ -35,10 +35,10 @@ artists:
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
-presented by
+
 **[Panke!](https://www.pankeculture.com/)**
 
-Presented by EL CHE & LIEZHUVIS 
+Big Jam presented by EL CHE & LIEZHUVIS 
 
 2G rules required for this Event 
 
