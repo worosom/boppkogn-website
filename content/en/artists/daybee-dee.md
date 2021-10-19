@@ -1,10 +1,10 @@
 ---
-avatar: /images/daybee-dee.jpg
-from: Berlin
-link: 'https://bit.ly/daybeedance'
-role: DJ
-slug: daybee-dee
 title: Daybee Dee
+slug: daybee-dee
+role: DJ
+from: Berlin
+avatar: /images/dj-daybee-dee-at-o2-logo.jpg
+link: https://bit.ly/daybeedance
 ---
 I am a multilingual and versatile artist of dance and music.   
  I'm born and raised in France in the 70's, in the Parisian suburbs. I am based now for a few years in Berlin, Germany.   
