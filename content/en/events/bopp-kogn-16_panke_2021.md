@@ -49,7 +49,7 @@ we are thankful for any **[SUPPORT](https://ko-fi.com/boppkogn)**
 |     | **Artists**                                                      |
 | --- | ---------------------------------------------------------------- |
 |     | **[Toni L](https://bopp-kogn.africa/artists/toni-l/)**           |
-|     | **[Schacke One](https://bopp-kogn.africa/artists/shacke-one/)**  |
+|     | **[Shacke One](https://bopp-kogn.africa/artists/shacke-one/)**   |
 |     | **[Daybee Dee](https://bopp-kogn.africa/artists/daybee-dee/)**   |
 |     | **[DJ EF](https://bopp-kogn.africa/artists/ef/)**                |
 |     | **[Diskohengst](https://bopp-kogn.africa/artists/schacke-one/)** |
