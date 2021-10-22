@@ -57,3 +57,5 @@ we are thankful for any **[SUPPORT](https://ko-fi.com/boppkogn)**
 |     | **[Daybee Dee](https://bopp-kogn.africa/artists/daybee-dee/)**   |
 |     | **[DJ EF](https://bopp-kogn.africa/artists/ef/)**                |
 |     | **[Diskohengst](https://bopp-kogn.africa/artists/schacke-one/)** |
+|     | **[Thatfuckingsara](https://bopp-kogn.africa/artists/thatfuckingsara/)** |
+|     | **[Dennis Real](https://bopp-kogn.africa/artists/dennisreal/)** |
