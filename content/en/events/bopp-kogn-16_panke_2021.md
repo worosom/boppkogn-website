@@ -37,6 +37,7 @@ artists:
       role: Dj
   - artist:
       relation: dennis-real
+      role: Mc
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
