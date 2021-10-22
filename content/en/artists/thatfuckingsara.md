@@ -2,6 +2,7 @@
 title: thatfuckingsara
 slug: thatfuckingsara
 role: dj
+from: Berlin
 links:
   - title: soundcloud
     href: https://soundcloud.com/that-fucking-sara
