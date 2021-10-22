@@ -34,6 +34,8 @@ artists:
       link: https://soundcloud.com/diskohengst
   - artist:
       relation: thatfuckingsara
+  - artist:
+      relation: dennis-real
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
