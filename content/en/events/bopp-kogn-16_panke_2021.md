@@ -34,6 +34,7 @@ artists:
       link: https://soundcloud.com/diskohengst
   - artist:
       relation: thatfuckingsara
+      role: Dj
   - artist:
       relation: dennis-real
 media: []
