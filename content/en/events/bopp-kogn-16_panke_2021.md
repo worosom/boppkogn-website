@@ -32,6 +32,8 @@ artists:
       relation: diskohengst
       avatar: /images/download-1-.jpeg
       link: https://soundcloud.com/diskohengst
+  - artist:
+      relation: thatfuckingsara
 media: []
 ---
 3 Years Birthday of the HH Worldwide Connection!
