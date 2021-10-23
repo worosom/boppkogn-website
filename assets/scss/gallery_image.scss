@@ -80,6 +80,10 @@ body,
         color: #FF0;
         overflow: hidden;
         white-space: nowrap;
+        display: none;
+        @media (min-width: 576px) {
+          display: block;
+        }
       }
     }
     .modal-footer {
@@ -202,13 +206,14 @@ body,
   }
   .modal-body {
     font-family: "Sporting Grotesque_Bold";
-    padding: 2rem 1.5rem;
+    padding: .5rem;
   }
   .modal_credit {
     background-color: $blue;
     color: #FF0;
     line-height: 1.5;
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: .5rem;
     &_text {
       margin-bottom: .5rem;
     }

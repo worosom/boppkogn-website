@@ -35,10 +35,10 @@ export function throttle (callback, delay, options = {}) {
   return throttled
 }
 
-export const imageURI = (route, i, image, origin) => {
-  const image_title = image.title || ''
+export const imageURI = (route, i, image, origin, caller) => {
+  const image_title = image.artists?.map(({slug, relation}) => slug || relation).join('_') || ''
   const _route = route.params.artist ? `/artists/${route.params.artist}` : `/events/${route.params.slug}`
-  let uri = `${_route}/gallery/${i}_${encodeURIComponent(image_title.split('/').join('_'))}/`
+  let uri = `${_route}/gallery/${i}_${encodeURIComponent(image_title)}/`
   if (origin) {
     uri += `?origin=${origin || encodeURIComponent(route.fullPath + '#pics')}`
   }
@@ -57,26 +57,21 @@ export async function artistData({route, $content}) {
   let i = 0
   let media = (await Promise.all(all_events.map(async ({slug, media}) => {
     if (media) {
-      const _media = media.filter(({image}) => image.artists && image.artists.filter(({relation}) => relation == data.slug).length > 0)
-      _media.forEach(async m => {
-	m.image.artists = await Promise.all(m.image.artists.map(async ({relation}) => await $content(`en/artists/${relation}`).fetch()))
-        m.slug = slug
-        m.uri = imageURI(route, i, m.image)
-        i += 1
-      })
+      let _media = media.filter(({image}) => image.artists && image.artists.filter(({relation}) => relation == data.slug).length > 0)
+      _media = await Promise.all(_media.map(async m => {
+	return {
+	  ...m,
+	  image: {
+	    ...m.image,
+	    artists: await Promise.all(m.image.artists.filter(a => !!a).map(async ({relation}) => ({...await $content(`en/artists/${relation}`).fetch(), relation}))),
+	    slug
+	  },
+	  uri: imageURI(route, i++, m.image)
+	}
+      }))
       return _media
     }
   }))).flat().filter(m => !!m)
-  data.media && (media = data.media.concat(media))
-  media && (media = media.map((m, i) => ({...m, uri: imageURI(route, i, m)})))
-  // if (data.links) {
-  //   for (let i = 0; i < data.links.length; i++) {
-  //     data.links[i] = {
-  //       href: data.links[i],
-  //       ... await metaget.fetch(data.links[i], {headers: {'User-Agent': 'Googlebot'}})
-  //     }
-  //   }
-  // }
   return {
     ...data,
     events,
@@ -111,5 +106,17 @@ export const copyTextToClipboard = (text, cb) => {
     fallbackCopyTextToClipboard(text, cb);
     return;
   }
-  navigator.clipboard.writeText(text).then(cb, err => {});
+  navigator.clipboard.writeText(text).then(cb, err => fallbackCopyTextToClipboard(text, cb));
+}
+
+export const ast2str = ({type, value, children}) => {
+  switch (type) {
+    case 'text':
+      return value;
+    case 'root':
+    case 'element':
+      return children.reduce((a, b) => a + (typeof b == 'object' ? ast2str(b) : b), '')
+    default:
+      return b || ''
+  }
 }

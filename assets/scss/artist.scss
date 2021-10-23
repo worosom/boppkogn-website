@@ -66,12 +66,16 @@
       font-size: 1.5rem;
       background: #0FF;
       color: #F00;
-      padding: 1rem;
       text-transform: uppercase;
       vertical-align: middle;
       border-radius: 0;
       transition: transform 150ms ease-out;
       transform-origin: 50% 50%;
+      padding: 0;
+      span {
+        display: inline-block;
+        padding: 1rem;
+      }
       @for $i from 1 through 10 {
         &:nth-of-type(#{$i}) {
           transform: rotateZ( random(10) - 5 + deg ) translateX( random(10) - 5 + px ) translateY( random(10) - 5 + px );
@@ -83,12 +87,29 @@
     }
   }
   #webmaster-badge {
-    span {
+    span.outer {
+      cursor: none;
       display: inline-block;
+      padding: 1rem 0;
+      transform-style: preserve-3d;
+      perspective: 50px;
+      &:first-of-type {
+        padding-left: 1rem;
+      }
+      &:last-of-type {
+        padding-right: 1rem;
+      }
       @for $i from 1 through 9 {
         &:nth-of-type(#{$i}) {
           animation: bob-y 1.5s #{$i * 1/9}s ease-in-out infinite;
         }
+        &:nth-of-type(#{$i}):hover span {
+          animation: spin 2s linear infinite;
+        }
+      }
+      span.inner {
+        padding: 0;
+        animation: none;
       }
     }
   }

@@ -51,36 +51,26 @@ media:
           text: 'Photo by: Maria Mai'
       src: /images/boppkogn_10_embe.classic_0.jpg
   - image:
-      artists:
-        - relation: ''
       credits:
         - instagram: mary_wonka
           text: 'Photo by: Maria Mai'
       src: /images/boppkogn-10_2.jpg
   - image:
-      artists:
-        - relation: ''
       credits:
         - instagram: mary_wonka
           text: 'Photo by: Maria Mai'
       src: /images/boppkogn-10_3.jpg
   - image:
-      artists:
-        - relation: ''
       credits:
         - instagram: mary_wonka
           text: 'Photo by: Maria Mai'
       src: /images/boppkogn-10_1.jpg
   - image:
-      artists:
-        - relation: '10'
       credits:
         - instagram: mary_wonka
           text: 'Photo by: Maria Mai'
       src: /images/boppkogn_10_dj-primark.jpg
   - image:
-      artists:
-        - relation: ''
       credits:
         - instagram: mary_wonka
           text: 'Photo by: Maria Mai'
