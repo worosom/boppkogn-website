@@ -55,7 +55,8 @@ export async function artistData({route, $content}) {
   const all_events = await $content('en/events').fetch()
   const events = all_events.filter(event => event.artists.filter(({artist}) => artist.relation == data.slug).length)
   let i = 0
-  let media = (await Promise.all(all_events.map(async ({slug, media}) => {
+  let media = (await Promise.all(all_events.map(async event => {
+    const {slug, media} = event
     if (media) {
       let _media = media.filter(({image}) => image.artists && image.artists.filter(({relation}) => relation == data.slug).length > 0)
       _media = await Promise.all(_media.map(async m => {
@@ -64,8 +65,9 @@ export async function artistData({route, $content}) {
 	  image: {
 	    ...m.image,
 	    artists: await Promise.all(m.image.artists.filter(a => !!a).map(async ({relation}) => ({...await $content(`en/artists/${relation}`).fetch(), relation}))),
-	    slug
+	    slug,
 	  },
+	  event,
 	  uri: imageURI(route, i++, m.image)
 	}
       }))

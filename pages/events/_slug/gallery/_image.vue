@@ -18,9 +18,9 @@
               </span>
               <div class="gallery_modal__ui--top__buttons">
                 <share-button @click="$refs.modal_share.show()"/>
-                  <b-btn title="Credits" v-b-modal.modal_credits>
-                    <md-information-icon w="1.5rem" h="1.5rem"/>
-                  </b-btn>
+                <b-btn title="Info" v-b-modal.modal_credits>
+                  <md-information-icon w="1.5rem" h="1.5rem"/>
+                </b-btn>
               </div>
             </div>
           </header>
