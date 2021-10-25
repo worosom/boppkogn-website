@@ -35,6 +35,12 @@ media:
         credit:
           - text: Photo by Maria Mai
             instagram: mary_wonka
+      artists:
+        - relation: andre-damar
+        - relation: adamz
+        - relation: nashi-44
+        - relation: el-che-44
+        - relation: grzly-adams
   - image:
       src: /images/img_9996d.jpeg
       artists:
