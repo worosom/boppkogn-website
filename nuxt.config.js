@@ -96,14 +96,14 @@ export default {
               return {...await $content(`en/artists/${artist.relation}`).fetch(), relation: artist.relation}
             })
           )
-          const _route = imageURI(route, i, {image: {...m.image, artists}}, false, 'config')
+          const _route = imageURI(route, i, {image: m.image}, false, 'config')
           gallery.push({
             route: _route,
             payload: {
               media: event.media,
               event,
               artists,
-              image: m
+              image: m.image
             }
           })
         }))
