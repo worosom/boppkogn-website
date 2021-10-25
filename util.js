@@ -74,6 +74,12 @@ export async function artistData({route, $content}) {
       return _media
     }
   }))).flat().filter(m => !!m)
+  data.media = data.media.map(m => ({
+    ...m,
+    artist: data,
+    uri: imageURI(route, i++, m.image)
+  }))
+  media = [...media, ...data.media]
   return {
     ...data,
     events,

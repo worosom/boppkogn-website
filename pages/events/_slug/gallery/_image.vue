@@ -219,7 +219,9 @@ export default {
       media = event.media
     }
     const image = media[parseInt(context.route.params.image.split('_')[0])].image
-    event = event || await $content(`en/events/${image.slug}`).fetch()
+    if (!event && image.slug) {
+      event = await $content(`en/events/${image.slug}`).fetch()
+    }
     const artists = image.artists && await Promise.all(
       image.artists.map(async ({relation}) => 
         await asyncData({
