@@ -78,7 +78,11 @@
                   :to="`/events/${event.slug}/?origin=${encodeURIComponent($route.fullPath)}#content`"
                   class="title"
                   >
-                  <img style="height: 3.5rem; z-index: 1" :src="event.image+'?h=56'"><span>{{event.title}} {{event.type}}<br>{{event.subtitle}}</span>
+                  <l-image
+                      style="height: 3.5rem; z-index: 1"
+                      :src="event.image"
+                      :alt="event.title"/>
+                  <span>{{event.title}} {{event.type}}<br>{{event.subtitle}}</span>
               </nuxt-link>
             </b-col>
           </b-row>
