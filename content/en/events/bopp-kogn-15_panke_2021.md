@@ -237,6 +237,7 @@ media:
             instagram: 3Seconds2
       artists:
         - relation: neshii
+        - relation: el-bufonk
   - image:
       src: /images/bopp-kogn-15_panke_2021_26.jpg
       credits:
@@ -300,6 +301,8 @@ media:
             instagram: 3Seconds2
       artists:
         - relation: neshii
+        - relation: wan-illa-nice
+        - relation: el-che-44
   - image:
       src: /images/bopp-kogn-15_panke_2021_34.jpg
       credits:
@@ -316,6 +319,8 @@ media:
             instagram: 3Seconds2
       artists:
         - relation: neshii
+        - relation: el-che-44
+        - relation: el-bufonk
   - image:
       src: /images/bopp-kogn-15_panke_2021_36.jpg
       credits:
@@ -323,7 +328,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: el-che-44
+        - relation: el-bufonk
   - image:
       src: /images/bopp-kogn-15_panke_2021_37.jpg
       credits:
@@ -331,7 +336,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: el-bufonk
+        - relation: el-che-44
   - image:
       src: /images/bopp-kogn-15_panke_2021_38.jpg
       credits:
