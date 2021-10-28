@@ -339,7 +339,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: el-che-44
+        - relation: neshii
   - image:
       src: /images/bopp-kogn-15_panke_2021_39.jpg
       credits:
