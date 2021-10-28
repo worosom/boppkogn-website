@@ -41,13 +41,14 @@
           <div class="modal-body">
             <div
                 class="modal__media">
-              <div :class="modal__image_class(_i)"
+              <div
+                :class="modal__image_class(_i)"
                 v-for="(item, _i) in media"
                 :key="_i"
-                v-if="visible[_i]">
+                v-if="visible(_i)">
                 <l-image
                     class='modal__image-large'
-                    @onload="onLoad(_i)"
+                    @onload="() => onLoad(_i)"
                     :smartcrop="false"
                     :lazy="false"
                     :fullscreen="true"
@@ -252,6 +253,10 @@ export default {
     }
   },
   methods: {
+    visible(i) {
+      if (this.media.length == 1) return [true];
+      return (this.currentIsLoaded && Math.abs(this.delta(i)) <= 1) || this.delta(i) == 0
+    },
     hide() {
       this.modal_ui.show = false;
       clearTimeout(this.modal_ui.timeout)
@@ -333,8 +338,10 @@ export default {
       }
     },
     onLoad(i) {
+      console.log('onLoad', i)
       if (this.delta(i) == 0) {
         this.currentIsLoaded = true
+        this.$forceUpdate()
       }
     }
   },
@@ -395,12 +402,6 @@ export default {
       const image = this.$route.params.image;
       const index = image.split("_")[0];
       return parseInt(index)
-    },
-    visible() {
-      if (this.media.length == 1) return [true];
-      return this.media.map((val, i) => {
-        return this.delta(i) == 0 || (this.currentIsLoaded && Math.abs(this.delta(i)) <= 1)
-      })
     },
     credits() {
       return (this.image.credits?.credit || this.image.credits)
