@@ -85,7 +85,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: liezhuvis
+        - relation: hityawitthat
   - image:
       src: /images/bopp-kogn-15_panke_2021_07.jpg
       credits:
@@ -148,7 +148,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: el-bufonk
+        - relation: liezhuvis
   - image:
       src: /images/bopp-kogn-15_panke_2021_15.jpg
       credits:
@@ -156,7 +156,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: liezhuvis
+        - relation: fabian-tombers
   - image:
       src: /images/bopp-kogn-15_panke_2021_16.jpg
       credits:
@@ -164,7 +164,7 @@ media:
           - text: Photo by Sebastian Porsche
             instagram: 3Seconds2
       artists:
-        - relation: fabian-tombers
+        - relation: el-bufonk
   - image:
       src: /images/bopp-kogn-15_panke_2021_17.jpg
       credits:
