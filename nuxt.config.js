@@ -96,7 +96,7 @@ export default {
               return {...await $content(`en/artists/${artist.relation}`).fetch(), relation: artist.relation}
             })
           )
-          const _route = imageURI(route, i, {image: m.image}, false, 'config')
+          const _route = imageURI(route, i, m.image, false, 'config')
           gallery.push({
             route: _route,
             payload: {
@@ -113,7 +113,7 @@ export default {
           payload: {
             event: {
               ...event,
-              media: event.media && event.media.map((m, i) => ({...m, uri: imageURI(route, i, m)})),
+              media: event.media && event.media.map((m, i) => ({...m, uri: imageURI(route, i, m.image)})),
               date: datum(event.date),
               artists
             },

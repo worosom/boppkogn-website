@@ -76,7 +76,7 @@ export default {
     event = {
       ...event,
       date: datum(event.date),
-      media: event.media && event.media.map((m, i) => ({...m, uri: imageURI(route, i, m)})),
+      media: event.media && event.media.map((m, i) => ({...m, uri: imageURI(route, i, m.image)})),
       artists,
     }
     const about = await $content('en/about/about').fetch()
