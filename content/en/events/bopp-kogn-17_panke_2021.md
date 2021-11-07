@@ -13,9 +13,7 @@ instagram: https://www.instagram.com/boppkognfestival/
 facebook: https://www.facebook.com/events/478826906691702?ref=newsfeed
 reservation: https://closecontact.club/
 meta_description: Vol. 17 of the HH Worldwide Connection! [Panke!](https://www.pankeculture.com/)
-artists:
-  - artist:
-      relation: mr-nylson
+artists: []
 media: []
 ---
 We have this time amazing guests for you to enjoy a beautiful night like you never had before ![😉]
