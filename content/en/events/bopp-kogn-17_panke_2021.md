@@ -3,7 +3,7 @@ title: Bopp Kogn
 slug: bopp-kogn-17_panke_2021
 image: /images/instagram-post-–-1-1-.png
 type: Part 17
-date: 2021-11-13 07:00pm
+date: 2021-11-13 09:00pm
 venue:
   name: Panke
   venueLink: https://bit.ly/2NDGRAK
@@ -25,9 +25,9 @@ entry only with proof of vaccination & ID.
 
 |     | **Artists**                                                              |
 | --- | ------------------------------------------------------------------------ |
-|     | **[Mr Nylson](https://bopp-kogn.africa/artists/toni-l/)**                    |
-|     | **[Femdelic](https://bopp-kogn.africa/artists/shacke-one/)**             |
-|     | **[Marc Hype](https://bopp-kogn.africa/artists/daybee-dee/)**            |
-|     | **[Winton Kelly Stevenson](https://bopp-kogn.africa/artists/ef/)**       |
-|     | **[Mac Manu](https://bopp-kogn.africa/artists/thatfuckingsara/)** |
-|     | **[DJ Idem](https://bopp-kogn.africa/artists/dennisreal/)**          |
+|     | **[Mr Nylson](https://bopp-kogn.africa/artists/mr-nylson/)**                    |
+|     | **[Femdelic](https://bopp-kogn.africa/artists/femdelic/)**             |
+|     | **[Marc Hype](https://bopp-kogn.africa/artists/marc-hype/)**            |
+|     | **[Winton Kelly Stevenson](https://bopp-kogn.africa/artists/winton-kelly-stevenson/)**       |
+|     | **[Mac Manu](https://bopp-kogn.africa/artists/mac-manu/)** |
+|     | **[DJ Idem](https://bopp-kogn.africa/artists/dj-idem/)**          |
