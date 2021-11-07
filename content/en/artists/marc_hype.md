@@ -1,6 +1,6 @@
 ---
 title: Marc Hype
-slug: marc_hype
+slug: marc-hype
 role: DJ
 links:
   - title: Website
