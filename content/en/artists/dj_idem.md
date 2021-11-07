@@ -1,6 +1,6 @@
 ---
 title: DJ IDEM
-slug: dj_idem
+slug: dj-idem
 role: DJ
 from: Paris
 links:
