@@ -9,7 +9,7 @@ venue:
   venueLink: https://bit.ly/2NDGRAK
 address: Gerichtstraße 23, Berlin
 price: 8-10 €
-instagram: https://www.instagram.com/boppkognfestival/
+instagram: https://www.instagram.com/boppkognfestival
 facebook: https://www.facebook.com/events/478826906691702?ref=newsfeed
 reservation: https://closecontact.club/
 meta_description: Vol. 17 of the HH Worldwide Connection! [Panke!](https://www.pankeculture.com/)
