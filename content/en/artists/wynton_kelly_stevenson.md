@@ -1,6 +1,6 @@
 ---
 title: Wynton Kelly Stevenson
-slug: Wynton-Kelly-Stevenson
+slug: wynton-kelly-stevenson
 role: Live
 links:
   - title: Soundcloud
