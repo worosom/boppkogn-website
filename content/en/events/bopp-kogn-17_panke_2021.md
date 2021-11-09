@@ -28,8 +28,11 @@ artists:
       relation: wynton-kelly-stevenson
 media: []
 ---
-We have this time amazing guests for you to enjoy! A beautiful night like you never had before! 😉
-**French Rap** in **Swiss Beats**, **American Blues**, **Beatbox** in a jazzy style mixed with **german Funk**.
+We have this time amazing guests for you to enjoy!
+
+A beautiful night like you never had before! 😉
+**French Rap** in **Swiss Beats**, **American Blues**,
+**Beatbox** in a jazzy style mixed with **german Funk.**
 
 Entry only with proof of vaccination & ID.
 
