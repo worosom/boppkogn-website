@@ -2,6 +2,7 @@
 title: Marc Hype
 slug: marc-hype
 role: DJ
+from: Berlin
 links:
   - title: Website
     href: http://marc-hype.com/
