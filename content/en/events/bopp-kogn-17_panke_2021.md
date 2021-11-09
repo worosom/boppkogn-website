@@ -24,18 +24,20 @@ artists:
       relation: marc-hype
   - artist:
       relation: dj-idem
+  - artist:
+      relation: wynton-kelly-stevenson
 media: []
 ---
-We have this time amazing guests for you to enjoy a beautiful night like you never had before ![😉]
-**French Rap** in **Swiss Beats**, **American Blues**, **Beatbox** in a jazzy style mix with **german Funk**.
+We have this time amazing guests for you to enjoy! A beautiful night like you never had before! 😉
+**French Rap** in **Swiss Beats**, **American Blues**, **Beatbox** in a jazzy style mixed with **german Funk**.
 
-entry only with proof of vaccination & ID.
+Entry only with proof of vaccination & ID.
 
-|     | **Artists**                                                              |
-| --- | ------------------------------------------------------------------------ |
-|     | **[Mr Nylson](https://bopp-kogn.africa/artists/mr-nylson/)**                    |
-|     | **[Femdelic](https://bopp-kogn.africa/artists/femdelic/)**             |
-|     | **[Marc Hype](https://bopp-kogn.africa/artists/marc-hype/)**            |
-|     | **[Wynton Kelly Stevenson](https://bopp-kogn.africa/artists/wynton-kelly-stevenson/)**       |
-|     | **[Mac Manu](https://bopp-kogn.africa/artists/mac-manu/)** |
-|     | **[DJ Idem](https://bopp-kogn.africa/artists/dj-idem/)**          |
+|     | **Artists**                                                                            |
+| --- | -------------------------------------------------------------------------------------- |
+|     | **[Mr Nylson](https://bopp-kogn.africa/artists/mr-nylson/)**                           |
+|     | **[Femdelic](https://bopp-kogn.africa/artists/femdelic/)**                             |
+|     | **[Marc Hype](https://bopp-kogn.africa/artists/marc-hype/)**                           |
+|     | **[Wynton Kelly Stevenson](https://bopp-kogn.africa/artists/wynton-kelly-stevenson/)** |
+|     | **[Mac Manu](https://bopp-kogn.africa/artists/mac-manu/)**                             |
+|     | **[DJ Idem](https://bopp-kogn.africa/artists/dj-idem/)**                               |
